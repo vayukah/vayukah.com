@@ -13,30 +13,33 @@ public class ConfigureSsg : IHostingStartup
             context.Configuration.GetSection(nameof(AppConfig)).Bind(AppConfig.Instance);
             services.AddSingleton(AppConfig.Instance);
             services.AddSingleton<RazorPagesEngine>();
-            services.AddSingleton<MarkdownPages>();
-            services.AddSingleton<MarkdownWhatsNew>();
-            services.AddSingleton<MarkdownVideos>();
-            services.AddSingleton<MarkdownBlog>();
+            //services.AddSingleton<MarkdownPages>();
+            services.AddSingleton<MarkdownProducts>();
+            //services.AddSingleton<MarkdownWhatsNew>();
+            //services.AddSingleton<MarkdownVideos>();
+            //services.AddSingleton<MarkdownBlog>();
             services.AddSingleton<MarkdownMeta>();
         })
         .ConfigureAppHost(
             appHost => appHost.Plugins.Add(new CleanUrlsFeature()),
             afterPluginsLoaded: appHost =>
             {
-                var pages = appHost.Resolve<MarkdownPages>();
-                var whatsNew = appHost.Resolve<MarkdownWhatsNew>();
-                var videos = appHost.Resolve<MarkdownVideos>();
-                var blogPosts = appHost.Resolve<MarkdownBlog>();
+                //var pages = appHost.Resolve<MarkdownPages>();
+                var products = appHost.Resolve<MarkdownProducts>();
+                //var whatsNew = appHost.Resolve<MarkdownWhatsNew>();
+                //var videos = appHost.Resolve<MarkdownVideos>();
+                //var blogPosts = appHost.Resolve<MarkdownBlog>();
                 var meta = appHost.Resolve<MarkdownMeta>();
 
-                blogPosts.Authors = AppConfig.Instance.Authors;
-                meta.Features = new() { pages, whatsNew, videos, blogPosts };
+                //blogPosts.Authors = AppConfig.Instance.Authors;
+                meta.Features = new() { /*pages, whatsNew, videos, blogPosts,*/ products };
                 meta.Features.ForEach(x => x.VirtualFiles = appHost.VirtualFiles);
                 
-                pages.LoadFrom("_pages");
-                whatsNew.LoadFrom("_whatsnew");
-                videos.LoadFrom("_videos");
-                blogPosts.LoadFrom("_posts");
+                //pages.LoadFrom("_pages");
+                products.LoadFrom("_products");
+                //whatsNew.LoadFrom("_whatsnew");
+                //videos.LoadFrom("_videos");
+                //blogPosts.LoadFrom("_posts");
                 AppConfig.Instance.GitPagesBaseUrl ??= ResolveGitBlobBaseUrl(appHost.ContentRootDirectory);
             },
             afterAppHostInit: appHost =>
