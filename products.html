@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg" href="img/logo.svg">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://razor-ssg.web-templates.io/feed.xml" />
-    <title>Speaking</title>
+    <title>products.md</title>
     <base href="https://scm-vayukah.github.io/vayukah-ssg/" />
     <script>
+    if (location.search === "?dark") localStorage.setItem('color-scheme','dark') 
+    if (location.search === "?light") localStorage.removeItem('color-scheme') 
     const cls = document.querySelector('html').classList
     if (localStorage.getItem('color-scheme') === 'dark')
         cls.add('dark')
@@ -15,7 +17,7 @@
         cls.remove('dark')
     </script>
     <link rel="stylesheet" href="css/app.css">
-    
+
     <script async src="https://ga.jspm.io/npm:es-module-shims@1.6.3/dist/es-module-shims.js"></script>
     <script type="importmap">
 {
@@ -28,51 +30,37 @@
 }
 </script>
     
-    <meta name="twitter:site" content="@RazorSsg" />
-    <meta property="og:url" content="https://razor-ssg.web-templates.io/speaking" />
-    <meta property="og:title" content="Speaking" />
-
-
 </head>
 <body class="bg-white dark:bg-black dark:text-white">
-
-<!-- Background backdrop, visually different from main _Layout -->
-<svg class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
-  <defs>
-    <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
-      <path d="M.5 200V.5H200" fill="none"/>
-    </pattern>
-  </defs>
-  <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
-    <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0"/>
-  </svg>
-  <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"/>
-</svg>
-<div class="absolute top-0 left-1/2 right-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48">
-  <svg viewBox="0 0 801 1036" aria-hidden="true" class="w-[50.0625rem]">
-    <path fill="url(#70656b7e-db44-4b9b-b7d2-1f06791bed52)" fill-opacity=".3" d="m282.279 843.371 32.285 192.609-313.61-25.32 281.325-167.289-58.145-346.888c94.5 92.652 277.002 213.246 251.009-45.597C442.651 127.331 248.072 10.369 449.268.891c160.956-7.583 301.235 116.434 351.256 179.39L507.001 307.557l270.983 241.04-495.705 294.774Z"/>
-    <defs>
-      <linearGradient id="70656b7e-db44-4b9b-b7d2-1f06791bed52" x1="508.179" x2="-28.677" y1="-116.221" y2="1091.63" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#9089FC"/>
-        <stop offset="1" stop-color="#FF80B5"/>
-      </linearGradient>
-    </defs>
-  </svg>
-</div>
-
 <header class="top-0 fixed z-50 h-14 bg-white dark:bg-black opacity-90 w-full shadow pr-3">
     <div class="flex flex-wrap items-center">
         <div class="absolute z-10 top-2 left-2 sm:static flex-shrink flex-grow-0">
             <div class="cursor-pointer">
                 <a class="navbar-brand flex items-center" href="./">
-                    <svg class="w-8 h-8 sm:ml-2 sm:w-12 sm:h-12" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M10 6c1.544 1.76 2.276 4.15 2.217 6.61c3.968 1.67 9.924 6.12 11.181 12.39H28C26.051 14.31 14.918 6.77 10 6zm-2 7c4.67 4.913.81 11.582-4 12h18.97C21.5 18.289 11.95 13.533 8 13z"/></svg>
-                    <span class="hidden sm:block text-2xl font-semibold">MyApp</span>
+                    <svg class="w-8 h-8 sm:ml-2 sm:w-12 sm:h-12" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 18" >
+
+                            <path d="m 0.048819,3.4671 -5.5e-4,2.5665 c 0.0456,0.3099 0.0912,0.61989 0.23634,0.94836 0.14511,0.32848 0.38966,0.67551 1.2181,1.399 0.82847,0.72352 2.2407,1.8235 3.6531,2.9235 0.18057,0.12262 0.36113,0.24523 0.59097,0.32213 0.22985,0.0769 0.50874,0.10803 0.78778,0.10802 0.27904,0 0.55792,-0.0311 0.80639,-0.10978 0.24848,-0.0786 0.46641,-0.20476 1.4183,-0.95422 0.95192,-0.74946 2.6378,-2.1222 4.3236,-3.495 l -5.6e-4,-3.7439 -3.7446,3.0009 c -0.37465,0.26707 -0.74927,0.53413 -1.2165,0.74836 -0.46723,0.21424 -1.0269,0.3756 -1.6221,0.3756 -0.59522,1e-5 -1.2257,-0.16134 -1.6615,-0.35342 -0.43585,-0.19209 -0.6768,-0.41478 -1.4425,-1.0426 -0.76568,-0.62779 -2.056,-1.6606 -2.7011,-2.177 C 0.048799,3.46711 0.048759,3.46711 0.048759,3.46711 Z"
+                                  fill="#0656d6"
+                                  id="path1" />
+                            <path d="m 13.83,6.6045 6.4e-4,-3.8851 2.2117,-1.759 c 0.1879,-0.14353 0.37578,-0.28705 0.61865,-0.41177 0.24287,-0.12471 0.5405,-0.23053 0.85063,-0.23052 0.31012,1e-5 0.63227,0.10579 0.87317,0.2181 0.2409,0.11231 0.40006,0.23091 0.85979,0.59587 0.45973,0.36497 1.2197,0.9761 1.9799,1.5873 v 3.7252 l -1.8582,-1.4511 C 19.09696,4.81137 18.82774,4.62932 18.5212,4.47263 18.21467,4.31594 17.87122,4.18481 17.5114,4.1848 c -0.35978,0 -0.73541,0.13113 -1.065,0.30098 -0.32958,0.16985 -0.61281,0.37827 -1.0281,0.70057 -0.41528,0.32229 -0.96256,0.75842 -1.2492,0.9871 -0.28662,0.22869 -0.31258,0.24992 -0.33854,0.27116 l -6.4e-4,0.15983 z"
+                                  fill="#eb8a0c"
+                                  id="path2" />
+                            <path d="m 21.954,3.4078 0.006,3.7491 2.1377,1.9121 c 0.0939,0.0972 0.18779,0.19449 0.25528,0.32086 0.0675,0.12636 0.10865,0.28177 0.11402,0.4293 0.005,0.14753 -0.0251,0.28699 -0.0999,0.42004 -0.0749,0.13305 -0.19414,0.25972 -0.39262,0.43178 -0.19848,0.17206 -0.47617,0.38952 -0.75385,0.60697 -0.31139,0.27638 -0.62278,0.55275 -0.84451,0.8445 -0.22172,0.29175 -0.35375,0.59879 -0.42061,0.88979 -0.0669,0.29101 -0.0686,0.56582 -0.0703,0.84072 l 1.6e-4,2.3519 5.8379,-4.8402 c 0.2427,-0.2515 0.4854,-0.50299 0.64035,-0.75922 0.15496,-0.25623 0.22217,-0.51726 0.21858,-0.79098 -0.004,-0.27372 -0.078,-0.56009 -0.25317,-0.86784 -0.17522,-0.30775 -0.45128,-0.63678 -1.5306,-1.5635 -1.0794,-0.92667 -2.9621,-2.451 -4.8447,-3.9753 z"
+                                  fill="#3eba3a"
+                                  id="path3" />
+                    </svg>
+                    <span class="hidden sm:block text-2xl font-semibold pl-6">Vayukah Drones</span>
                 </a>
             </div>
         </div>
         <div class="flex flex-grow flex-shrink flex-nowrap justify-end items-center">
             <nav class="relative flex flex-grow leading-6 font-semibold text-slate-700 dark:text-slate-200">
                 <ul class="flex flex-wrap items-center justify-end w-full m-0 pb-2 sm:pb-0">
+                            <li class="relative flex flex-wrap just-fu-start m-0">
+                                <a href="products" class="p-4 flex items-center justify-start mw-full hover:text-sky-500 dark:hover:text-sky-400">
+                                    Products
+                                </a>
+                            </li>
                             <li class="relative flex flex-wrap just-fu-start m-0">
                                 <a href="whatsnew" class="p-4 flex items-center justify-start mw-full hover:text-sky-500 dark:hover:text-sky-400">
                                     What's New
@@ -129,62 +117,21 @@ mountAll()
 
 
 <div class="min-h-screen">
-  <main role="main" class="pt-14 pb-3">
-    
-
-
-
+    <main role="main" class="pt-14 pb-3">
+        
 <link rel="stylesheet" href="css/typography.css">
 <section class="flex-col md:flex-row flex justify-center mt-16 mb-16 md:mb-12">
     <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-gray-50 sm:text-5xl md:text-6xl">
-        Speaking
+        products.md
     </h1>
-</section>    
+</section>
 <div class="mx-auto">
     <div class="mx-auto prose lg:prose-xl mb-24">
-        <h2 id="ive-spoken-at-events-all-around-the-world-and-been-interviewed-for-many-podcasts">I’ve spoken at events all around the world and been interviewed for many podcasts.<a class="header-anchor" href="javascript:;" onclick="location.hash='#ive-spoken-at-events-all-around-the-world-and-been-interviewed-for-many-podcasts'" aria-label="Permalink">&ZeroWidthSpace;</a></h2>
-<p>One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions.</p>
-<h2 id="conferences">Conferences<a class="header-anchor" href="javascript:;" onclick="location.hash='#conferences'" aria-label="Permalink">&ZeroWidthSpace;</a></h2>
-<blockquote>
-<p>SysConf 2021</p>
-</blockquote>
-<h4 id="in-space-no-one-can-watch-you-stream-until-now">In space, no one can watch you stream — until now<a class="header-anchor" href="javascript:;" onclick="location.hash='#in-space-no-one-can-watch-you-stream-until-now'" aria-label="Permalink">&ZeroWidthSpace;</a></h4>
-<p>A technical deep-dive into HelioStream, the real-time streaming library I wrote for transmitting live video back to Earth.</p>
-<p><a href="#">Watch video</a></p>
-<blockquote>
-<p>Business of Startups 2020</p>
-</blockquote>
-<h4 id="lessons-learned-from-our-first-product-recall">Lessons learned from our first product recall<a class="header-anchor" href="javascript:;" onclick="location.hash='#lessons-learned-from-our-first-product-recall'" aria-label="Permalink">&ZeroWidthSpace;</a></h4>
-<p>They say that if you’re not embarrassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated.</p>
-<p><a href="#">Watch video</a></p>
-<h2 id="podcasts">Podcasts<a class="header-anchor" href="javascript:;" onclick="location.hash='#podcasts'" aria-label="Permalink">&ZeroWidthSpace;</a></h2>
-<blockquote>
-<p>Encoding Design, July 2022</p>
-</blockquote>
-<h4 id="using-design-as-a-competitive-advantage">Using design as a competitive advantage<a class="header-anchor" href="javascript:;" onclick="location.hash='#using-design-as-a-competitive-advantage'" aria-label="Permalink">&ZeroWidthSpace;</a></h4>
-<p>How we used world-class visual design to attract a great team, win over customers, and get more press for Planetaria.</p>
-<p><a href="#">Listen to podcast</a></p>
-<blockquote>
-<p>The Escape Velocity Show, March 2022</p>
-</blockquote>
-<h4 id="bootstrapping-an-aerospace-company-to-17m-arr">Bootstrapping an aerospace company to $17M ARR<a class="header-anchor" href="javascript:;" onclick="location.hash='#bootstrapping-an-aerospace-company-to-17m-arr'" aria-label="Permalink">&ZeroWidthSpace;</a></h4>
-<p>The story of how we built one of the most promising space startups in the world without taking any capital from investors.</p>
-<p><a href="#">Listen to podcast</a></p>
-<blockquote>
-<p>How They Work Radio, September 2021</p>
-</blockquote>
-<h4 id="programming-your-company-operating-system">Programming your company operating system<a class="header-anchor" href="javascript:;" onclick="location.hash='#programming-your-company-operating-system'" aria-label="Permalink">&ZeroWidthSpace;</a></h4>
-<p>On the importance of creating systems and processes for running your business so that everyone on the team knows how to make the right decision no matter the situation.</p>
-<p><a href="#">Listen to podcast</a></p>
+        <p>Describe the product here !</p>
 
     </div>
 </div>
-
-<link rel="stylesheet" href="css/highlight.css">
-<script src="lib/js/highlight.js"></script>
-
-<script>hljs.highlightAll()</script>
-  </main>
+    </main>
 </div>
 
 <footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
@@ -254,9 +201,6 @@ mountAll()
         </svg>
       </a>
     </div>
-    <p class="mt-10 text-center text-xs leading-5 text-gray-500">
-      <a href="https://github.com/NetCoreTemplates/razor-ssg">powered by razor</a>
-    </p>
   </div>
 </footer>
 
@@ -276,6 +220,14 @@ post('[data-post]', {
     } 
 })
 </script>
+
+
+<script type="module">
+import { init } from "app.mjs"
+init()
+</script>
+
+
 
 </body>
 </html>
