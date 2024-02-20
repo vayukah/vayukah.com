@@ -1,1 +1,4 @@
-﻿Describe the product here !
+﻿---
+title: Vayu SM - Vayukah Drones
+productName: Vayu SM
+---
