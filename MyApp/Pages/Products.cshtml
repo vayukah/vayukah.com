@@ -1,11 +1,14 @@
-﻿@page "/products"
+﻿@page "/products/{subpage?}"
 @attribute [RenderStatic]
 @inject MarkdownProducts products
 @{
-    var doc = products.VisiblePages.First();
+    var subpage = RouteData.Values["subpage"] as string;
 
-    ViewData["Title"] = doc.Title;
-}
+    var doc = string.IsNullOrEmpty(subpage) ? products.VisiblePages.First()
+        : products.VisiblePages.FirstOrDefault(p => subpage.Equals(p.Slug, StringComparison.OrdinalIgnoreCase));
+
+    ViewData["Title"] = doc?.Title;
+} 
 
 <link rel="stylesheet" href="css/typography.css">
 <nav class="bg-gray-800">
@@ -17,11 +20,12 @@
                 </div>
                 <div class="hidden sm:ml-6 sm:block">
                     <div class="flex space-x-4  justify-end">
-                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                        <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Dashboard</a>
-                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Team</a>
-                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
-                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
+                        @foreach (var subPage in products.VisiblePages)
+                        {
+                            <a href="/products/@subPage.Slug" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">@subPage.Title</a>
+                        }
+                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Wiki</a>
+                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Enquire</a>
                     </div>
                 </div>
             </div>
@@ -32,10 +36,10 @@
     <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+            <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Overview</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Specs</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Wiki</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Enquire</a>
         </div>
     </div>
 </nav>
@@ -47,6 +51,6 @@
 </section> *@
 <div class="mx-auto">
     <div class="mx-auto prose lg:prose-xl mb-24">
-        @Html.Raw(doc.Preview)
+        @Html.Raw(doc?.Preview)
     </div>
 </div>
