@@ -1,11 +1,10 @@
-﻿@page "/products/{subpage?}"
+﻿@page "/vayusm/overview"
 @attribute [RenderStatic]
 @inject MarkdownProducts products
 @{
-    var subpage = RouteData.Values["subpage"] as string;
 
-    var doc = string.IsNullOrEmpty(subpage) ? products.VisiblePages.First()
-        : products.VisiblePages.FirstOrDefault(p => subpage.Equals(p.Slug, StringComparison.OrdinalIgnoreCase));
+    var doc = products.VisiblePages.First();
+
 
     ViewData["Title"] = doc?.Title;
 } 
@@ -22,7 +21,7 @@
                     <div class="flex space-x-4  justify-end">
                         @foreach (var subPage in products.VisiblePages)
                         {
-                            <a href="/products/@subPage.Slug" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">@subPage.Title</a>
+                            <a href="/vayusm/@subPage.Title.ToLower()" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">@subPage.Title</a>
                         }
                         <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Wiki</a>
                         <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Enquire</a>
