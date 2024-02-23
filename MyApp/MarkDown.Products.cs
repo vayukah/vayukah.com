@@ -28,10 +28,13 @@ public class MarkdownProducts : MarkdownPagesBase<MarkdownFileInfo>
         foreach (var file in files)
         {
             var doc = Load(file.VirtualPath, pipeline);
+            //capitalize name
+            doc.Title = char.ToUpper(doc.Title[0]) + doc.Title.Substring(1);
             if (doc == null)
                 continue;
 
             Pages.Add(doc);
         }
     }
+
 }

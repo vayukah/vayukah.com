@@ -1,11 +1,13 @@
-﻿@page "/products"
+﻿@page "/vayusm/overview"
 @attribute [RenderStatic]
 @inject MarkdownProducts products
 @{
+
     var doc = products.VisiblePages.First();
 
-    ViewData["Title"] = doc.Title;
-}
+
+    ViewData["Title"] = doc?.Title;
+} 
 
 <link rel="stylesheet" href="css/typography.css">
 <nav class="bg-gray-800 sticky top-0 z-50  ">
@@ -32,10 +34,10 @@
     <div class="sm:hidden" id="mobile-menu ">
         <div class="space-y-1 px-2 pb-3 pt-2 ">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-            <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+            <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Overview</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Specs</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Wiki</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Enquire</a>
         </div>
     </div>
 </nav>
@@ -47,6 +49,6 @@
 </section> *@
 <div class="mx-auto">
     <div class="mx-auto prose lg:prose-xl mb-24">
-        @Html.Raw(doc.Preview)
+        @Html.Raw(doc?.Preview)
     </div>
 </div>
