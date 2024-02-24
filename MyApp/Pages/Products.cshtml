@@ -1,9 +1,9 @@
-﻿@page "/vayusm/overview"
+﻿@page "/products"
 @attribute [RenderStatic]
 @inject MarkdownProducts products
 @{
 
-    var doc = products.VisiblePages.First();
+    var doc = products.VisiblePages[1];
 
 
     ViewData["Title"] = doc?.Title;
