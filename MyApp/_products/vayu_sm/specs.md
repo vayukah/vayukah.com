@@ -3,10 +3,10 @@ title: specs
 ---
 
 # Vayu SM Specs
-#### Dimensions
+
 |
 |---|---|
-**Dimensions** | Folded Dimensions       | 404mm x 402mmx 304mm
+**Dimensions** | Folded Dimensions       | 404mm x 402mmx 340mm
 | |Unfolded Diameter |  1175mm x 1175mm x 446mm
 | |Unfolded Height                    | 446 mm
 | |Folded Height                      | 340 mm
