@@ -159,7 +159,7 @@
     text-transform: uppercase;
 }
 .table tr {
-    border-top: 1px solid #dfe2e5;
+    border-top: 0px solid #dfe2e5;
 }
 .table-striped thead tr, .table-striped tr:nth-child(2n), .table-bordered tr:nth-child(2n) {
     background-color: #f6f8fa;
@@ -177,12 +177,39 @@
 }
 
 .table th,.table td {
-    border: 1px solid #dfe2e5;
+    border: 0px solid #dfe2e5;
     padding: .6em 1em
 }
 .dark .table th,.dark .table td {
-    border: 1px solid #1f2937;
+    border: 0px solid #1f2937;  
 }
+
+.body{
+    padding:0px;
+    margin:0px;
+}
+
+.table-specs table, th, td, tr {
+    border-collapse: collapse;
+    border: none;
+    border-top: none;
+    border-bottom: none;
+    text-indent: initial;
+    max-width: 60rem;
+    font-size:medium;
+    
+}
+
+.table-specs td {
+    display: table-cell;
+    border: 0px;
+    border-top: none;
+    border-bottom: none;
+    width: 20px;
+    text-align:justify-all;
+}
+
+
 
 .youtube {
     width: 768px;
