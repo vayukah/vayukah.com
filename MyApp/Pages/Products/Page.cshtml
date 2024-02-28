@@ -1,0 +1,19 @@
+﻿@page "/products/{Slug}"
+@model MyApp.Page
+@inject MarkdownPages Markdown
+
+@implements IRenderStatic<MyApp.Page>
+@functions {
+    public List<Page> GetStaticProps(RenderContext ctx) =>
+        ctx.Resolve<MarkdownPages>().GetVisiblePages("products").Map(page => new Page { Slug = page.Slug.RightPart('/') });
+}
+
+@await Html.PartialAsync("DocsPage", new Shared.DocsPage {
+   Slug = Model.Slug,
+   Folder = "products",
+   DefaultMenu = new MarkdownMenu {
+       Icon = Markdown.DefaultMenuIcon,
+       Text = "Products",
+       Link = "/products/",
+   },
+}.Init(this, Markdown))
