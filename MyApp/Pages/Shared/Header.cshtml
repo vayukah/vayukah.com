@@ -1,6 +1,8 @@
-<header class="top-0 fixed z-50 h-14 bg-white dark:bg-black opacity-90 w-full shadow pr-3">
-    <div class="flex flex-wrap items-center">
-        <div class="absolute z-10 top-2 left-2 sm:static flex-shrink flex-grow-0">
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<header class="   top-0 fixed  z-10 h-14 bg-white dark:bg-black opacity-90 w-full shadow ">
+    <div class=" flex flex-wrap items-center h-14  w-full  pr-2">
+        <div class="absolute z-10 top-2 left-2 sm:static flex-shrink flex-grow-0 ">
             <div class="cursor-pointer">
                 <a class="navbar-brand flex items-center" href="./">
                     <svg class="w-8 h-8 sm:ml-2 sm:w-12 sm:h-12" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 18" >
@@ -15,37 +17,39 @@
                                   fill="#3eba3a"
                                   id="path3" />
                     </svg>
-                    <span class="hidden sm:block text-2xl font-semibold pl-6">Vayukah Drones</span>
+                    <span class="hidden sm:block text-2xl font-semibold pl-6 text-black">Vayukah Drones</span>
                 </a>
             </div>
         </div>
-        <div class="flex flex-grow flex-shrink flex-nowrap justify-end items-center">
-            <nav class="relative flex flex-grow leading-6 font-semibold text-slate-700 dark:text-slate-200">
-                <ul class="flex flex-wrap items-center justify-end w-full m-0 pb-2 sm:pb-0">
-                    @{
-                        void RenderNavLink(string href, string childContent, string? cls = null)
-                        {
-                            <li class="@Html.ClassNames("relative flex flex-wrap just-fu-start m-0",cls)">
-                                <a href="@href" class="@Html.ClassNames("p-4 flex items-center justify-start mw-full hover:text-sky-500 dark:hover:text-sky-400", 
-                                    Html.MatchesPath(href) ? "text-blue-700 dark:text-blue-300" : "")">
-                                    @Html.Raw(childContent)
-                                </a>
-                            </li>
-                        }
-                        RenderNavLink("products", "Products");
-                        RenderNavLink("whatsnew", "What's New");
-                        RenderNavLink("videos", "Videos");
-                        RenderNavLink("creatorkit/", "Creator Kit");
-                        RenderNavLink("blog", "Blog");
-                        RenderNavLink("posts/", "Archive");
-                        RenderNavLink("speaking", "Speaking");
-                        RenderNavLink("uses", "Uses");
-                        RenderNavLink("about", "About");
-                    }
-                    <li class="relative flex flex-wrap just-fu-start m-0">
-                        <div data-component="DarkModeToggle" class="ml-2 w-10"></div>
-                    </li>
-                </ul>
+        
+        <div class="flex flex-grow flex-shrink flex-nowrap justify-end items-center   ">
+            <nav class="relative flex flex-grow leading-6 font-semibold text-black dark:text-slate-200 ">
+                <div class="flex flex-wrap  justify-end w-full  pb-2 sm:pb-0 ">
+                    <div class="subnav ">
+                    <button class="subnavbtn "> Drone <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content shadow ">
+                            <a href="/products">SMPT 4 Drone</a>
+                        </div>    
+                      </div>
+                    <div class="subnav">
+                        <button class="subnavbtn mr-16 "> Battery <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content shadow ">
+                            <a href="#">Vayukah Battery </a>
+                        </div>
+                    </div>                   
+                    <div class="subnav ">
+                        <button class="subnavbtn "> Software <i class="fa fa-caret-down"></i></button>
+                        <div class="subnav-content shadow ">
+                            <a href="#">DroneSharp GCS</a>
+                        </div>
+                    </div>
+                    <div class="subnav ">
+                        <button class="subnavbtn "><a>Contact Us</a> </button>
+                    </div>
+                    <div class="subnav ">
+                        <button class="subnavbtn "> About Us</button>
+                    </div>
+                    </div>
             </nav>
 
         </div>
