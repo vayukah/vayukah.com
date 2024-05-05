@@ -4,29 +4,89 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-20 pb-16 text-center lg:pt-32">
-    <h1 class="mx-auto max-w-4xl font-display text-5xl font-medium tracking-tight text-slate-900 dark:text-slate-50 sm:text-7xl">
-        caption eg: 
+<div class="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 pt-20 pb-16 text-center lg:pt-32">
+    <h1 class="mx-auto max-w-4xl font-display text-4xl font-medium tracking-tight text-slate-900 dark:text-slate-50 sm:text-2xl">
+        
         <span class="relative whitespace-nowrap text-blue-600">
             <svg aria-hidden="true" viewBox="0 0 418 42" class="absolute top-2/3 left-0 h-[0.58em] w-full fill-blue-300/70" preserveAspectRatio="none">
                 <path d="M203.371.916c-26.013-2.078-76.686 1.963-124.73 9.946L67.3 12.749C35.421 18.062 18.2 21.766 6.004 25.934 1.244 27.561.828 27.778.874 28.61c.07 1.214.828 1.121 9.595-1.176 9.072-2.377 17.15-3.92 39.246-7.496C123.565 7.986 157.869 4.492 195.942 5.046c7.461.108 19.25 1.696 19.17 2.582-.107 1.183-7.874 4.31-25.75 10.366-21.992 7.45-35.43 12.534-36.701 13.884-2.173 2.308-.202 4.407 4.442 4.734 2.654.187 3.263.157 15.593-.78 35.401-2.686 57.944-3.488 88.365-3.143 46.327.526 75.721 2.23 130.788 7.584 19.787 1.924 20.814 1.98 24.557 1.332l.066-.011c1.201-.203 1.53-1.825.399-2.335-2.911-1.31-4.893-1.604-22.048-3.261-57.509-5.556-87.871-7.36-132.059-7.842-23.239-.254-33.617-.116-50.627.674-11.629.54-42.371 2.494-46.696 2.967-2.359.259 8.133-3.625 26.504-9.81 23.239-7.825 27.934-10.149 28.304-14.005.417-4.348-3.529-6-16.878-7.066Z"></path>
-            </svg><span class="relative">Vayu SM</span>
+            </svg><span class="relative sm:text-5xl">Vayu SM Drone</span>
         </span> <!-- --> - Survey and Mapping made easy for GIS applications.
     </h1>
-    <p class="mx-auto mt-6 max-w-2xl text-lg tracking-tight text-slate-700 dark:text-slate-200">
-        --- Subtext caption explaining how we do it or how we differentiate our product.----
-    </p>
+    
     <div class="mt-10 flex justify-center gap-x-6">
         <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900" href="/products">
-            Explore
+            Vayu SM Specs
         </a>
-        <a href="https://youtu.be/CrMNviwK2tA" class="group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none ring-slate-200 text-slate-700 dark:text-slate-200 hover:text-slate-900 hover:ring-slate-300 dark:hover:ring-slate-600 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300">
+        <a href="https://youtu.be/CrMNviwK2tA" target="_blank" class="group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none ring-slate-200 text-slate-700 dark:text-slate-200 hover:text-slate-900 hover:ring-slate-300 dark:hover:ring-slate-600 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300">
             <svg aria-hidden="true" class="h-3 w-3 flex-none fill-blue-600 group-active:fill-current">
                 <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z"></path>
             </svg><span class="ml-3">Watch video</span>
         </a>
     </div>
-    <div class="mt-36 lg:mt-44">
+    <section id="Drone" class="bg-gray-50 text-center  w-full my-4">
+
+        <div class="grid grid-cols-1  lg:grid-cols-2  lg:gap-y-1">
+            <div class="  flex items-center  justify-center border-2 rounded-2xl shadow-lg">
+                <img src="./img/products/Drone/Drone iso.png">
+            </div>
+            <div class=" flex items-center  justify-center ">
+               
+                <ul class="list-disc text-gray-700 text-2xl" style=" text-align:left;">
+                    <li><b>Operational Envelope </b></li>
+                    <li>Max payload: 2 k.g</li>
+                    <li>Max endurance: 55 min</li>
+                    <li>Max speed: 15 m/s</li>
+                    <li>Max wind resistance: 10 m/s</li>
+                </ul>
+                </div>
+                </div>
+
+        <div class="grid grid-cols-1  lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-1">
+            <div class="  flex items-center  justify-center ">
+                <ul class=" list-disc text-gray-700 text-2xl sm:text-2xl " style=" text-align:left;">
+                    <li><b>Features</b></li>
+                    <li>Compact and portable</li>
+                    <li>Fully integrated PPK</li>
+                    @* <li>Tested and proven Photogrammetry at 120 m altitude with 15 m/s</li> *@
+                    <li>Photogrammetry at 120 m with 15 m/s</li>
+                </ul>
+            </div>
+            <div class=" flex items-center  justify-center border-2 rounded-2xl shadow-lg ">
+                <img width="350px" height="250px" src="./img/products/Drone/Drone side view BG.png">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1  lg:grid-cols-2  lg:gap-y-1">
+            <div class="   flex items-center  justify-center border-2 rounded-2xl shadow-lg ">
+                <img  src="./img/products/Drone/Drone GCS.png"> 
+            </div>
+            <div class=" flex items-center  justify-center ">
+                <ul class="list-disc text-gray-700 text-2xl sm:text-2xl" style=" text-align:left;">
+                    <li><b>Applications</b></li>
+                    <li>Survey and mapping</li>
+                    <li>Infrastructure Inspection</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1  lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-1">
+            <div class="  flex items-center  justify-center  ">
+                <ul class="list-disc text-gray-700 text-2xl sm:text-2xl py-16" style=" text-align:left;">
+                    <li><b>Payloads</b></li>
+                    <li>Sony α 6100</li>
+                    <li>Sony α 7R IV</li>
+                    <li>Gremsy S1 V3 Gimbal + Sony α 6100</li>
+                </ul>
+            </div>
+            <div class="  flex items-center  justify-center border-2 rounded-2xl shadow-lg ">
+                <img width="450px" height="450px" src="./img/products/Drone/IMG_9041.png">
+            </div>
+        </div>
+           
+                
+        </section>
+  @*   <div class="mt-36 lg:mt-44">
         <p class="font-display text-base text-slate-900">Trusted by these six companies so far</p>
         <ul role="list" class="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-x-0 sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0">
             <li>
@@ -91,77 +151,94 @@
                 </ul>
             </li>
         </ul>
-    </div>
-</div>
+    </div> *@
+
 
 @* @await Html.PartialAsync("Newsletter") *@
-<section id="showcase" class="bg-gray-50 text-center w-full py-12 sm:py-24">
+
+    <section id="showcase" class="bg-gray-50 text-center   sm:py-24">
     <div class="mx-auto max-w-7xl">
         <div class="mb-16">
-            <h2 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">Dronesharp GCS</h2>
+            <h1 class="text-4xl tracking-tight  text-gray-900 sm:text-2xl md:text-2xl ">Dronesharp GCS</h1>
             <div class="my-3 max-w-lg mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-4xl">
                 Fly with confidence
             </div>
         </div>
-        <div class="mt-10 flex justify-center gap-x-6">
+        @* <div class="mt-10 flex justify-center gap-x-6">
             <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900" href="/products">
                 Explore
             </a>
-            <a href="https://youtu.be/CrMNviwK2tA" class="group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none ring-slate-200 text-slate-700 dark:text-slate-200 hover:text-slate-900 hover:ring-slate-300 dark:hover:ring-slate-600 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300">
+            <a href="#" target="_blank" class="group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none ring-slate-200 text-slate-700 dark:text-slate-200 hover:text-slate-900 hover:ring-slate-300 dark:hover:ring-slate-600 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300">
                 <svg aria-hidden="true" class="h-3 w-3 flex-none fill-blue-600 group-active:fill-current">
                     <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z"></path>
                 </svg><span class="ml-3">Watch video</span>
-            </a>
+            </a> *@
         </div>
-        <div class="mt-8 grid grid-cols-3 gap-4">
-            <a class="block group border dark:border-gray-800 hover:border-indigo-700 dark:hover:border-indigo-700">
+        <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="block group flex items-center  justify-center border-2 rounded-2xl shadow-lg  ">
                 <img class="p-2" src="./img/products/dronesharp/main-ui.png">
-                <div class="bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-semibold group-hover:bg-indigo-700 group-hover:text-white text-center py-2">User interface</div>
-            </a>
-            <a class="block group border dark:border-gray-800 hover:border-indigo-700 dark:hover:border-indigo-700">
+               @*  <div class="bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-semibold  text-center py-2">User interface</div> *@
+            </div>
+        <div class="block group flex items-center  justify-center border-2 rounded-2xl shadow-lg ">
                 <div style="max-height:310px;overflow:hidden">
                     <img class="p-2" src="./img/products/dronesharp/plan-mission.png">
                 </div>
-                <div class="bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-semibold group-hover:bg-indigo-700 group-hover:text-white text-center py-2">Plan survey</div>
-            </a>
-            <a class="block group border dark:border-gray-800 hover:border-indigo-700 dark:hover:border-indigo-700" href="https://docs.servicestack.net">
+               @*  <div class="bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-semibold  text-center py-2">Plan survey</div> *@
+            </div>
+        <div class="block group flex items-center  justify-center border-2 rounded-2xl shadow-lg ">
                 <div style="max-height:310px;overflow:hidden">
                     <img class="p-2" src="./img/products/dronesharp/plan-mission.png">
                 </div>
-                <div class="bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-semibold group-hover:bg-indigo-700 group-hover:text-white text-center py-2">Plan corridor</div>
-            </a>
-            <a class="block group border dark:border-gray-800 hover:border-indigo-700 dark:hover:border-indigo-700" href="https://jamstacks.net">
+               @*  <div class="bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-semibold  text-center py-2">Plan corridor</div> *@
+            </div>
+        <div class="block group  flex items-center  justify-center border-2 rounded-2xl shadow-lg ">
                 <img class="p-2" src="./img/products/dronesharp/fly-mission.png">
-                <div class="bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-semibold group-hover:bg-indigo-700 group-hover:text-white text-center py-2">Fly mission</div>
-            </a>
+               @*  <div class="bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-300 font-semibold  text-center py-2">Fly mission</div> *@
+            </div>
         </div>
     </div>
 </section>
 
-<section id="smart battery" class="text-center w-full py-12 sm:py-24">
+
+<section id="smart battery" class="text-center w-full p-6 sm:py-24">
     <div class="mx-auto max-w-7xl">
         <div class="mb-16">
-            <h2 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">Smart battery</h2>
+            <h1 class="text-4xl tracking-tight  text-gray-900 sm:text-2xl md:text-2xl ">Smart battery</h1>
             <div class="my-3 max-w-lg mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-4xl">
                 Battery with inbuilt BMS
             </div>
         </div>
-        <div class="mt-10 flex justify-center gap-x-6">
+       @*  <div class="mt-10 flex justify-center gap-x-6">
             <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900" href="/products">
                 Explore
             </a>
-            <a href="https://youtu.be/CrMNviwK2tA" class="group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none ring-slate-200 text-slate-700 dark:text-slate-200 hover:text-slate-900 hover:ring-slate-300 dark:hover:ring-slate-600 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300">
+            <a href="https://youtu.be/CrMNviwK2tA" target="_blank" class="group inline-flex ring-1 items-center justify-center rounded-full py-2 px-4 text-sm focus:outline-none ring-slate-200 text-slate-700 dark:text-slate-200 hover:text-slate-900 hover:ring-slate-300 dark:hover:ring-slate-600 active:bg-slate-100 active:text-slate-600 focus-visible:outline-blue-600 focus-visible:ring-slate-300">
                 <svg aria-hidden="true" class="h-3 w-3 flex-none fill-blue-600 group-active:fill-current">
                     <path d="m9.997 6.91-7.583 3.447A1 1 0 0 1 1 9.447V2.553a1 1 0 0 1 1.414-.91L9.997 5.09c.782.355.782 1.465 0 1.82Z"></path>
                 </svg><span class="ml-3">Watch video</span>
             </a>
-        </div>
-        <div class="mt-0.5 block group border dark:border-gray-800 hover:border-indigo-700 dark:hover:border-indigo-700 grid grid-rows lg\:space-y-4  justify-center">
-            <img  width="400px" height="400px"  src="./img/products/battery/battery1.png">
+        </div> *@
+        <div class="grid grid-cols-1 lg:py-6 py-2 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-1">
+            <div class="  lg\:grid-rows-\[auto_1fr\] flex items-center  justify-center ">
+                <img width="350px" height="350px" class="border-2 rounded-2xl shadow-lg" src="./img/products/battery/battery2.png">
           @*   <img class="p-2" src="./img/products/battery/battery2.png">
             <img class="p-2" src="./img/products/battery/battery3.png"> *@
-            <div class="ml-8">
-                <table > 
+        </div>
+            <div class=" grid-cols-1 flex items-center  justify-center ">
+
+                <ul class="list-disc text-gray-700 text-2xl sm:text-2xl" style=" text-align:left;">
+                    <li>Capacity: 21000 mah</li>
+                    <li>Cells: 6s</li>
+                    <li>BMS: Yes</li>
+                    <li>Wattage: 450w</li>
+                    <li>Discharge: 10 C</li>
+                    <li>CAN enabled BMS Li-ion battery</li>
+                </ul>
+
+
+
+
+              @*   <table class="items-center">
                     <tbody>
                         <tr>
                             <td>Capacity: </td>
@@ -187,20 +264,28 @@
                             <td></td>
                             <td></td>
                         </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
                         <tr >
                             <td colspan="2"> CAN enabled BMS Li-ion battery </td>
                         </tr>
                     </tbody>
                     
                 </table>
-                
+                 *@
             </div>
                 
         </div>
             
     </div>
 </section>
-
+</div>
 @* <section class="mt-24">
     <h2 class="text-4xl md:text-6xl font-bold tracking-tighter leading-tight md:pr-8 whitespace-nowrap text-center pt-8">
         Getting Started

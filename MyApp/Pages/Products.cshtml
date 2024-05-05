@@ -1,0 +1,55 @@
+﻿@page "/products"
+@attribute [RenderStatic]
+@inject MarkdownProducts products
+@{
+
+    var doc = products.VisiblePages[1];
+
+
+    ViewData["Title"] = doc?.Title;
+} 
+
+<link rel="stylesheet" href="css/typography.css">
+<link href="/path/to/tailwind.css" rel="stylesheet">
+@* <nav class="bg-gray-800 sticky top-0 z-20  ">
+    <div class="mx-auto px-2 sm:px-6 lg:px-8">
+            <div class=" ">
+        <div class="relative flex h-14 items-center justify-end ">
+                <div class="flex flex-1  ">
+                    <div class="h-8 font-bold text-white mr-8 items-center text-left mt-2">Vayu SM</div>
+                </div>
+                <div class="hidden sm:ml-6 sm:block   ">
+                    <div class="flex space-x-4  ">
+                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Overview</a>
+                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Specs</a>
+                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Wiki</a>
+                        <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Enquiry</a>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu ">
+        <div class="space-y-1 px-2 pb-3 pt-2 ">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Overview</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Specs</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Wiki</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Enquire</a>
+        </div>
+    </div>
+</nav>
+ *@
+@* <section class="flex-col md:flex-row flex justify-center mt-16 mb-16 md:mb-12">
+    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-gray-50 sm:text-5xl md:text-6xl">
+        @doc.Title
+    </h1>
+</section> *@
+<div class=" flex justify-center">
+    <div class="ml-6 my-2 pt-6 px-2 grow prose table-specs ">
+        @Html.Raw(doc?.Preview)
+    </div>
+</div>
