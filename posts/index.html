@@ -32,12 +32,23 @@
     
 </head>
 <body class="bg-white dark:bg-black dark:text-white">
-<header class="top-0 fixed z-50 h-14 bg-white dark:bg-black opacity-90 w-full shadow pr-3">
-    <div class="flex flex-wrap items-center">
-        <div class="absolute z-10 top-2 left-2 sm:static flex-shrink flex-grow-0">
-            <div class="cursor-pointer">
-                <a class="navbar-brand flex items-center" href="./">
-                    <svg class="w-8 h-8 sm:ml-2 sm:w-12 sm:h-12" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 18" >
+
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<header class="top-0 fixed  z-10 w-full  bg-white dark:bg-black opacity-100 shadow">
+    <script>
+        function hideOtherNavOpen(navElementIdToShow, navElementIdToHide) {
+            document.getElementById(navElementIdShow).classList.toggle('hidden');
+            console.log(navElementId);
+        }
+    </script>
+    <nav class="mx-auto flex max-w-7xl items-center justify-between w-full  p-6 lg:p-4 lg:px-8" aria-label="Global">
+        <div class=" hidden lg:flex lg:gap-x- flex flex-wrap items-center justify-start    ">
+            <div class="absolute  sm:static flex-shrink flex-grow-0 ">
+                <div class="cursor-pointer">
+                    <a class="navbar-brand flex items-center" href="./">
+                        <svg class="w-8 h-8  hidden sm:block" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 18">
 
                             <path d="m 0.048819,3.4671 -5.5e-4,2.5665 c 0.0456,0.3099 0.0912,0.61989 0.23634,0.94836 0.14511,0.32848 0.38966,0.67551 1.2181,1.399 0.82847,0.72352 2.2407,1.8235 3.6531,2.9235 0.18057,0.12262 0.36113,0.24523 0.59097,0.32213 0.22985,0.0769 0.50874,0.10803 0.78778,0.10802 0.27904,0 0.55792,-0.0311 0.80639,-0.10978 0.24848,-0.0786 0.46641,-0.20476 1.4183,-0.95422 0.95192,-0.74946 2.6378,-2.1222 4.3236,-3.495 l -5.6e-4,-3.7439 -3.7446,3.0009 c -0.37465,0.26707 -0.74927,0.53413 -1.2165,0.74836 -0.46723,0.21424 -1.0269,0.3756 -1.6221,0.3756 -0.59522,1e-5 -1.2257,-0.16134 -1.6615,-0.35342 -0.43585,-0.19209 -0.6768,-0.41478 -1.4425,-1.0426 -0.76568,-0.62779 -2.056,-1.6606 -2.7011,-2.177 C 0.048799,3.46711 0.048759,3.46711 0.048759,3.46711 Z"
                                   fill="#0656d6"
@@ -48,76 +59,212 @@
                             <path d="m 21.954,3.4078 0.006,3.7491 2.1377,1.9121 c 0.0939,0.0972 0.18779,0.19449 0.25528,0.32086 0.0675,0.12636 0.10865,0.28177 0.11402,0.4293 0.005,0.14753 -0.0251,0.28699 -0.0999,0.42004 -0.0749,0.13305 -0.19414,0.25972 -0.39262,0.43178 -0.19848,0.17206 -0.47617,0.38952 -0.75385,0.60697 -0.31139,0.27638 -0.62278,0.55275 -0.84451,0.8445 -0.22172,0.29175 -0.35375,0.59879 -0.42061,0.88979 -0.0669,0.29101 -0.0686,0.56582 -0.0703,0.84072 l 1.6e-4,2.3519 5.8379,-4.8402 c 0.2427,-0.2515 0.4854,-0.50299 0.64035,-0.75922 0.15496,-0.25623 0.22217,-0.51726 0.21858,-0.79098 -0.004,-0.27372 -0.078,-0.56009 -0.25317,-0.86784 -0.17522,-0.30775 -0.45128,-0.63678 -1.5306,-1.5635 -1.0794,-0.92667 -2.9621,-2.451 -4.8447,-3.9753 z"
                                   fill="#3eba3a"
                                   id="path3" />
+                        </svg>
+                        <span class="hidden sm:block text-2xl font-semibold text-black">Vayukah Drones</span>
+                    </a>
+                </div>
+                </div>
+                </div>
+        <div class="hidden lg:flex lg:gap-x-8 justify-center">
+            <div class="relative">
+                <button type="button" class="flex items-center gap-x-1 text-lg font-bold font-semibold leading-6 text-gray-900" id="product-button" aria-expanded="true"
+                        onclick="document.getElementById('nav-menu-lg').classList.toggle('hidden')"
+                        >
+                    Product
+                    <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                     </svg>
-                    <span class="hidden sm:block text-2xl font-semibold pl-6">Vayukah Drones</span>
+                </button>
+
+                <!--
+                  'Product' flyout menu, show/hide based on flyout menu state.
+
+                  Entering: "transition ease-out duration-200"
+                    From: "opacity-0 translate-y-1"
+                    To: "opacity-100 translate-y-0"
+                  Leaving: "transition ease-in duration-150"
+                    From: "opacity-100 translate-y-0"
+                    To: "opacity-0 translate-y-1"
+                -->
+                <div class="absolute -left-8 top-full z-0 mt-3  w-40 overflow-hidden  hidden bg-white shadow-lg ring-1 ring-gray-900/5 " id="nav-menu-lg">
+                    <div class="p-4">
+                        <div class="group relative flex items-center gap-x-6 rounded-lg py-4 text-sm leading-6 hover:bg-gray-50">
+                            <div class="flex-auto">
+                                <a href="#Drone" class="block font-semibold text-gray-900">
+                                    Drone
+                                </a>
+                            </div>
+                        </div>
+                        <div class="group relative flex items-center gap-x-6 rounded-lg py-4 text-sm leading-6 hover:bg-gray-50">
+                            
+                            <div class="flex-auto">
+                                <a href="#smart battery" class="block font-semibold text-gray-900">
+                                  Smart Battery
+                                   
+                                </a>
+                            </div>
+                        </div>
+                        
+ 
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="relative">
+                <button type="button" class="flex items-center gap-x-1 text-lg font-bold font-semibold leading-6 text-gray-900" id="software-button" aria-expanded="true"
+                        onclick="document.getElementById('nav-menu-software').classList.toggle('hidden')">
+                    Software
+                    <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+
+                <!--
+                  'Product' flyout menu, show/hide based on flyout menu state.
+
+                  Entering: "transition ease-out duration-200"
+                    From: "opacity-0 translate-y-1"
+                    To: "opacity-100 translate-y-0"
+                  Leaving: "transition ease-in duration-150"
+                    From: "opacity-100 translate-y-0"
+                    To: "opacity-0 translate-y-1"
+                -->
+                <div class="absolute -left-8 top-full  mt-3  w-40 overflow-hidden hidden   bg-white shadow-lg ring-1 ring-gray-900/5 " id="nav-menu-software">
+                    <div class="p-4">
+                        <div class="group relative flex items-center gap-x-6 rounded-lg py-4 text-sm leading-6 hover:bg-gray-50">
+                            
+                            <div class="flex-auto">
+                                <a href="#" class="block font-semibold text-gray-900">
+                                    DroneSharp.io
+                                    <span class="absolute inset-0"></span>
+                                </a>
+                                
+                            </div>
+                        </div>
+                        <div class="group relative flex items-center gap-x-6 rounded-lg py-4 text-sm leading-6 hover:bg-gray-50">
+                           
+                            <div class="flex-auto">
+                                <a href="#showcase" class="block font-semibold text-gray-900">
+                                    Dronesharp-GCS
+                                    <span class="absolute inset-0"></span>
+                                </a>
+                                
+                            </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+            <a href="/contact" class="text-lg font-bold  font-semibold leading-6 text-gray-900">Contact Us</a>
+            <a href="/about" class="text-lg font-bold  font-semibold leading-6 text-gray-900">About Us</a>
+        </div>
+        
+    </nav>
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div class="lg:hidden flex " role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-10"></div>
+        <div class="fixed inset-y-0 right-0 z-10  w-full  overflow-y-auto pt-4   sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div class="flex items-center justify-between">
+                
+                <button name="btn_show_hide_menu m-" type="button"
+                        class="-m-2.5 rounded-md p-2.5 text-gray-700 flex items-center"
+                        onclick=" document.getElementById('nav-menu-to-hide').classList.toggle('hidden')">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <a href="#" class="-m-1.5 p-1.5  justify-center flex items-center">
+                    <span class="sr-only">Your Company</span>
+                    <svg class="w-8 h-8 sm:ml-2 sm:w-12 sm:h-12" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 18">
+
+                        <path d="m 0.048819,3.4671 -5.5e-4,2.5665 c 0.0456,0.3099 0.0912,0.61989 0.23634,0.94836 0.14511,0.32848 0.38966,0.67551 1.2181,1.399 0.82847,0.72352 2.2407,1.8235 3.6531,2.9235 0.18057,0.12262 0.36113,0.24523 0.59097,0.32213 0.22985,0.0769 0.50874,0.10803 0.78778,0.10802 0.27904,0 0.55792,-0.0311 0.80639,-0.10978 0.24848,-0.0786 0.46641,-0.20476 1.4183,-0.95422 0.95192,-0.74946 2.6378,-2.1222 4.3236,-3.495 l -5.6e-4,-3.7439 -3.7446,3.0009 c -0.37465,0.26707 -0.74927,0.53413 -1.2165,0.74836 -0.46723,0.21424 -1.0269,0.3756 -1.6221,0.3756 -0.59522,1e-5 -1.2257,-0.16134 -1.6615,-0.35342 -0.43585,-0.19209 -0.6768,-0.41478 -1.4425,-1.0426 -0.76568,-0.62779 -2.056,-1.6606 -2.7011,-2.177 C 0.048799,3.46711 0.048759,3.46711 0.048759,3.46711 Z"
+                              fill="#0656d6"
+                              id="path1" />
+                        <path d="m 13.83,6.6045 6.4e-4,-3.8851 2.2117,-1.759 c 0.1879,-0.14353 0.37578,-0.28705 0.61865,-0.41177 0.24287,-0.12471 0.5405,-0.23053 0.85063,-0.23052 0.31012,1e-5 0.63227,0.10579 0.87317,0.2181 0.2409,0.11231 0.40006,0.23091 0.85979,0.59587 0.45973,0.36497 1.2197,0.9761 1.9799,1.5873 v 3.7252 l -1.8582,-1.4511 C 19.09696,4.81137 18.82774,4.62932 18.5212,4.47263 18.21467,4.31594 17.87122,4.18481 17.5114,4.1848 c -0.35978,0 -0.73541,0.13113 -1.065,0.30098 -0.32958,0.16985 -0.61281,0.37827 -1.0281,0.70057 -0.41528,0.32229 -0.96256,0.75842 -1.2492,0.9871 -0.28662,0.22869 -0.31258,0.24992 -0.33854,0.27116 l -6.4e-4,0.15983 z"
+                              fill="#eb8a0c"
+                              id="path2" />
+                        <path d="m 21.954,3.4078 0.006,3.7491 2.1377,1.9121 c 0.0939,0.0972 0.18779,0.19449 0.25528,0.32086 0.0675,0.12636 0.10865,0.28177 0.11402,0.4293 0.005,0.14753 -0.0251,0.28699 -0.0999,0.42004 -0.0749,0.13305 -0.19414,0.25972 -0.39262,0.43178 -0.19848,0.17206 -0.47617,0.38952 -0.75385,0.60697 -0.31139,0.27638 -0.62278,0.55275 -0.84451,0.8445 -0.22172,0.29175 -0.35375,0.59879 -0.42061,0.88979 -0.0669,0.29101 -0.0686,0.56582 -0.0703,0.84072 l 1.6e-4,2.3519 5.8379,-4.8402 c 0.2427,-0.2515 0.4854,-0.50299 0.64035,-0.75922 0.15496,-0.25623 0.22217,-0.51726 0.21858,-0.79098 -0.004,-0.27372 -0.078,-0.56009 -0.25317,-0.86784 -0.17522,-0.30775 -0.45128,-0.63678 -1.5306,-1.5635 -1.0794,-0.92667 -2.9621,-2.451 -4.8447,-3.9753 z"
+                              fill="#3eba3a"
+                              id="path3" />
+                    </svg>
+                    <span class=" text-lg font-semibold text-black">Vayukah Drones</span>
                 </a>
+                <div></div>
+            </div>
+            
+            <div class=" flow-root hidden bg-white mx-6 "  id="nav-menu-to-hide">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6" >
+                        <div class="-mx-3">
+                            <button type="button" class="flex w-full items-center  rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false"
+                                 onclick="document.getElementById('nav-menu-drone').classList.toggle('hidden')">
+                                Drone
+                                <!--
+                                  Expand/collapse icon, toggle classes based on menu open state.
+
+                                  Open: "rotate-180", Closed: ""
+                                -->
+                                <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                            <div class="mt-2 space-y-2 hidden"  id="nav-menu-drone">
+                                <a href="#Drone" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">SMPT 4 Drone</a>
+                            </div>
+                        </div>
+                        <div class="-mx-3">
+                            <button type="button" class="flex w-full items-center  rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false"
+                                    onclick="document.getElementById('nav-menu-Battey').classList.toggle('hidden')">
+                                Battery
+                                <!--
+                                  Expand/collapse icon, toggle classes based on menu open state.
+
+                                  Open: "rotate-180", Closed: ""
+                                -->
+                                <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                            <div class="mt-2 space-y-2 hidden" id="nav-menu-Battey">
+                                <a href="#smart battery" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Vayukah Battery</a>
+                            </div>
+                        </div>
+                        <div class="-mx-3">
+                        <button type="button" class="flex w-full items-center  rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false"
+                                onclick="document.getElementById('nav-menu-Software').classList.toggle('hidden')">
+                            Software
+                            <!--
+                              Expand/collapse icon, toggle classes based on menu open state.
+
+                              Open: "rotate-180", Closed: ""
+                            -->
+                            <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                        <div class="mt-2 space-y-2 hidden" id="nav-menu-Software">
+                            <a href="#showcase" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">DroneSharp GCS</a>
+                        </div>
+                    </div>
+                    <a href="/contact" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact Us</a>
+                    <a href="/about" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About Us</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="flex flex-grow flex-shrink flex-nowrap justify-end items-center">
-            <nav class="relative flex flex-grow leading-6 font-semibold text-slate-700 dark:text-slate-200">
-                <ul class="flex flex-wrap items-center justify-end w-full m-0 pb-2 sm:pb-0">
-                            <li class="relative flex flex-wrap just-fu-start m-0">
-                                <a href="products/" class="p-4 flex items-center justify-start mw-full hover:text-sky-500 dark:hover:text-sky-400">
-                                    Products
-                                </a>
-                            </li>
-                            <li class="relative flex flex-wrap just-fu-start m-0">
-                                <a href="whatsnew" class="p-4 flex items-center justify-start mw-full hover:text-sky-500 dark:hover:text-sky-400">
-                                    What's New
-                                </a>
-                            </li>
-                            <li class="relative flex flex-wrap just-fu-start m-0">
-                                <a href="videos" class="p-4 flex items-center justify-start mw-full hover:text-sky-500 dark:hover:text-sky-400">
-                                    Videos
-                                </a>
-                            </li>
-                            <li class="relative flex flex-wrap just-fu-start m-0">
-                                <a href="creatorkit/" class="p-4 flex items-center justify-start mw-full hover:text-sky-500 dark:hover:text-sky-400">
-                                    Creator Kit
-                                </a>
-                            </li>
-                            <li class="relative flex flex-wrap just-fu-start m-0">
-                                <a href="blog" class="p-4 flex items-center justify-start mw-full hover:text-sky-500 dark:hover:text-sky-400">
-                                    Blog
-                                </a>
-                            </li>
-                            <li class="relative flex flex-wrap just-fu-start m-0">
-                                <a href="posts/" class="p-4 flex items-center justify-start mw-full hover:text-sky-500 dark:hover:text-sky-400">
-                                    Archive
-                                </a>
-                            </li>
-                            <li class="relative flex flex-wrap just-fu-start m-0">
-                                <a href="speaking" class="p-4 flex items-center justify-start mw-full hover:text-sky-500 dark:hover:text-sky-400">
-                                    Speaking
-                                </a>
-                            </li>
-                            <li class="relative flex flex-wrap just-fu-start m-0">
-                                <a href="uses" class="p-4 flex items-center justify-start mw-full hover:text-sky-500 dark:hover:text-sky-400">
-                                    Uses
-                                </a>
-                            </li>
-                            <li class="relative flex flex-wrap just-fu-start m-0">
-                                <a href="about" class="p-4 flex items-center justify-start mw-full hover:text-sky-500 dark:hover:text-sky-400">
-                                    About
-                                </a>
-                            </li>
-                    <li class="relative flex flex-wrap just-fu-start m-0">
-                        <div data-component="DarkModeToggle" class="ml-2 w-10"></div>
-                    </li>
-                </ul>
-            </nav>
-
-        </div>
     </div>
+    <!-- Mobile menu, show/hide based on menu state. -->
+   
 </header>
-<script type="module">
-import { mountAll } from "app.mjs"
-mountAll()
-</script>
+
 
 
 <div class="min-h-screen">
-    <main role="main" class="pt-14 pb-3">
+    <main role="main" class="pt-14 pb-3 px-8">
         
 <div class="relative bg-gray-50 dark:bg-gray-900 px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28">
     <div class="absolute inset-0">
@@ -165,73 +312,72 @@ mountAll()
     </main>
 </div>
 
-<footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
-  <div class="mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8">
-    <nav class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12" aria-label="Footer">
-      <div class="pb-6">
-        <a href="whatsnew" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:hover:text-gray-50">What's New</a>
-      </div>
+<footer b-nirpzh5sxm class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div b-nirpzh5sxm class="mx-auto max-w-7xl overflow-hidden py-6 px-6 sm:py-6 lg:px-6">
+        <nav b-nirpzh5sxm class="-mb-6 columns-2 sm:flex  sm:space-x-12 " aria-label="Footer">
+            <table b-nirpzh5sxm class="table" style="text-align:left;">
+                <tr b-nirpzh5sxm >
+                    <th b-nirpzh5sxm >Products</th>
+                    <th b-nirpzh5sxm > Software</th>
+                    <th b-nirpzh5sxm >
+                        <a b-nirpzh5sxm href="/contact">
+                        Contact us
+                        </a>
+                        </th>
+                    <th b-nirpzh5sxm >
+                        <a b-nirpzh5sxm href="/about">
+                        About Us
+                        </a>
+                        </th>
+                </tr>
+                <tr b-nirpzh5sxm>
+                    <td b-nirpzh5sxm>
+                        <a b-nirpzh5sxm href="/products">
+                            Vayu sm
+                        </a>
+                    </td>
+                    <td b-nirpzh5sxm>
+                        <a b-nirpzh5sxm href="#showcase">
+                            DroneSharp GCS
+                        </a>
+                    </td>
+                    
+                </tr>
+                <tr b-nirpzh5sxm>
+                    <td b-nirpzh5sxm><a b-nirpzh5sxm href="#smart battery">Smart Battery</a></td>
+                    <td b-nirpzh5sxm>DroneSharp Cloud</td>
+                    
+                </tr>
+                </table>
+        </nav>
+    
+    <div b-nirpzh5sxm class="mt-16 flex justify-center space-x-10">
 
-      <div class="pb-6">
-        <a href="blog" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:hover:text-gray-50">Blog</a>
-      </div>
 
-      <div class="pb-6">
-        <a href="posts" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:hover:text-gray-50">Archive</a>
-      </div>
+    <a b-nirpzh5sxm target="_blank" href=https://www.linkedin.com/company/vayukah-drone" class="text-gray-400 hover:text-gray-500">
+        <span class="sr-only">LinkedIN </span>
+        <svg class="h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
+            <path b-nirpzh5sxm d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+        </svg>
+    </a>
 
-      <div class="pb-6">
-        <a href="speaking" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:hover:text-gray-50">Speaking</a>
-      </div>
-
-      <div class="pb-6">
-        <a href="uses" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:hover:text-gray-50">Uses</a>
-      </div>
-
-      <div class="pb-6">
-        <a href="about" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:hover:text-gray-50">About</a>
-      </div>
-
-      <div class="pb-6">
-        <a href="privacy" class="text-sm leading-6 text-gray-600 hover:text-gray-900 dark:hover:text-gray-50">Privacy</a>
-      </div>
-    </nav>
-    <div class="mt-10 flex justify-center space-x-10">
-      <a href="#" class="text-gray-400 hover:text-gray-500">
-        <span class="sr-only">Facebook</span>
-        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+      <a b-nirpzh5sxm href="https://github.com/vayukah" target="_blank" class="text-gray-400 hover:text-gray-500">
+        <span b-nirpzh5sxm class="sr-only">GitHub</span>
+        <svg b-nirpzh5sxm class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path b-nirpzh5sxm fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
         </svg>
       </a>
 
-      <a href="#" class="text-gray-400 hover:text-gray-500">
-        <span class="sr-only">Instagram</span>
-        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"/>
-        </svg>
-      </a>
-
-      <a href="#" class="text-gray-400 hover:text-gray-500">
-        <span class="sr-only">Twitter</span>
-        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
-        </svg>
-      </a>
-
-      <a href="#" class="text-gray-400 hover:text-gray-500">
-        <span class="sr-only">GitHub</span>
-        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
-        </svg>
-      </a>
-
-      <a href="#" class="text-gray-400 hover:text-gray-500">
-        <span class="sr-only">YouTube</span>
-        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-          <path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"/>
+      <a b-nirpzh5sxm target="_blank" href="https://www.youtube.com/&#64vayukahdrones8395" class="text-gray-400 hover:text-gray-500">
+        <span b-nirpzh5sxm class="sr-only">YouTube</span>
+        <svg b-nirpzh5sxm class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path b-nirpzh5sxm fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"/>
         </svg>
       </a>
     </div>
+    <p b-nirpzh5sxm class="mt-10 text-center text-xs leading-5 text-gray-500">
+            <span b-nirpzh5sxm>&copy;</span>2024 by Vayukah Drone Systems And Services Pvt Ltd
+    </p>
   </div>
 </footer>
 
