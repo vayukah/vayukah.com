@@ -6,7 +6,7 @@
     <link rel="icon" type="image/svg" href="img/logo.svg">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://razor-ssg.web-templates.io/feed.xml" />
     <title>Home page</title>
-    <base href="https://scm-vayukah.github.io/vayukah-ssg/" />
+    <base href="/" />
     <script>
     if (location.search === "?dark") localStorage.setItem('color-scheme','dark') 
     if (location.search === "?light") localStorage.removeItem('color-scheme') 
@@ -292,9 +292,9 @@
             <div class="  flex items-center  justify-center border-2 rounded-2xl shadow-lg">
                 <img src="./img/products/Drone/Drone iso.png">
             </div>
-            <div class=" flex items-center  justify-center ">
+            <div class="  hidden lg:flex  flex flex-wrap items-center justify-center ">
                
-                <ul class="list-disc text-gray-700 text-2xl" style=" text-align:left;">
+                <ul class=" text-gray-700 text-2xl" style=" text-align:left;">
                     <li><b>Operational Envelope </b></li>
                     <li>Max payload: 2 k.g</li>
                     <li>Max endurance: 55 min</li>
@@ -302,11 +302,20 @@
                     <li>Max wind resistance: 10 m/s</li>
                 </ul>
                 </div>
+            <div class="   lg:hidden flex items-center pl-10 py-6 justify-center ">
+                <ul class="   text-gray-700 text-2xl sm:text-2xl " style=" text-align:left;">
+                    <li><b>Operational Envelope </b></li>
+                    <li>Max payload: 2 k.g</li>
+                    <li>Max endurance: 55 min</li>
+                    <li>Max speed: 15 m/s</li>
+                    <li>Max wind resistance: 10 m/s</li>
+                </ul>
+            </div>
                 </div>
 
         <div class="grid grid-cols-1  lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-1">
-            <div class="  flex items-center  justify-center ">
-                <ul class=" list-disc text-gray-700 text-2xl sm:text-2xl " style=" text-align:left;">
+            <div class="   hidden lg:flex  flex flex-wrap items-center justify-center ">
+                <ul class="   text-gray-700 text-2xl " style=" text-align:left;">
                     <li><b>Features</b></li>
                     <li>Compact and portable</li>
                     <li>Fully integrated PPK</li>
@@ -316,14 +325,29 @@
             <div class=" flex items-center  justify-center border-2 rounded-2xl shadow-lg ">
                 <img width="350px" height="250px" src="./img/products/Drone/Drone side view BG.png">
             </div>
+            <div class="   lg:hidden flex items-center pl-10 py-6 justify-center ">
+                <ul class="   text-gray-700 text-2xl sm:text-2xl " style=" text-align:left;">
+                    <li><b>Features</b></li>
+                    <li>Compact and portable</li>
+                    <li>Fully integrated PPK</li>
+                    <li>Photogrammetry at 120 m with 15 m/s</li>
+                </ul>
+                </div>
         </div>
 
         <div class="grid grid-cols-1  lg:grid-cols-2  lg:gap-y-1">
             <div class="   flex items-center  justify-center border-2 rounded-2xl shadow-lg ">
                 <img  src="./img/products/Drone/Drone GCS.png"> 
             </div>
-            <div class=" flex items-center  justify-center ">
-                <ul class="list-disc text-gray-700 text-2xl sm:text-2xl" style=" text-align:left;">
+            <div class="  hidden lg:flex  flex flex-wrap items-center justify-center ">
+                <ul class=" text-gray-700 text-2xl sm:text-2xl" style=" text-align:left;">
+                    <li><b>Applications</b></li>
+                    <li>Survey and mapping</li>
+                    <li>Infrastructure Inspection</li>
+                </ul>
+            </div>
+            <div class="  lg:hidden flex items-center  py-6 justify-center ">
+                <ul class=" text-gray-700 text-2xl sm:text-2xl py-16" style=" text-align:left;">
                     <li><b>Applications</b></li>
                     <li>Survey and mapping</li>
                     <li>Infrastructure Inspection</li>
@@ -332,8 +356,8 @@
         </div>
 
         <div class="grid grid-cols-1  lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-1">
-            <div class="  flex items-center  justify-center  ">
-                <ul class="list-disc text-gray-700 text-2xl sm:text-2xl py-16" style=" text-align:left;">
+            <div class="  hidden lg:flex lg:gap-x- flex flex-wrap items-center justify-center ">
+                <ul class=" text-gray-700 text-2xl sm:text-2xl py-16" style=" text-align:left;">
                     <li><b>Payloads</b></li>
                     <li>Sony α 6100</li>
                     <li>Sony α 7R IV</li>
@@ -342,6 +366,14 @@
             </div>
             <div class="  flex items-center  justify-center border-2 rounded-2xl shadow-lg ">
                 <img width="450px" height="450px" src="./img/products/Drone/IMG_9041.png">
+            </div>
+            <div class="  lg:hidden flex items-center pl-10 py-6 justify-center ">
+                <ul class="list-disc text-gray-700 text-2xl sm:text-2xl py-16" style=" text-align:left;">
+                    <li><b>Payloads</b></li>
+                    <li>Sony α 6100</li>
+                    <li>Sony α 7R IV</li>
+                    <li>Gremsy S1 V3 Gimbal + Sony α 6100</li>
+                </ul>
             </div>
         </div>
            
@@ -377,11 +409,11 @@
                 <img class="p-2" src="./img/products/dronesharp/fly-mission.png">
             </div>
         </div>
-    </div>
+    
 </section>
 
 
-<section id="smart battery" class="text-center w-full p-6 sm:py-24">
+<section id="smart battery" class="text-center bg-gray-50 w-full sm:py-24">
     <div class="mx-auto max-w-7xl">
         <div class="mb-16">
             <h1 class="text-4xl tracking-tight  text-gray-900 sm:text-2xl md:text-2xl ">Smart battery</h1>
@@ -393,15 +425,16 @@
             <div class="  lg\:grid-rows-\[auto_1fr\] flex items-center  justify-center ">
                 <img width="350px" height="350px" class="border-2 rounded-2xl shadow-lg" src="./img/products/battery/battery2.png">
         </div>
-            <div class=" grid-cols-1 flex items-center  justify-center ">
+            <div class=" grid-cols-1 flex py-6 items-center  justify-center ">
 
-                <ul class="list-disc text-gray-700 text-2xl sm:text-2xl" style=" text-align:left;">
+                <ul class=" text-gray-700 text-2xl sm:text-2xl" style=" text-align:left;">
+                    <li>BMS: Yes</li>
+                    <li>Inbulit BMS</li>
                     <li>Capacity: 21000 mah</li>
                     <li>Cells: 6s</li>
-                    <li>BMS: Yes</li>
                     <li>Wattage: 450w</li>
                     <li>Discharge: 10 C</li>
-                    <li>CAN enabled BMS Li-ion battery</li>
+                    <li>CAN Interface</li>
                 </ul>
 
 
@@ -428,41 +461,31 @@ mount('#getting-started', GettingStarted, { template:'razor-ssg' })
 
 <footer b-nirpzh5sxm class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
     <div b-nirpzh5sxm class="mx-auto max-w-7xl overflow-hidden py-6 px-6 sm:py-6 lg:px-6">
-        <nav b-nirpzh5sxm class="-mb-6 columns-2 sm:flex  sm:space-x-12 " aria-label="Footer">
-            <table b-nirpzh5sxm class="table" style="text-align:left;">
-                <tr b-nirpzh5sxm >
-                    <th b-nirpzh5sxm >Products</th>
-                    <th b-nirpzh5sxm > Software</th>
-                    <th b-nirpzh5sxm >
-                        <a b-nirpzh5sxm href="/contact">
-                        Contact us
-                        </a>
-                        </th>
-                    <th b-nirpzh5sxm >
-                        <a b-nirpzh5sxm href="/about">
-                        About Us
-                        </a>
-                        </th>
-                </tr>
-                <tr b-nirpzh5sxm>
-                    <td b-nirpzh5sxm>
-                        <a b-nirpzh5sxm href="/products">
-                            Vayu sm
-                        </a>
-                    </td>
-                    <td b-nirpzh5sxm>
-                        <a b-nirpzh5sxm href="#showcase">
-                            DroneSharp GCS
-                        </a>
-                    </td>
-                    
-                </tr>
-                <tr b-nirpzh5sxm>
-                    <td b-nirpzh5sxm><a b-nirpzh5sxm href="#smart battery">Smart Battery</a></td>
-                    <td b-nirpzh5sxm>DroneSharp Cloud</td>
-                    
-                </tr>
-                </table>
+        <nav b-nirpzh5sxm class="-mb-6 sm:flex  sm:space-x-12 " aria-label="Footer">
+            <div b-nirpzh5sxm class="grid grid-cols-2  lg:grid-cols-3  gap-8 lg:gap-y-1">
+            <div b-nirpzh5sxm class="  flex items-center  justify-center">
+                 <ul b-nirpzh5sxm class=" text-gray-700 " style=" text-align:left;">
+                    <li b-nirpzh5sxm><b b-nirpzh5sxm>Products </b></li>
+                    <li b-nirpzh5sxm><a b-nirpzh5sxm href="#Drone">Drone </a></li>
+                    <li b-nirpzh5sxm><a b-nirpzh5sxm href="#smart battery">Smart Battery </a></li>
+                </ul>
+            </div>
+            <div b-nirpzh5sxm class=" flex items-center  justify-center ">
+               <ul b-nirpzh5sxm class=" text-gray-700 " style=" text-align:left;">
+                 <li b-nirpzh5sxm><b b-nirpzh5sxm>Software </b></li>
+                    <li b-nirpzh5sxm><a b-nirpzh5sxm href="#Drone">DroneSharp.io </a></li>
+                    <li b-nirpzh5sxm><a b-nirpzh5sxm href="#show case">DroneSharp-GCS </a></li>
+                </ul>
+                </div>
+                <div b-nirpzh5sxm class=" flex items-center  justify-center ">
+               <ul b-nirpzh5sxm class=" text-gray-700 " style=" text-align:left;">
+                 <li b-nirpzh5sxm><b b-nirpzh5sxm><a b-nirpzh5sxm href="Contact">Contact Us </a></b></li>
+                  <li b-nirpzh5sxm><b b-nirpzh5sxm><a b-nirpzh5sxm href="about">About Us </a></b></li>
+                 </ul>
+                 </div>
+
+
+                </div>
         </nav>
     
     <div b-nirpzh5sxm class="mt-16 flex justify-center space-x-10">
