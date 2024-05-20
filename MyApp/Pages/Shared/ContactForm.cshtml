@@ -1,5 +1,5 @@
 ﻿<div class="  grid grid-cols-1 lg:grid-cols-2  gap-6 py-6 my-10">
-    <div class="flex items-center  justify-end ">
+    <div class="flex items-center  justify-center ">
     <div class=" max-w-sm p-6 bg-white border border-gray-200 rounded-3xl shadow  ">
         <div class="flex flex-col items-center justify-center   ">
             @if (ViewContext.RouteData.Values["success"] != null)
@@ -76,8 +76,9 @@
         </div>
         </div>
     </div>
-    <div >
 
+    <div class="flex  justify-center">
+        <div>
         <ul class=" text-gray-700 text-lg px-6 sm:text-lg py-6 " style=" text-align:left;">
             <li><b>Register Office:</b></li>
             <li></li>
@@ -105,5 +106,6 @@
             <li><b>E-mail:</b> info@vayukah.com</li>
 
         </ul>
+        </div>
     </div>
     </div>
