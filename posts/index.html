@@ -43,7 +43,12 @@
             console.log(navElementId);
         }
     </script>
-    <nav class="mx-auto flex max-w-7xl items-center justify-between w-full  p-6 lg:p-4 lg:px-8" aria-label="Global">
+    <style>
+        .dropdown:hover .dropdown-menu{
+           display: block;
+        }
+    </style>
+    <nav class="mx-auto flex max-w-7xl items-center justify-between w-full  px-6  lg:px-8" aria-label="Global">
         <div class=" hidden lg:flex lg:gap-x- flex flex-wrap items-center justify-start    ">
             <div class="absolute  sm:static flex-shrink flex-grow-0 ">
                 <div class="cursor-pointer">
@@ -64,96 +69,48 @@
                     </a>
                 </div>
                 </div>
-                </div>
-        <div class="hidden lg:flex lg:gap-x-8 justify-center">
-            <div class="relative">
-                <button type="button" class="flex items-center gap-x-1 text-lg font-bold font-semibold leading-6 text-gray-900" id="product-button" aria-expanded="true"
-                        onclick="document.getElementById('nav-menu-lg').classList.toggle('hidden')"
-                        >
-                    Product
-                    <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-
-                <!--
-                  'Product' flyout menu, show/hide based on flyout menu state.
-
-                  Entering: "transition ease-out duration-200"
-                    From: "opacity-0 translate-y-1"
-                    To: "opacity-100 translate-y-0"
-                  Leaving: "transition ease-in duration-150"
-                    From: "opacity-100 translate-y-0"
-                    To: "opacity-0 translate-y-1"
-                -->
-                <div class="absolute -left-8 top-full z-0 mt-3  w-40 overflow-hidden  hidden bg-white shadow-lg ring-1 ring-gray-900/5 " id="nav-menu-lg">
-                    <div class="p-4">
-                        <div class="group relative flex items-center gap-x-6 rounded-lg py-4 text-sm leading-6 hover:bg-gray-50">
-                            <div class="flex-auto">
-                                <a href="#Drone" target="_parent" class="block font-semibold text-gray-900">
-                                    Drone
-                                </a>
-                            </div>
-                        </div>
-                        <div class="group relative flex items-center gap-x-6 rounded-lg py-4 text-sm leading-6 hover:bg-gray-50">
-                            
-                            <div class="flex-auto">
-                                <a href="#smart battery" class="block font-semibold text-gray-900">
-                                  Smart Battery
-                                   
-                                </a>
-                            </div>
-                        </div>
-                        
- 
+        </div>
+        <div class="hidden lg:flex lg:gap-x-8 justify-center items-center">
+                    <div class="relative">
+                        <ul class="w-auto">
+                            <li class="dropdown inline px-4 ">
+                               <div class="relative">
+                                    <button type="button" class="flex items-center gap-x-1 text-lg font-bold font-semibold leading-6 text-gray-900">
+                                        Product
+                                        <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                               </div>
+                                <div class="dropdown-menu absolute hidden h-auto flex pt-4">
+                                    <ul class="block w-40 bg-white shadow px-12 py-8">
+                                        <li class="p-2 hover:bg-gray-100"><a href="#Drone" target="_parent" class="block  cursor-pointer">Drone</a></li>
+                                        <li class="p-2 hover:bg-gray-100"><a href="#smart battery" class="block  cursor-pointer">Smart Battery</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    
-                </div>
-            </div>
-            <div class="relative">
-                <button type="button" class="flex items-center gap-x-1 text-lg font-bold font-semibold leading-6 text-gray-900" id="software-button" aria-expanded="true"
-                        onclick="document.getElementById('nav-menu-software').classList.toggle('hidden')">
-                    Solutions
-                    <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-
-                <!--
-                  'Product' flyout menu, show/hide based on flyout menu state.
-
-                  Entering: "transition ease-out duration-200"
-                    From: "opacity-0 translate-y-1"
-                    To: "opacity-100 translate-y-0"
-                  Leaving: "transition ease-in duration-150"
-                    From: "opacity-100 translate-y-0"
-                    To: "opacity-0 translate-y-1"
-                -->
-                <div class="absolute -left-8 top-full  mt-3  w-40 overflow-hidden hidden   bg-white shadow-lg ring-1 ring-gray-900/5 " id="nav-menu-software">
-                    <div class="p-4">
-                        <div class="group relative flex items-center gap-x-6 rounded-lg py-4 text-sm leading-6 hover:bg-gray-50">
-                            
-                            <div class="flex-auto">
-                                <a href="#" class="block font-semibold text-gray-900">
-                                    DroneSharp.io
-                                    <span class="absolute inset-0"></span>
-                                </a>
-                                
-                            </div>
-                        </div>
-                        <div class="group relative flex items-center gap-x-6 rounded-lg py-4 text-sm leading-6 hover:bg-gray-50">
-                           
-                            <div class="flex-auto">
-                                <a href="#showcase" class="block font-semibold text-gray-900">
-                                    Dronesharp-GCS
-                                    <span class="absolute inset-0"></span>
-                                </a>
-                                
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-                        </div>
+                    <div class="relative">
+                        <ul class="w-auto">
+                            <li class="dropdown inline px-4">
+                                <div class="relative">
+                                    <button type="button" class="flex items-center gap-x-1 text-lg font-bold font-semibold leading-6 text-gray-900">
+                                        Solutions
+                                        <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="dropdown-menu absolute hidden h-auto flex pt-4">
+                                    <ul class="block w-40 bg-white shadow px-12 py-8">
+                                        <li class="p-2 hover:bg-gray-100"><a href="#" target="_parent" class="  cursor-pointer">Dronesharp.io</a></li>
+                                        <li class="p-2 hover:bg-gray-100"><a href="#showcase" class="block cursor-pointer">Dronesharp-GCS</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
             <a href="/contact" class="text-lg font-bold  font-semibold leading-6 text-gray-900">Contact Us</a>
             <a href="/about" class="text-lg font-bold  font-semibold leading-6 text-gray-900">About Us</a>
         </div>
