@@ -48,7 +48,7 @@
            display: block;
         }
     </style>
-    <nav class="mx-auto flex max-w-7xl items-center justify-between w-full  px-6  lg:px-8" aria-label="Global">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between w-full lg:px-8 lg:py-4 " aria-label="Global">
         <div class=" hidden lg:flex lg:gap-x- flex flex-wrap items-center justify-start    ">
             <div class="absolute  sm:static flex-shrink flex-grow-0 ">
                 <div class="cursor-pointer">
@@ -73,7 +73,7 @@
         <div class="hidden lg:flex lg:gap-x-8 justify-center items-center">
                     <div class="relative">
                         <ul class="w-auto">
-                            <li class="dropdown inline px-4 ">
+                            <li class="dropdown inline  ">
                                <div class="relative">
                                     <button type="button" class="flex items-center gap-x-1 text-lg font-bold font-semibold leading-6 text-gray-900">
                                         Product
@@ -82,10 +82,10 @@
                                         </svg>
                                     </button>
                                </div>
-                                <div class="dropdown-menu absolute hidden h-auto flex pt-4">
-                                    <ul class="block w-40 bg-white shadow px-12 py-8">
-                                        <li class="p-2 hover:bg-gray-100"><a href="#Drone" target="_parent" class="block  cursor-pointer">Drone</a></li>
-                                        <li class="p-2 hover:bg-gray-100"><a href="#smart battery" class="block  cursor-pointer">Smart Battery</a></li>
+                                <div class="dropdown-menu absolute hidden h-auto flex ">
+                                    <ul class="block w-40 bg-white shadow py-8">
+                                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#Drone" target="_parent" class="block  cursor-pointer">Drone</a></li>
+                                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#smart battery" class="block  cursor-pointer">Smart Battery</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -93,7 +93,7 @@
                     </div>
                     <div class="relative">
                         <ul class="w-auto">
-                            <li class="dropdown inline px-4">
+                            <li class="dropdown inline ">
                                 <div class="relative">
                                     <button type="button" class="flex items-center gap-x-1 text-lg font-bold font-semibold leading-6 text-gray-900">
                                         Solutions
@@ -102,10 +102,10 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <div class="dropdown-menu absolute hidden h-auto flex pt-4">
-                                    <ul class="block w-40 bg-white shadow px-12 py-8">
-                                        <li class="p-2 hover:bg-gray-100"><a href="#" target="_parent" class="  cursor-pointer">Dronesharp.io</a></li>
-                                        <li class="p-2 hover:bg-gray-100"><a href="#showcase" class="block cursor-pointer">Dronesharp-GCS</a></li>
+                                <div class="dropdown-menu absolute hidden h-auto flex ">
+                                    <ul class="block w-40 bg-white shadow py-8">
+                                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#" target="_parent" class="  cursor-pointer">Dronesharp.io</a></li>
+                                        <li class="px-4 py-2 hover:bg-gray-100"><a href="#showcase" class="block cursor-pointer">Dronesharp-GCS</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -115,12 +115,12 @@
             <a href="/about" class="text-lg font-bold  font-semibold leading-6 text-gray-900">About Us</a>
         </div>
         
-    </nav>
+    
     <!-- Mobile menu, show/hide based on menu open state. -->
     <div class="lg:hidden flex " role="dialog" aria-modal="true">
         <!-- Background backdrop, show/hide based on slide-over state. -->
-        <div class="fixed top-0   w-full  pt-4   sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div class="flex  items-center justify-between">
+        <div class="fixed top-0 w-full pt-4 bg-white ring-1 ring-gray-900/10">
+            <div class="flex  items-center justify-between px-2">
                 
                 <button name="btn_show_hide_menu m-" type="button"
                         class="-m-2.5 rounded-md p-2.5 text-gray-700 flex items-center"
@@ -149,13 +149,13 @@
                 <div></div>
             </div>
             
-            <div class=" flow-root hidden bg-white mx-6 "  id="nav-menu-to-hide">
+            <div class=" flow-root hidden bg-white mx-6 max-w-sm"  id="nav-menu-to-hide">
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6" >
                         <div class="-mx-3">
                             <button type="button" class="flex w-full items-center  rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false"
                                  onclick="document.getElementById('nav-menu-drone').classList.toggle('hidden')">
-                                Drone
+                                Product
                                 <!--
                                   Expand/collapse icon, toggle classes based on menu open state.
 
@@ -167,25 +167,8 @@
                             </button>
                             <!-- 'Product' sub-menu, show/hide based on menu state. -->
                             <div class="mt-2 space-y-2 hidden"  id="nav-menu-drone">
-                                <a href="#Drone" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">SMPT 4 Drone</a>
-                            </div>
-                        </div>
-                        <div class="-mx-3">
-                            <button type="button" class="flex w-full items-center  rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false"
-                                    onclick="document.getElementById('nav-menu-Battey').classList.toggle('hidden')">
-                                Battery
-                                <!--
-                                  Expand/collapse icon, toggle classes based on menu open state.
-
-                                  Open: "rotate-180", Closed: ""
-                                -->
-                                <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                                </svg>
-                            </button>
-                            <!-- 'Product' sub-menu, show/hide based on menu state. -->
-                            <div class="mt-2 space-y-2 hidden" id="nav-menu-Battey">
-                                <a href="#smart battery" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Vayukah Battery</a>
+                                <a href="#Drone" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Drone</a>
+                                <a href="#smart battery" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Smart Battery</a>
                             </div>
                         </div>
                         <div class="-mx-3">
@@ -214,6 +197,7 @@
             </div>
         </div>
     </div>
+    </nav>
     <!-- Mobile menu, show/hide based on menu state. -->
    
 </header>
@@ -221,14 +205,14 @@
 
 
 <div class="min-h-screen">
-    <main role="main" class="">
+    <main role="main" class="lg\:mt-20 md:mt-15 sm:mt-10 mt-5">
         
 
-<div class="  grid grid-cols-1 lg:grid-cols-2  gap-6 py-6 my-10">
-    <div class="flex items-center  justify-center ">
-    <div class=" max-w-sm p-6 bg-white border border-gray-200 rounded-3xl shadow  ">
+<div class="  grid grid-cols-1 lg:grid-cols-2  gap-6 mt-20 ">
+  <div class="flex items-center lg:justify-end justify-center  ">
+    <div class=" max-w-sm lg:max-w-md  p-6 bg-white border border-gray-200 rounded-3xl shadow  ">
         <div class="flex flex-col items-center justify-center   ">
-            <h1 class="text-4xl font-bold text-gray-800 mb-8">Contact Us</h1>
+            <h1 class="text-lg font-bold text-gray-800 mb-8">Contact Us</h1>
             <form class="w-full max-w-lg needs-validation" action="https://api.web3forms.com/submit" method="POST" id="form">
                 <input type="hidden" name="access_key" value="c96688f8-d47d-405c-b556-a43defc593ff" />
                 <input type="hidden" name="subject" value="New Submission from Vayukah.com" />
@@ -284,10 +268,10 @@
             </form>
 
         </div>
-        </div>
     </div>
+  </div>
 
-    <div class="flex  justify-center">
+    <div class="flex lg:justify-start justify-center ">
         <div>
         <ul class=" text-gray-700 text-lg px-6 sm:text-lg py-6 " style=" text-align:left;">
             <li><b>Register Office:</b></li>
@@ -318,7 +302,7 @@
         </ul>
         </div>
     </div>
-    </div>
+</div>
     </main>
 </div>
 
