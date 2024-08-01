@@ -1,4 +1,6 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using AspNetCore.ReCaptcha;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var mvcBuilder = builder.Services.AddRazorPages();
@@ -6,7 +8,7 @@ if (builder.Environment.IsDevelopment())
 {
     mvcBuilder.AddRazorRuntimeCompilation();
 }
-
+builder.Services.AddReCaptcha(builder.Configuration.GetSection("ReCaptcha"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
