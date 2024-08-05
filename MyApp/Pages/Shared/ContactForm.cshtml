@@ -1,14 +1,25 @@
-﻿@page "/Contact"
-@using AspNetCore.ReCaptcha
-@using AspNetCore.ReCaptcha.RazorPages.Pages
-@using Microsoft.AspNetCore.Localization
-@using Microsoft.Extensions.Options
-@inject IOptions<ReCaptchaSettings> ReCaptchaSettings
-@model ContactModel
+﻿<script>
+    function validateForm() 
+    {
 
-@{
-    ViewData["Title"] = "Contact Us";
-}
+        const forms = document.getElementById('form');
+
+        const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+        const Error = document.getElementById('error');
+    
+        if (!hCaptcha) 
+        {
+            Error.classList.remove('hidden')
+            return false;
+        }
+
+        else 
+        {
+            Error.classList.add('hidden')
+            return true;
+        }
+    }
+</script>
 
 <div class="  grid grid-cols-1 lg:grid-cols-2  gap-6 my-20 ">
     <div class="flex items-center lg:justify-end justify-center  py-5">
@@ -16,81 +27,66 @@
             <div class="flex flex-col items-center justify-center   ">
 
                 <h1 class="text-lg font-bold text-gray-800 mb-8">Contact Us</h1>
-                <form class="w-full max-w-lg" method="post" id="form">
+                <form class="w-full max-w-lg" action="https://api.web3forms.com/submit" method="post" id="form" onsubmit="return validateForm()">
                     <input type="hidden" name="access_key" value="c96688f8-d47d-405c-b556-a43defc593ff" />
                     <input type="hidden" name="subject" value="New Submission from Vayukah.com" />
                     <input type="hidden" name="redirect" value="https://www.vayukah.com/contact-success">
                     <input type="checkbox" name="botcheck" id="" style="display: none;" />
-                    <div>
-                        <p class="text-green-200">@TempData["Message"]</p>
-                    </div>
-                    <div asp-validation-summary="All"></div>
                     <div class="flex flex-wrap -mx-3 mb-6">
-                        <div class="form-group w-full md:w-1/2 px-3">
-                            <label asp-for="MyModel.FirstName" class="control-label block  tracking-wide text-gray-700 text-xs font-medium mb-2"></label>
-                            <input asp-for="MyModel.FirstName" class="form-control appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white">
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-medium mb-2" for="first-name">
+                                First Name
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="fname" name="first_name" type="text" required>
                         </div>
-                        <div class="form-group w-full md:w-1/2 px-3">
-                            <label asp-for="MyModel.LastName" class="control-label block  tracking-wide text-gray-700 text-xs font-medium mb-2"></label>
-                            <input asp-for="MyModel.LastName" class="form-control appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white">
-                        </div>
-                    </div>
-                    <div class="flex flex-wrap -mx-3 mb-6">
-                        <div class="form-group w-full px-3">
-                            <label asp-for="MyModel.Email" class="control-label block  tracking-wide text-gray-700 text-xs font-medium mb-2"></label>
-                            <input asp-for="MyModel.Email" class="form-control appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white">
+                        <div class="w-full md:w-1/2 px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-medium mb-2" for="last-name">
+                                Last Name
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="lname" name="last_name" type="text" required>
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
-                        <div class="form-group w-full px-3">
-                            <label asp-for="MyModel.PhoneNumber" class="control-label block  tracking-wide text-gray-700 text-xs font-medium mb-2"></label>
-                            <input asp-for="MyModel.PhoneNumber" class="form-control appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white">
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-medium mb-2" for="email">
+                                Email
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="email" name="email" type="email" required>
+                            <p class="text-gray-600 text-xs italic">Please enter a valid email address.</p>
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
-                        <div class="form-group w-full px-3">
-                            <label asp-for="MyModel.Message" class="control-label block  tracking-wide text-gray-700 text-xs font-medium mb-2"></label>
-                            <textarea asp-for="MyModel.Message" class="form-control no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white h-36 resize-none"></textarea>
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-medium mb-2" for="email">
+                                Phone number
+                            </label>
+                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="phone" type="text" name="phone" required>
+                            <p class="text-gray-600 text-xs italic">Please enter a valid email address.</p>
                         </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
-                        <div class="w-1/4 px-3">
-                            <div class="form-group">
-                                @switch (ReCaptchaSettings.Value.Version)
-                                {
-                                    case ReCaptchaVersion.V2:
-                                        // Optionally override language of the recaptcha
-                                        // @Html.ReCaptcha(language: "en")
-                                        <recaptcha />
-                                        break;
-                                    case ReCaptchaVersion.V2Invisible:
-                                        <recaptcha class-name="btn btn-primary" callback="submitForm" text="Submit Invisible ReCaptcha" />
-                                        break;
-                                    case ReCaptchaVersion.V3:
-                                        <recaptcha action="contact" />
-                                        break;
-                                }
-
-                            </div>
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-medium mb-2" for="message">
+                                Message
+                            </label>
+                            <textarea class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white h-48 resize-none" id="message" name="message"></textarea>
                         </div>
-                    </div>@*  <div class="flex justify-center hidden" id="Captchahelper">
-                    <p class=" text-yellow-400 text-md italic" >Invailed </p>
-                    </div> *@
-                    <div class="md:flex md:items-center pb-3 ">
-                        @if (ReCaptchaSettings.Value.Version != ReCaptchaVersion.V2Invisible)
-                         {
-                        <div class="md:w-1/3 ">
-                            <button class="bg-black hover:bg-gray-200 text-gray-200 hover:text-gray-700 font-semibold py-2 px-4 border  rounded btn btn-primary" id="submitButton" type="submit">
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <div class="h-captcha" data-captcha="true"></div>
+                            <p class="text-red-700 text-md mt-2 italic hidden" id="error">Please fill out captcha field </p>
+                        </div>
+                    </div>
+                    <div class="md:flex md:items-center -mx-3 mb-6">
+                        <div class="md:w-1/3 px-3">
+                            <button class="bg-black hover:bg-gray-200 text-gray-200 hover:text-gray-700 font-semibold py-2 px-4 border rounded" type="submit" name="submit" id="submit">
                                 Send
                             </button>
                         </div>
-                         }
                     </div>
-
-
-
                 </form>
-
+                <script src="https://web3forms.com/client/script.js" async defer></script>
             </div>
         </div>
     </div>
