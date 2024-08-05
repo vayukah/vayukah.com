@@ -23,9 +23,7 @@
   </Target>
 
   <ItemGroup>
-    <PackageReference Include="AspNetCore.ReCaptcha" Version="1.8.2" />
     <PackageReference Include="Markdig" Version="0.30.*" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="ServiceStack" Version="8.*" />
     <PackageReference Include="ServiceStack.Mvc" Version="8.*" />
 
