@@ -1,111 +1,122 @@
-﻿@using AspNetCore.ReCaptcha
-@inject AspNetCore.ReCaptcha.IReCaptchaService recapta
-<div class="  grid grid-cols-1 lg:grid-cols-2  gap-6 mt-20 ">
-  <div class="flex items-center lg:justify-end justify-center  ">
-    <div class=" max-w-sm lg:max-w-md  p-6 bg-white border border-gray-200 rounded shadow  ">
-        <div class="flex flex-col items-center justify-center   ">
-            @if (ViewContext.RouteData.Values["success"] != null)
-            {
-                @*  <script type="text/javascript">
-            window.onload = function () {
-            alert("Thank you for contacting us !");
-            };
-            </script> *@
-                <div class="bg-green-200 p-6 py-4 mx-2 my-4 rounded-md text-lg flex items-center mx-auto max-w-lg">
-                    <svg viewBox="0 0 24 24" class="text-green-600 w-5 h-5 sm:w-5 sm:h-5 mr-3">
-                        <path fill="currentColor"
-                              d="M12,0A12,12,0,1,0,24,12,12.014,12.014,0,0,0,12,0Zm6.927,8.2-6.845,9.289a1.011,1.011,0,0,1-1.43.188L5.764,13.769a1,1,0,1,1,1.25-1.562l4.076,3.261,6.227-8.451A1,1,0,1,1,18.927,8.2Z">
-                        </path>
-                    </svg>  
-                    <span class="text-green-800">Thank you for your interest !</span>
-                </div>
-            }
-            <h1 class="text-lg font-bold text-gray-800 mb-8">Contact Us</h1>
-            <form class="w-full max-w-lg needs-validation" action="https://api.web3forms.com/submit" method="POST" id="form">
-                <input type="hidden" name="access_key" value="c96688f8-d47d-405c-b556-a43defc593ff" />
-                <input type="hidden" name="subject" value="New Submission from Vayukah.com" />
-                <input type="hidden" name="redirect" value="https://www.vayukah.com/contact-success">
-                <input type="checkbox" name="botcheck" id="" style="display: none;" />
-                <div class="flex flex-wrap -mx-3 mb-6">
-                    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-                        <label class="block tracking-wide text-gray-700 text-xs font-medium mb-2" for="first-name">
-                            First name*
-                        </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="fname" name="first_name" type="text" required>
-                    </div>
-                    <div class="w-full md:w-1/2 px-3">
-                        <label class="block  tracking-wide text-gray-700 text-xs font-medium mb-2" for="last-name">
-                            Last name*
-                        </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white" id="lname" name="last_name" type="text" required>
-                    </div>
-                </div>
-                <div class="flex flex-wrap -mx-3 mb-6">
-                    <div class="w-full px-3">
-                        <label class="block tracking-wide text-gray-700 text-xs font-medium mb-2" for="email">
-                            Email*
-                        </label>
-                        <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="email" name="email" type="email" required>
-                        <p class="text-gray-600 text-xs italic">Please enter a valid email address.</p>
-                    </div>
-                </div>
-                <div class="flex flex-wrap -mx-3 mb-6">
-                    <div class="w-full px-3">
-                        <label class="block  tracking-wide text-gray-700 text-xs font-medium mb-2" for="email">
-                            Phone number*
-                        </label>
-                        <input type="tel" class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="phone" type="text" name="phone" required>
-                        <p class="text-gray-600 text-xs italic">Please enter a valid email address.</p>
-                    </div>
-                </div>
-                <div class="flex flex-wrap -mx-3 mb-6">
-                    <div class="w-full px-3">
-                        <label class="block tracking-wide text-gray-700 text-xs font-medium mb-2" for="message">
-                            Message*
-                        </label>
-                        <textarea class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white h-36 resize-none" id="message" name="message"></textarea>
-                    </div>
-                </div>
-                 <div class="flex flex-wrap -mx-3 mb-6">
-                     <div class="w-1/4 px-3">
-                        <recaptcha />
-                     </div> 
-                 </div>
-                <div class="md:flex md:items-center pb-3 pl-3">
-                    <div class="md:w-1/3 ">
-                        <button class="bg-black hover:bg-gray-200 text-gray-200 hover:text-gray-700 font-semibold py-2 px-4 border  rounded" type="submit">
-                            Send
-                        </button>
-                    </div>
-                </div>
-            </form>
+﻿@page "/Contact"
+@using AspNetCore.ReCaptcha
+@using AspNetCore.ReCaptcha.RazorPages.Pages
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+@inject IOptions<ReCaptchaSettings> ReCaptchaSettings
+@model ContactModel
 
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="  grid grid-cols-1 lg:grid-cols-2  gap-6 my-20 ">
+    <div class="flex items-center lg:justify-end justify-center  py-5">
+        <div class=" max-w-sm lg:max-w-md  p-6 bg-white border border-gray-200 rounded shadow  ">
+            <div class="flex flex-col items-center justify-center   ">
+
+                <h1 class="text-lg font-bold text-gray-800 mb-8">Contact Us</h1>
+                <form class="w-full max-w-lg" method="post" id="form">
+                    <input type="hidden" name="access_key" value="c96688f8-d47d-405c-b556-a43defc593ff" />
+                    <input type="hidden" name="subject" value="New Submission from Vayukah.com" />
+                    <input type="hidden" name="redirect" value="https://www.vayukah.com/contact-success">
+                    <input type="checkbox" name="botcheck" id="" style="display: none;" />
+                    <div>
+                        <p class="text-green-200">@TempData["Message"]</p>
+                    </div>
+                    <div asp-validation-summary="All"></div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="form-group w-full md:w-1/2 px-3">
+                            <label asp-for="MyModel.FirstName" class="control-label block  tracking-wide text-gray-700 text-xs font-medium mb-2"></label>
+                            <input asp-for="MyModel.FirstName" class="form-control appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white">
+                        </div>
+                        <div class="form-group w-full md:w-1/2 px-3">
+                            <label asp-for="MyModel.LastName" class="control-label block  tracking-wide text-gray-700 text-xs font-medium mb-2"></label>
+                            <input asp-for="MyModel.LastName" class="form-control appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="form-group w-full px-3">
+                            <label asp-for="MyModel.Email" class="control-label block  tracking-wide text-gray-700 text-xs font-medium mb-2"></label>
+                            <input asp-for="MyModel.Email" class="form-control appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="form-group w-full px-3">
+                            <label asp-for="MyModel.PhoneNumber" class="control-label block  tracking-wide text-gray-700 text-xs font-medium mb-2"></label>
+                            <input asp-for="MyModel.PhoneNumber" class="form-control appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="form-group w-full px-3">
+                            <label asp-for="MyModel.Message" class="control-label block  tracking-wide text-gray-700 text-xs font-medium mb-2"></label>
+                            <textarea asp-for="MyModel.Message" class="form-control no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white h-36 resize-none"></textarea>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-1/4 px-3">
+                            <div class="form-group">
+                                @switch (ReCaptchaSettings.Value.Version)
+                                {
+                                    case ReCaptchaVersion.V2:
+                                        // Optionally override language of the recaptcha
+                                        // @Html.ReCaptcha(language: "en")
+                                        <recaptcha />
+                                        break;
+                                    case ReCaptchaVersion.V2Invisible:
+                                        <recaptcha class-name="btn btn-primary" callback="submitForm" text="Submit Invisible ReCaptcha" />
+                                        break;
+                                    case ReCaptchaVersion.V3:
+                                        <recaptcha action="contact" />
+                                        break;
+                                }
+
+                            </div>
+                        </div>
+                    </div>@*  <div class="flex justify-center hidden" id="Captchahelper">
+                    <p class=" text-yellow-400 text-md italic" >Invailed </p>
+                    </div> *@
+                    <div class="md:flex md:items-center pb-3 ">
+                        @if (ReCaptchaSettings.Value.Version != ReCaptchaVersion.V2Invisible)
+                         {
+                        <div class="md:w-1/3 ">
+                            <button class="bg-black hover:bg-gray-200 text-gray-200 hover:text-gray-700 font-semibold py-2 px-4 border  rounded btn btn-primary" id="submitButton" type="submit">
+                                Send
+                            </button>
+                        </div>
+                         }
+                    </div>
+
+
+
+                </form>
+
+            </div>
         </div>
     </div>
-  </div>
 
     <div class="flex lg:justify-start lg:items-center justify-center ">
-      <div>
-        <ul class=" text-gray-700 text-lg px-6 sm:text-lg py-6 " style=" text-align:left;">
-            <li class="py-2"><b>Register Office</b></li>
-            <li>3rd Floor,  Plot no.283/B,</li>
-            <li>New Auto Nagar,  Kanaru Autonagar road,</li>
-            <li>Kanuru,  Vijayawada,</li>
-            <li>NTR,  Andhra Pradesh,  520007</li>
-        </ul>
+        <div>
+            <ul class=" text-gray-700 text-lg px-6 sm:text-lg py-6 " style=" text-align:left;">
+                <li class="py-2"><b>Register Office</b></li>
+                <li>3rd Floor,  Plot no.283/B,</li>
+                <li>New Auto Nagar,  Kanaru Autonagar road,</li>
+                <li>Kanuru,  Vijayawada,</li>
+                <li>NTR,  Andhra Pradesh,  520007</li>
+            </ul>
 
-        <ul class=" text-gray-700 text-lg px-6 sm:text-lg py-6" style=" text-align:left;">
-            <li class="py-2"><b>Hyderabad Office</b></li>
-            <li>Flat #213,</li>
-            <li>Transcon Pragathi Avenue,</li>
-            <li>Peerzadiguda,  Medchal Dist,</li>
-            <li>Telangana,  500098</li>
-        </ul>
+            <ul class=" text-gray-700 text-lg px-6 sm:text-lg py-6" style=" text-align:left;">
+                <li class="py-2"><b>Hyderabad Office</b></li>
+                <li>Flat #213,</li>
+                <li>Transcon Pragathi Avenue,</li>
+                <li>Peerzadiguda,  Medchal Dist,</li>
+                <li>Telangana,  500098</li>
+            </ul>
 
-        <ul class=" text-gray-700 text-lg px-6 sm:text-lg py-6" style=" text-align:left;">
-            <li><b>Contact number</b> 94918 79611</li>
-            <li><b>E-mail</b> info@vayukah.com</li>
-        </ul>
-      </div>
+            <ul class=" text-gray-700 text-lg px-6 sm:text-lg py-6" style=" text-align:left;">
+                <li><b>Contact number</b> 94918 79611</li>
+                <li><b>E-mail</b> info@vayukah.com</li>
+            </ul>
+        </div>
     </div>
-</div>
+  </div>  
