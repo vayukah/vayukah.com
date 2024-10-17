@@ -6,10 +6,16 @@
 
 <div class="text-center lg:pt-2 sm:pt-2 pt-2">
     <section class="text-cente/r mb-4 border-y">
-       <div class="flex items-center justify-center border-y ">
+        <div class="flex lg:hidden items-center justify-center border-y ">
            <video autoplay loop muted height="auto" width="100%" >
               <source src="./video/Drone_render.mp4" type="video/mp4" />
            </video>
+        </div>
+        @*For lg or above*@
+        <div class="flex hidden lg:flex items-center justify-center border-y " style="background-image: url('./img/products/Drone/Backgroundimage.png'); background-repeat: no-repeat;">
+            <video autoplay loop muted height="auto" width="60%">
+                <source src="./video/Drone_render.mp4" type="video/mp4" />
+            </video>
         </div>
     </section>
     <h1 class="mx-auto max-w-4xl font-display text-2xl font-medium tracking-tight text-slate-900 dark:text-slate-50 sm:text-4xl">
