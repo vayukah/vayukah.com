@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg" href="img/logo.svg">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://razor-ssg.web-templates.io/feed.xml" />
+    <title>VIGOR</title>
+    <base href="/" />
+    <script>
+    if (location.search === "?dark") localStorage.setItem('color-scheme','dark') 
+    if (location.search === "?light") localStorage.removeItem('color-scheme') 
+    const cls = document.querySelector('html').classList
+    if (localStorage.getItem('color-scheme') === 'dark')
+        cls.add('dark')
+    else
+        cls.remove('dark')
+    </script>
+    <link rel="stylesheet" href="css/app.css">
+
+    <script async src="https://ga.jspm.io/npm:es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+{
+    "imports": {
+        "app.mjs": "./mjs/app.mjs",
+        "vue": "./lib/mjs/vue.min.mjs",
+        "@servicestack/client": "./lib/mjs/servicestack-client.min.mjs",
+        "@servicestack/vue": "./lib/mjs/servicestack-vue.min.mjs"
+    }
+}
+</script>
+    
+</head>
+<body class="bg-white dark:bg-black dark:text-white">
+
+<link rel="stylesheet" href="css/typography.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<header class="top-0 fixed  z-10 w-full  bg-white dark:bg-black opacity-100 shadow">
+    <script>
+        function hideOtherNavOpen(navElementIdToShow, navElementIdToHide) {
+            document.getElementById(navElementIdShow).classList.toggle('hidden');
+            console.log(navElementId);
+        }
+    </script>
+    <style>
+        .dropdown:hover .dropdown-menu{
+           display: block;
+        }
+    </style>
+    <nav class="mx-auto flex max-w-7xl items-center justify-between w-full lg:px-8 lg:py-4 " aria-label="Global">
+        <div class=" hidden lg:flex lg:gap-x- flex flex-wrap items-center justify-start    ">
+            <div class="absolute  sm:static flex-shrink flex-grow-0 ">
+                <div class="cursor-pointer">
+                    <a class="navbar-brand flex items-center" href="./">
+                        <svg class="w-8 h-8  hidden sm:block" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 18">
+
+                            <path d="m 0.048819,3.4671 -5.5e-4,2.5665 c 0.0456,0.3099 0.0912,0.61989 0.23634,0.94836 0.14511,0.32848 0.38966,0.67551 1.2181,1.399 0.82847,0.72352 2.2407,1.8235 3.6531,2.9235 0.18057,0.12262 0.36113,0.24523 0.59097,0.32213 0.22985,0.0769 0.50874,0.10803 0.78778,0.10802 0.27904,0 0.55792,-0.0311 0.80639,-0.10978 0.24848,-0.0786 0.46641,-0.20476 1.4183,-0.95422 0.95192,-0.74946 2.6378,-2.1222 4.3236,-3.495 l -5.6e-4,-3.7439 -3.7446,3.0009 c -0.37465,0.26707 -0.74927,0.53413 -1.2165,0.74836 -0.46723,0.21424 -1.0269,0.3756 -1.6221,0.3756 -0.59522,1e-5 -1.2257,-0.16134 -1.6615,-0.35342 -0.43585,-0.19209 -0.6768,-0.41478 -1.4425,-1.0426 -0.76568,-0.62779 -2.056,-1.6606 -2.7011,-2.177 C 0.048799,3.46711 0.048759,3.46711 0.048759,3.46711 Z"
+                                  fill="#0656d6"
+                                  id="path1" />
+                            <path d="m 13.83,6.6045 6.4e-4,-3.8851 2.2117,-1.759 c 0.1879,-0.14353 0.37578,-0.28705 0.61865,-0.41177 0.24287,-0.12471 0.5405,-0.23053 0.85063,-0.23052 0.31012,1e-5 0.63227,0.10579 0.87317,0.2181 0.2409,0.11231 0.40006,0.23091 0.85979,0.59587 0.45973,0.36497 1.2197,0.9761 1.9799,1.5873 v 3.7252 l -1.8582,-1.4511 C 19.09696,4.81137 18.82774,4.62932 18.5212,4.47263 18.21467,4.31594 17.87122,4.18481 17.5114,4.1848 c -0.35978,0 -0.73541,0.13113 -1.065,0.30098 -0.32958,0.16985 -0.61281,0.37827 -1.0281,0.70057 -0.41528,0.32229 -0.96256,0.75842 -1.2492,0.9871 -0.28662,0.22869 -0.31258,0.24992 -0.33854,0.27116 l -6.4e-4,0.15983 z"
+                                  fill="#eb8a0c"
+                                  id="path2" />
+                            <path d="m 21.954,3.4078 0.006,3.7491 2.1377,1.9121 c 0.0939,0.0972 0.18779,0.19449 0.25528,0.32086 0.0675,0.12636 0.10865,0.28177 0.11402,0.4293 0.005,0.14753 -0.0251,0.28699 -0.0999,0.42004 -0.0749,0.13305 -0.19414,0.25972 -0.39262,0.43178 -0.19848,0.17206 -0.47617,0.38952 -0.75385,0.60697 -0.31139,0.27638 -0.62278,0.55275 -0.84451,0.8445 -0.22172,0.29175 -0.35375,0.59879 -0.42061,0.88979 -0.0669,0.29101 -0.0686,0.56582 -0.0703,0.84072 l 1.6e-4,2.3519 5.8379,-4.8402 c 0.2427,-0.2515 0.4854,-0.50299 0.64035,-0.75922 0.15496,-0.25623 0.22217,-0.51726 0.21858,-0.79098 -0.004,-0.27372 -0.078,-0.56009 -0.25317,-0.86784 -0.17522,-0.30775 -0.45128,-0.63678 -1.5306,-1.5635 -1.0794,-0.92667 -2.9621,-2.451 -4.8447,-3.9753 z"
+                                  fill="#3eba3a"
+                                  id="path3" />
+                        </svg>
+                        <span class="hidden sm:block text-2xl font-semibold text-black">Vayukah Drones</span>
+                    </a>
+                </div>
+                </div>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-8 justify-center items-center">
+                    <div class="relative">
+                        <ul class="w-auto">
+                            <li class="dropdown inline  ">
+                               <div class="relative">
+                                    <button type="button" class="flex items-center gap-x-1 text-lg font-bold font-semibold leading-6 text-gray-900">
+                                        Product
+                                        <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                               </div>
+                                <div class="dropdown-menu absolute hidden h-auto flex ">
+                                    <ul class="block w-40 bg-white shadow py-8">
+                                        <li class="px-4 py-2 hover:bg-gray-100"><a href="/drone" target="_parent" class="block  cursor-pointer">Drone</a></li>
+                                        <li class="px-4 py-2 hover:bg-gray-100"><a href="/battery" class="block  cursor-pointer">Smart Battery</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="relative">
+                        <ul class="w-auto">
+                            <li class="dropdown inline ">
+                                <div class="relative">
+                                    <button type="button" class="flex items-center gap-x-1 text-lg font-bold font-semibold leading-6 text-gray-900">
+                                        Solutions
+                                        <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="dropdown-menu absolute hidden h-auto flex ">
+                                    <ul class="block w-40 bg-white shadow py-8">
+                                        <li class="px-4 py-2 hover:bg-gray-100"><a href="/dronesharpcloud" class="cursor-pointer">Dronesharp.io</a></li>
+                                        <li class="px-4 py-2 hover:bg-gray-100"><a href="/dronesharpgcs" class="block cursor-pointer">Dronesharp-GCS</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+            <a href="/contact" class="text-lg font-bold  font-semibold leading-6 text-gray-900">Contact Us</a>
+            <a href="/about" class="text-lg font-bold  font-semibold leading-6 text-gray-900">About Us</a>
+        </div>
+        
+    
+    <!-- Mobile menu, show/hide based on menu open state. -->
+    <div class="lg:hidden flex " role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed top-0 w-full pt-4 bg-white ring-1 ring-gray-900/10">
+            <div class="flex  items-center justify-between px-2">
+                
+                <button name="btn_show_hide_menu m-" type="button"
+                        class="-m-2.5 rounded-md p-2.5 text-gray-700 flex items-center"
+                        onclick=" document.getElementById('nav-menu-to-hide').classList.toggle('hidden')">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <a href="#" class="-m-1.5 p-1.5  justify-center flex items-center">
+                    <span class="sr-only">Your Company</span>
+                    <svg class="w-8 h-8 sm:ml-2 sm:w-12 sm:h-12" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 18">
+
+                        <path d="m 0.048819,3.4671 -5.5e-4,2.5665 c 0.0456,0.3099 0.0912,0.61989 0.23634,0.94836 0.14511,0.32848 0.38966,0.67551 1.2181,1.399 0.82847,0.72352 2.2407,1.8235 3.6531,2.9235 0.18057,0.12262 0.36113,0.24523 0.59097,0.32213 0.22985,0.0769 0.50874,0.10803 0.78778,0.10802 0.27904,0 0.55792,-0.0311 0.80639,-0.10978 0.24848,-0.0786 0.46641,-0.20476 1.4183,-0.95422 0.95192,-0.74946 2.6378,-2.1222 4.3236,-3.495 l -5.6e-4,-3.7439 -3.7446,3.0009 c -0.37465,0.26707 -0.74927,0.53413 -1.2165,0.74836 -0.46723,0.21424 -1.0269,0.3756 -1.6221,0.3756 -0.59522,1e-5 -1.2257,-0.16134 -1.6615,-0.35342 -0.43585,-0.19209 -0.6768,-0.41478 -1.4425,-1.0426 -0.76568,-0.62779 -2.056,-1.6606 -2.7011,-2.177 C 0.048799,3.46711 0.048759,3.46711 0.048759,3.46711 Z"
+                              fill="#0656d6"
+                              id="path1" />
+                        <path d="m 13.83,6.6045 6.4e-4,-3.8851 2.2117,-1.759 c 0.1879,-0.14353 0.37578,-0.28705 0.61865,-0.41177 0.24287,-0.12471 0.5405,-0.23053 0.85063,-0.23052 0.31012,1e-5 0.63227,0.10579 0.87317,0.2181 0.2409,0.11231 0.40006,0.23091 0.85979,0.59587 0.45973,0.36497 1.2197,0.9761 1.9799,1.5873 v 3.7252 l -1.8582,-1.4511 C 19.09696,4.81137 18.82774,4.62932 18.5212,4.47263 18.21467,4.31594 17.87122,4.18481 17.5114,4.1848 c -0.35978,0 -0.73541,0.13113 -1.065,0.30098 -0.32958,0.16985 -0.61281,0.37827 -1.0281,0.70057 -0.41528,0.32229 -0.96256,0.75842 -1.2492,0.9871 -0.28662,0.22869 -0.31258,0.24992 -0.33854,0.27116 l -6.4e-4,0.15983 z"
+                              fill="#eb8a0c"
+                              id="path2" />
+                        <path d="m 21.954,3.4078 0.006,3.7491 2.1377,1.9121 c 0.0939,0.0972 0.18779,0.19449 0.25528,0.32086 0.0675,0.12636 0.10865,0.28177 0.11402,0.4293 0.005,0.14753 -0.0251,0.28699 -0.0999,0.42004 -0.0749,0.13305 -0.19414,0.25972 -0.39262,0.43178 -0.19848,0.17206 -0.47617,0.38952 -0.75385,0.60697 -0.31139,0.27638 -0.62278,0.55275 -0.84451,0.8445 -0.22172,0.29175 -0.35375,0.59879 -0.42061,0.88979 -0.0669,0.29101 -0.0686,0.56582 -0.0703,0.84072 l 1.6e-4,2.3519 5.8379,-4.8402 c 0.2427,-0.2515 0.4854,-0.50299 0.64035,-0.75922 0.15496,-0.25623 0.22217,-0.51726 0.21858,-0.79098 -0.004,-0.27372 -0.078,-0.56009 -0.25317,-0.86784 -0.17522,-0.30775 -0.45128,-0.63678 -1.5306,-1.5635 -1.0794,-0.92667 -2.9621,-2.451 -4.8447,-3.9753 z"
+                              fill="#3eba3a"
+                              id="path3" />
+                    </svg>
+                    <span class=" text-lg font-semibold text-black">Vayukah Drones</span>
+                </a>
+                <div></div>
+            </div>
+            
+            <div class=" flow-root hidden bg-white mx-6 max-w-sm"  id="nav-menu-to-hide">
+                <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6" >
+                        <div class="-mx-3">
+                            <button type="button" class="flex w-full items-center  rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false"
+                                 onclick="document.getElementById('nav-menu-drone').classList.toggle('hidden')">
+                                Product
+                                <!--
+                                  Expand/collapse icon, toggle classes based on menu open state.
+
+                                  Open: "rotate-180", Closed: ""
+                                -->
+                                <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                            <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                            <div class="mt-2 space-y-2 hidden"  id="nav-menu-drone">
+                                <a href="/drone" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Drone</a>
+                                <a href="/battery" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Smart Battery</a>
+                            </div>
+                        </div>
+                        <div class="-mx-3">
+                        <button type="button" class="flex w-full items-center  rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false"
+                                onclick="document.getElementById('nav-menu-Software').classList.toggle('hidden')">
+                            Solutions
+                            <!--
+                              Expand/collapse icon, toggle classes based on menu open state.
+
+                              Open: "rotate-180", Closed: ""
+                            -->
+                            <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                        <div class="mt-2 space-y-2 hidden" id="nav-menu-Software">
+                            <a href="/dronesharpgcs" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">DroneSharp GCS</a>
+                            <a href="/dronesharpcloud" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">DroneSharp.io</a>
+                        </div>
+                    </div>
+                    <a href="/contact" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact Us</a>
+                    <a href="/about" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">About Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </nav>
+</header>
+
+
+
+<div class="min-h-screen">
+    <main role="main" class="lg\:mt-20 md:mt-15 sm:mt-10 mt-5">
+        
+<div class="text-center lg:pt-2 sm:pt-2 pt-2 ">
+    <section class="text-center mb-4 border-y">
+        <div class="grid grid-cols-1 p-4 border-y ">
+            <div class="flex items-center justify-center">
+                <div class=" flex justify-center">
+                    <img class="object-contain " height="auto" width="60%" src="./img/products/Drone/dronelayout.png">
+                </div>
+            </div>
+            <h3 class="mx-auto max-w-4xl lg:my-4 sm:my-2 my-1 font-display text-2xl font-medium tracking-tight text-slate-900 dark:text-slate-50 sm:text-4xl">
+                <b>VIGOR</b>
+            </h3>
+        </div>
+    </section>
+    <div class="mx-auto max-w-4xl lg:my-8 md:my-4 my-2">
+        <h1 class=" font-display  font-medium tracking-tight text-slate-900 dark:text-slate-50 lg:text-2xl md:text-lg text-md ">
+            A stable platform for Survey, Mapping and Inspection projects with a wide range of lens. Vigor is equipped with RTK module, pivoting camera mount and obstacle detection.
+        </h1>
+        <div class="flex lg:my-4 my-2 justify-center">
+            <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900" href="/products">
+               Vigor Specs
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="mx-auto max-w-7xl lg:mb-8 md:mb-4 mb-2 grid lg:grid-cols-2 grid-cols-1 gap-y-4 text-center ">
+    <div class=" p-4 flex grid grid-cols-1 justify-center border-2 shadow-lg">
+        <div class=" flex items-end justify-center">
+            <h1 class="text-2xl"><b>Powerhouse of an UAV</b></h1>
+        </div>
+        <div class="flex items-center justify-center">
+            <img class="object-contain " src="./img/products/Drone/dronelayout.png">
+        </div>
+        <div class="flex items-stretch justify-center">
+            <ul class="text-md md:text-lg self-start ">
+                <li>Multi-directional</li>
+                <li>Range finders</li>
+                <li>Obstacle detection and stop</li>
+            </ul>    
+        </div>
+    </div>
+    <div class="flex items-center justify-center">
+        <div class="  flex grid items-center grid-cols-1 lg:gap-x-3 gap-y-2">
+            <div class=" p-4 flex grid grid-cols-1 justify-center border-2 shadow-lg">
+                <div class=" flex items-end justify-center">
+                    <h1 class="text-2xl"><b>Compact to transport</b></h1>
+                </div>
+                <img class="object-contain " src="./img/products/Drone/Drone_compact.png">
+                <div class="flex items-stretch justify-center">
+                    <ul class="text-md md:text-lg self-start ">
+                        <li>Fits into a backpack</li>
+                        <li>Quick and easy deployement</li>
+                    </ul>
+                </div>
+            </div>
+            <div class=" p-4 flex grid grid-cols-1 justify-center border-2 shadow-lg">
+                <div class=" flex items-end justify-center">
+                    <h1 class="text-2xl"><b>Payload Quick Release</b></h1>
+                </div>
+                <img class="object-contain " src="./img/products/Drone/Quick_release.png">
+                <div class="flex items-stretch justify-center">
+                    <ul class="text-md md:text-lg self-start ">
+                        <li>Inatant payload swap</li>
+                        <li>Upto 15 lens combinations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </main>
+</div>
+
+<footer b-nirpzh5sxm class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div b-nirpzh5sxm class="mx-auto max-w-7xl py-6 px-6 sm:py-6 lg:px-6">
+        <div b-nirpzh5sxm class="  flex mx-8 px-2  space-x-12 " aria-label="Footer">
+            <div b-nirpzh5sxm class="grid grid-cols-2   lg:grid-cols-4  gap-x-8 gap-y-4">
+                <div b-nirpzh5sxm class="  ">
+                    <ul b-nirpzh5sxm class=" text-gray-700 " style=" text-align:left;">
+                        <li b-nirpzh5sxm><b b-nirpzh5sxm>Products </b></li>
+                         <li b-nirpzh5sxm class="mt-2"><a b-nirpzh5sxm href="/drone">Drone </a></li>
+                        <li b-nirpzh5sxm class="mt-2"><a b-nirpzh5sxm href="/battery">Smart battery </a></li>
+                    </ul>
+                </div>
+                <div b-nirpzh5sxm class= "">
+                   <ul b-nirpzh5sxm class=" text-gray-700 " style=" text-align:left;">
+                       <li b-nirpzh5sxm><b b-nirpzh5sxm>Solutions </b></li>
+                       <li b-nirpzh5sxm class="mt-2"><a b-nirpzh5sxm href="/dronesharpcloud">DroneSharp.io </a></li>
+                       <li b-nirpzh5sxm class="mt-2"><a b-nirpzh5sxm href="/dronesharpgcs">DroneSharp-GCS </a></li>
+                   </ul>
+                </div>
+                <div b-nirpzh5sxm class="  ">
+                   <ul b-nirpzh5sxm class=" text-gray-700 " style=" text-align:left;">
+                    <li b-nirpzh5sxm><b b-nirpzh5sxm><a b-nirpzh5sxm href="contact">Contact Us </a></b></li>  
+                   </ul>
+                </div>
+                <div b-nirpzh5sxm class="  ">
+                    <ul b-nirpzh5sxm class=" text-gray-700 " style=" text-align:left;">
+                         <li b-nirpzh5sxm><b b-nirpzh5sxm><a b-nirpzh5sxm href="about">About Us </a></b></li>
+                    </ul>
+                </div>  
+        
+            </div>
+        </div> 
+        <div b-nirpzh5sxm class="mt-10 flex justify-center space-x-10">
+            <a b-nirpzh5sxm target="_blank" href="https://www.linkedin.com/company/vayukah-drones/" class="text-gray-400 hover:text-gray-500">
+                <span b-nirpzh5sxm class="sr-only">LinkedIN </span>
+                <svg b-nirpzh5sxm class="h-6 w-6" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
+                    <path b-nirpzh5sxm d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+                </svg>
+            </a>
+            <a b-nirpzh5sxm href="https://github.com/vayukah" target="_blank" class="text-gray-400 hover:text-gray-500">
+                  <span b-nirpzh5sxm class="sr-only">GitHub</span>
+                  <svg b-nirpzh5sxm class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path b-nirpzh5sxm fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
+                  </svg>
+            </a>
+            <a b-nirpzh5sxm target="_blank" href="https://www.youtube.com/&#64vayukahdrones8395" class="text-gray-400 hover:text-gray-500">
+                <span b-nirpzh5sxm class="sr-only">YouTube</span>
+                <svg b-nirpzh5sxm class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path b-nirpzh5sxm fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"/>
+                </svg>
+            </a>
+        </div>
+        <p b-nirpzh5sxm class="mt-10 text-center text-xs leading-5 text-gray-500">
+            <span b-nirpzh5sxm>&copy;</span>2024 by Vayukah Drone Systems And Services Pvt Ltd
+        </p>
+    </div>
+</footer>
+
+<script type="module">
+//TODO: Replace with local and production URLs of CreatorKit .NET App or Remove if not using CreatorKit
+import { mail } from 'https://creatorkit.netcore.io/mjs/components/mail.mjs'
+import { post } from 'https://creatorkit.netcore.io/mjs/components/post.mjs'
+
+mail('[data-mail]', { 
+    mailingLists: ['MonthlyNewsletter'] 
+})
+
+post('[data-post]', {
+    commentLink: { 
+        href: '/community-rules',
+        label: 'read the community rules'
+    } 
+})
+</script>
+
+
+<script type="module">
+import { init } from "app.mjs"
+init()
+</script>
+
+
+
+</body>
+</html>
