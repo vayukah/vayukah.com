@@ -2,7 +2,7 @@
 title: specs
 ---
 
-# Vayu SM Specs
+# VIGOR Specs
 
 |
 |---|---|
