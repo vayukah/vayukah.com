@@ -2,7 +2,7 @@
 title: specs
 ---
 
-# VIGOR Specs
+# VIGOR S50 Specs
 
 |
 |---|---|
