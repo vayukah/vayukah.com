@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg" href="img/logo.svg">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://razor-ssg.web-templates.io/feed.xml" />
-    <title>Manage your mail preferences</title>
+    <title>Speaking</title>
     <base href="/" />
     <script>
-    if (location.search === "?dark") localStorage.setItem('color-scheme','dark') 
-    if (location.search === "?light") localStorage.removeItem('color-scheme') 
     const cls = document.querySelector('html').classList
     if (localStorage.getItem('color-scheme') === 'dark')
         cls.add('dark')
@@ -17,7 +15,7 @@
         cls.remove('dark')
     </script>
     <link rel="stylesheet" href="css/app.css">
-
+    
     <script async src="https://ga.jspm.io/npm:es-module-shims@1.6.3/dist/es-module-shims.js"></script>
     <script type="importmap">
 {
@@ -31,12 +29,37 @@
 </script>
     
     <meta name="twitter:site" content="@RazorSsg" />
-    <meta property="og:url" content="https://razor-ssg.web-templates.io/mail-preferences" />
-    <meta property="og:title" content="Manage your mail preferences" />
+    <meta property="og:url" content="https://razor-ssg.web-templates.io/speaking" />
+    <meta property="og:title" content="Speaking" />
 
 
 </head>
 <body class="bg-white dark:bg-black dark:text-white">
+
+<!-- Background backdrop, visually different from main _Layout -->
+<svg class="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]" aria-hidden="true">
+  <defs>
+    <pattern id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+      <path d="M.5 200V.5H200" fill="none"/>
+    </pattern>
+  </defs>
+  <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+    <path d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z" stroke-width="0"/>
+  </svg>
+  <rect width="100%" height="100%" stroke-width="0" fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"/>
+</svg>
+<div class="absolute top-0 left-1/2 right-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48">
+  <svg viewBox="0 0 801 1036" aria-hidden="true" class="w-[50.0625rem]">
+    <path fill="url(#70656b7e-db44-4b9b-b7d2-1f06791bed52)" fill-opacity=".3" d="m282.279 843.371 32.285 192.609-313.61-25.32 281.325-167.289-58.145-346.888c94.5 92.652 277.002 213.246 251.009-45.597C442.651 127.331 248.072 10.369 449.268.891c160.956-7.583 301.235 116.434 351.256 179.39L507.001 307.557l270.983 241.04-495.705 294.774Z"/>
+    <defs>
+      <linearGradient id="70656b7e-db44-4b9b-b7d2-1f06791bed52" x1="508.179" x2="-28.677" y1="-116.221" y2="1091.63" gradientUnits="userSpaceOnUse">
+        <stop stop-color="#9089FC"/>
+        <stop offset="1" stop-color="#FF80B5"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</div>
+
 
 <link rel="stylesheet" href="css/typography.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -208,26 +231,53 @@
 
 
 <div class="min-h-screen">
-    <main role="main" class="lg\:mt-20 md:mt-15 sm:mt-10 mt-5">
-        
+  <main role="main" class="pt-14">
+    
 
 
 
 <link rel="stylesheet" href="css/typography.css">
 <section class="flex-col md:flex-row flex justify-center mt-16 mb-16 md:mb-12">
     <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-gray-50 sm:text-5xl md:text-6xl">
-        Manage your mail preferences
+        Speaking
     </h1>
 </section>    
 <div class="mx-auto">
     <div class="mx-auto prose lg:prose-xl mb-24">
-        <div class="flex justify-center">
-    <svg class="w-20 h-20" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 5h13a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3m0 1c-.5 0-.94.17-1.28.47l7.78 5.03l7.78-5.03C18.94 6.17 18.5 6 18 6H5m6.5 6.71L3.13 7.28C3.05 7.5 3 7.75 3 8v9a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2V8c0-.25-.05-.5-.13-.72l-8.37 5.43Z"/></svg>
-</div>
-<p>Manage your communications with MyApp by selecting updates you'd like to receive.</p>
-<div class="not-prose flex justify-center">
-    <div data-mail="MailPreferences"></div>
-</div>
+        <h2 id="ive-spoken-at-events-all-around-the-world-and-been-interviewed-for-many-podcasts">I’ve spoken at events all around the world and been interviewed for many podcasts.<a class="header-anchor" href="javascript:;" onclick="location.hash='#ive-spoken-at-events-all-around-the-world-and-been-interviewed-for-many-podcasts'" aria-label="Permalink">&ZeroWidthSpace;</a></h2>
+<p>One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions.</p>
+<h2 id="conferences">Conferences<a class="header-anchor" href="javascript:;" onclick="location.hash='#conferences'" aria-label="Permalink">&ZeroWidthSpace;</a></h2>
+<blockquote>
+<p>SysConf 2021</p>
+</blockquote>
+<h4 id="in-space-no-one-can-watch-you-stream-until-now">In space, no one can watch you stream — until now<a class="header-anchor" href="javascript:;" onclick="location.hash='#in-space-no-one-can-watch-you-stream-until-now'" aria-label="Permalink">&ZeroWidthSpace;</a></h4>
+<p>A technical deep-dive into HelioStream, the real-time streaming library I wrote for transmitting live video back to Earth.</p>
+<p><a href="#">Watch video</a></p>
+<blockquote>
+<p>Business of Startups 2020</p>
+</blockquote>
+<h4 id="lessons-learned-from-our-first-product-recall">Lessons learned from our first product recall<a class="header-anchor" href="javascript:;" onclick="location.hash='#lessons-learned-from-our-first-product-recall'" aria-label="Permalink">&ZeroWidthSpace;</a></h4>
+<p>They say that if you’re not embarrassed by your first version, you’re doing it wrong. Well when you’re selling DIY space shuttle kits it turns out it’s a bit more complicated.</p>
+<p><a href="#">Watch video</a></p>
+<h2 id="podcasts">Podcasts<a class="header-anchor" href="javascript:;" onclick="location.hash='#podcasts'" aria-label="Permalink">&ZeroWidthSpace;</a></h2>
+<blockquote>
+<p>Encoding Design, July 2022</p>
+</blockquote>
+<h4 id="using-design-as-a-competitive-advantage">Using design as a competitive advantage<a class="header-anchor" href="javascript:;" onclick="location.hash='#using-design-as-a-competitive-advantage'" aria-label="Permalink">&ZeroWidthSpace;</a></h4>
+<p>How we used world-class visual design to attract a great team, win over customers, and get more press for Planetaria.</p>
+<p><a href="#">Listen to podcast</a></p>
+<blockquote>
+<p>The Escape Velocity Show, March 2022</p>
+</blockquote>
+<h4 id="bootstrapping-an-aerospace-company-to-17m-arr">Bootstrapping an aerospace company to $17M ARR<a class="header-anchor" href="javascript:;" onclick="location.hash='#bootstrapping-an-aerospace-company-to-17m-arr'" aria-label="Permalink">&ZeroWidthSpace;</a></h4>
+<p>The story of how we built one of the most promising space startups in the world without taking any capital from investors.</p>
+<p><a href="#">Listen to podcast</a></p>
+<blockquote>
+<p>How They Work Radio, September 2021</p>
+</blockquote>
+<h4 id="programming-your-company-operating-system">Programming your company operating system<a class="header-anchor" href="javascript:;" onclick="location.hash='#programming-your-company-operating-system'" aria-label="Permalink">&ZeroWidthSpace;</a></h4>
+<p>On the importance of creating systems and processes for running your business so that everyone on the team knows how to make the right decision no matter the situation.</p>
+<p><a href="#">Listen to podcast</a></p>
 
     </div>
 </div>
@@ -236,7 +286,7 @@
 <script src="lib/js/highlight.js"></script>
 
 <script>hljs.highlightAll()</script>
-    </main>
+  </main>
 </div>
 
 <footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
@@ -312,14 +362,6 @@ post('[data-post]', {
     } 
 })
 </script>
-
-
-<script type="module">
-import { init } from "app.mjs"
-init()
-</script>
-
-
 
 </body>
 </html>

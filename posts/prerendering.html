@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/svg" href="img/logo.svg">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="https://razor-ssg.web-templates.io/feed.xml" />
-    <title>Deployment with GitHub Actions</title>
+    <title>Prerendering Razor Pages</title>
     <base href="/" />
     <script>
     if (location.search === "?dark") localStorage.setItem('color-scheme','dark') 
@@ -31,12 +31,12 @@
 </script>
     
     <meta name="twitter:site" content="@RazorSsg" />
-    <meta name="twitter:creator" content="@gayle" />
+    <meta name="twitter:creator" content="@lucy" />
     <meta name="twitter:card" content="summary" />
-    <meta property="og:description" content="Configuring your GitHub repo for SSH and CDN deployments" />
-    <meta property="og:url" content="https://razor-ssg.web-templates.io/posts/deploy" />
-    <meta property="og:title" content="Deployment with GitHub Actions" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1485841890310-6a055c88698a?crop=entropy&amp;fit=crop&amp;h=1000&amp;w=2000" />
+    <meta property="og:description" content="Improving Blog Performance with Prerendering" />
+    <meta property="og:url" content="https://razor-ssg.web-templates.io/posts/prerendering" />
+    <meta property="og:title" content="Prerendering Razor Pages" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1522526886914-6e8d4fd91399?crop=entropy&amp;fit=crop&amp;h=1000&amp;w=2000" />
 
 
 </head>
@@ -223,30 +223,37 @@
 <div class="container px-5 mb-32 mx-auto">
         <article class="mt-20">
             <h1 class="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
-                Deployment with GitHub Actions
+                Prerendering Razor Pages
             </h1>
             <div class="flex justify-between">
                 <div class="md:mb-12 flex items-center">
-                        <a href="posts/author/gayle-smith"><img class="w-12 h-12 rounded-full mr-4 text-cyan-600" src="img/authors/author2.svg"></a>
+                        <a href="posts/author/lucy-bates"><img class="w-12 h-12 rounded-full mr-4 text-cyan-600" src="img/authors/author1.svg"></a>
                     <div class="flex flex-col">
-                            <a class="text-xl font-semibold hover:underline" href="posts/author/gayle-smith">Gayle Smith</a>
+                            <a class="text-xl font-semibold hover:underline" href="posts/author/lucy-bates">Lucy Bates</a>
             <ul role="list" class="flex">
                     <li>
-                        <a title="Follow on Twitter" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500" href="https://twitter.com/gayle">
+                        <a title="Follow on Twitter" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500" href="https://twitter.com/lucy">
                             <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none text-zinc-500 fill-zinc-500 transition group-hover:fill-indigo-500">
                                 <path d="M20.055 7.983c.011.174.011.347.011.523 0 5.338-3.92 11.494-11.09 11.494v-.003A10.755 10.755 0 0 1 3 18.186c.308.038.618.057.928.058a7.655 7.655 0 0 0 4.841-1.733c-1.668-.032-3.13-1.16-3.642-2.805a3.753 3.753 0 0 0 1.76-.07C5.07 13.256 3.76 11.6 3.76 9.676v-.05a3.77 3.77 0 0 0 1.77.505C3.816 8.945 3.288 6.583 4.322 4.737c1.98 2.524 4.9 4.058 8.034 4.22a4.137 4.137 0 0 1 1.128-3.86A3.807 3.807 0 0 1 19 5.274a7.657 7.657 0 0 0 2.475-.98c-.29.934-.9 1.729-1.713 2.233A7.54 7.54 0 0 0 22 5.89a8.084 8.084 0 0 1-1.945 2.093Z"></path>
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a title="Follow on Mastodon" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500" href="https://mastodon.social/@gayle">
+                        <a title="Follow on threads.net" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500" href="https://threads.net/@lucy">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-none text-zinc-500 fill-zinc-500 transition group-hover:fill-indigo-500" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M20.94 14c-.28 1.41-2.44 2.96-4.97 3.26c-1.31.15-2.6.3-3.97.24c-2.25-.11-4-.54-4-.54v.62c.32 2.22 2.22 2.35 4.03 2.42c1.82.05 3.44-.46 3.44-.46l.08 1.65s-1.28.68-3.55.81c-1.25.07-2.81-.03-4.62-.5c-3.92-1.05-4.6-5.24-4.7-9.5l-.01-3.43c0-4.34 2.83-5.61 2.83-5.61C6.95 2.3 9.41 2 11.97 2h.06c2.56 0 5.02.3 6.47.96c0 0 2.83 1.27 2.83 5.61c0 0 .04 3.21-.39 5.43M18 8.91c0-1.08-.3-1.91-.85-2.56c-.56-.63-1.3-.96-2.23-.96c-1.06 0-1.87.41-2.42 1.23l-.5.88l-.5-.88c-.56-.82-1.36-1.23-2.43-1.23c-.92 0-1.66.33-2.23.96C6.29 7 6 7.83 6 8.91v5.26h2.1V9.06c0-1.06.45-1.62 1.36-1.62c1 0 1.5.65 1.5 1.93v2.79h2.07V9.37c0-1.28.5-1.93 1.51-1.93c.9 0 1.35.56 1.35 1.62v5.11H18V8.91Z"/>
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7.5c-1.333-3-3.667-4.5-7-4.5c-5 0-8 2.5-8 9s3.5 9 8 9s7-3 7-5s-1-5-7-5c-2.5 0-3 1.25-3 2.5C9 15 10 16 11.5 16c2.5 0 3.5-1.5 3.5-5s-2-4-3-4s-1.833.333-2.5 1"/>
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a title="Email Gayle Smith" href="mailto:gayle@email.org" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500">
+                        <a title="Follow on GitHub" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500" href="https://github.com/lucy">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none text-zinc-500 fill-zinc-500 transition group-hover:fill-indigo-500">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="Email Lucy Bates" href="mailto:lucy@email.org" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500">
                             <svg class="h-6 w-6 flex-none text-zinc-500 fill-zinc-500 transition group-hover:fill-indigo-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.588 1.413T20 20H4Zm8-7L4 8v10h16V8l-8 5Zm0-2l8-5H4l8 5ZM4 8V6v12V8Z"/></svg>
                         </a>
                     </li>
@@ -257,20 +264,21 @@
             </div>
             <div class="mb-8 md:mb-16 sm:mx-0">
                 <div class="sm:mx-0">
-                    <img src="https://images.unsplash.com/photo-1485841890310-6a055c88698a?crop=entropy&amp;fit=crop&amp;h=1000&amp;w=2000" alt="Deployment with GitHub Actions Background" class="shadow-small">
+                    <img src="https://images.unsplash.com/photo-1522526886914-6e8d4fd91399?crop=entropy&amp;fit=crop&amp;h=1000&amp;w=2000" alt="Prerendering Razor Pages Background" class="shadow-small">
                 </div>
             </div>
             <div class="flex max-w-3xl mx-auto justify-between">
                 <div>
                     <div class="mb-4 flex flex-wrap">
-                            <a href="posts/tagged/github-actions" class="mr-2 text-xs leading-5 font-semibold bg-slate-400/10 rounded-full py-1 px-3 flex items-center space-x-2 hover:bg-slate-400/20 dark:highlight-white/5">github-actions</a>
-                            <a href="posts/tagged/devops" class="mr-2 text-xs leading-5 font-semibold bg-slate-400/10 rounded-full py-1 px-3 flex items-center space-x-2 hover:bg-slate-400/20 dark:highlight-white/5">devops</a>
+                            <a href="posts/tagged/csharp" class="mr-2 text-xs leading-5 font-semibold bg-slate-400/10 rounded-full py-1 px-3 flex items-center space-x-2 hover:bg-slate-400/20 dark:highlight-white/5">c#</a>
+                            <a href="posts/tagged/dev" class="mr-2 text-xs leading-5 font-semibold bg-slate-400/10 rounded-full py-1 px-3 flex items-center space-x-2 hover:bg-slate-400/20 dark:highlight-white/5">dev</a>
+                            <a href="posts/tagged/markdown" class="mr-2 text-xs leading-5 font-semibold bg-slate-400/10 rounded-full py-1 px-3 flex items-center space-x-2 hover:bg-slate-400/20 dark:highlight-white/5">markdown</a>
                     </div>
                         <div class="max-w-3xl mx-auto">
                             <div class="mb-6 text-lg text-gray-500">
-                                <time datetime="2023-01-01T00:00:00.0000000">January 1, 2023</time>
+                                <time datetime="2023-01-11T00:00:00.0000000">January 11, 2023</time>
                                 <span aria-hidden="true">&middot;</span>
-                                <span>4 min read</span>
+                                <span>6 min read</span>
                             </div>
                         </div>
                 </div>
@@ -283,89 +291,182 @@
             </div>
             <div class="max-w-3xl mx-auto">
                 <div id="post" class="prose lg:prose-xl max-w-none mb-32">
-                    <h1 id="servicestack-github-action-deployments">ServiceStack GitHub Action Deployments<a class="header-anchor" href="javascript:;" onclick="location.hash='#servicestack-github-action-deployments'" aria-label="Permalink">&ZeroWidthSpace;</a></h1>
-<p>The <a href="https://github.com/NetCoreTemplates/razor-tailwind/blob/main/.github/workflows/release.yml">release.yml</a>
-in this template enables GitHub Actions CI deployment to a dedicated server with SSH access.</p>
-<h2 id="overview">Overview<a class="header-anchor" href="javascript:;" onclick="location.hash='#overview'" aria-label="Permalink">&ZeroWidthSpace;</a></h2>
-<p><code>release.yml</code> is designed to work with a ServiceStack app deploying directly to a single server via SSH. A docker image is built and stored on GitHub's <code>ghcr.io</code> docker registry when a GitHub Release is created.</p>
-<p>GitHub Actions specified in <code>release.yml</code> then copy files remotely via scp and use <code>docker-compose</code> to run the app remotely via SSH.</p>
-<h2 id="whats-the-process-of-release.yml">What's the process of <code>release.yml</code>?<a class="header-anchor" href="javascript:;" onclick="location.hash='#whats-the-process-of-release.yml'" aria-label="Permalink">&ZeroWidthSpace;</a></h2>
-<p><img src="https://raw.githubusercontent.com/ServiceStack/docs/master/docs/images/mix/release-ghr-vanilla-diagram.png" alt="" /></p>
-<h2 id="deployment-server-setup">Deployment server setup<a class="header-anchor" href="javascript:;" onclick="location.hash='#deployment-server-setup'" aria-label="Permalink">&ZeroWidthSpace;</a></h2>
-<p>To get this working, a server needs to be setup with the following:</p>
+                    <p>Prerendering static content is a popular technique used by <a href="https://jamstack.org">JAMStack</a> Apps to improve the
+performance, reliability and scalability of Web Apps that's able to save unnecessary computation at runtime by
+generating static content at deployment which can be optionally hosted from a CDN for even greater performance.</p>
+<p>As such we thought it a valuable technique to include in this template to show how it can be easily achieved
+within a Razor Pages Application. Since prerendered content is only updated at deployment, it's primarily only
+useful for static content like this Blog which is powered by the static markdown content in
+<a href="https://github.com/NetCoreTemplates/vue-mjs/tree/main/MyApp/wwwroot/_blog/posts">_blog/posts</a> whose content
+is prerendered to:</p>
 <ul>
-<li>SSH access</li>
-<li>docker</li>
-<li>docker-compose</li>
-<li>ports 443 and 80 for web access of your hosted application</li>
+<li><a href="https://vue-mjs.web-templates.io/blog">/blog</a></li>
 </ul>
-<p>This can be your own server or any cloud hosted server like Digital Ocean, AWS, Azure etc. We use <a href="http://cloud.hetzner.com/">Hetzner Cloud</a>
-to deploy all ServiceStack's <a href="https://github.com/NetCoreTemplates/">GitHub Project Templates</a> as it was the
-<a href="https://servicestack.net/blog/finding-best-us-value-cloud-provider">best value US cloud provider</a> we've found.</p>
-<p>When setting up your server, you'll want to use a dedicated SSH key for access to be used by GitHub Actions. GitHub Actions will need the <em>private</em> SSH key within a GitHub Secret to authenticate. This can be done via ssh-keygen and copying the public key to the authorized clients on the server.</p>
-<p>To let your server handle multiple ServiceStack applications and automate the generation and management of TLS certificates, an additional docker-compose file is provided in this template, <code>nginx-proxy-compose.yml</code>. This docker-compose file is ready to run and can be copied to the deployment server.</p>
-<p>For example, once copied to remote <code>~/nginx-proxy-compose.yml</code>, the following command can be run on the remote server.</p>
-<pre><code>docker-compose -f ~/nginx-proxy-compose.yml up -d
+<h3 id="parsing-markdown-files">Parsing Markdown Files<a class="header-anchor" href="javascript:;" onclick="location.hash='#parsing-markdown-files'" aria-label="Permalink">&ZeroWidthSpace;</a></h3>
+<p>All the functionality to load and render Markdown files is maintained in
+<a href="https://github.com/NetCoreTemplates/vue-mjs/blob/main/MyApp/Configure.Markdown.cs">Configure.Markdown.cs</a>,
+most of which is spent populating the POCO below from the content and frontmatter of each Markdown file:</p>
+<pre><code class="language-csharp">public class MarkdownFileInfo
+{
+    public string Path { get; set; } = default!;
+    public string? Slug { get; set; }
+    public string? FileName { get; set; }
+    public string? HtmlFileName { get; set; }
+    public string? Title { get; set; }
+    public string? Summary { get; set; }
+    public string? Splash { get; set; }
+    public string? Author { get; set; }
+    public List&lt;string&gt; Tags { get; set; } = new();
+    public DateTime? Date { get; set; }
+    public string? Content { get; set; }
+    public string? Preview { get; set; }
+    public string? HtmlPage { get; set; }
+    public int? WordCount { get; set; }
+    public int? LineCount { get; set; }
+}
 </code></pre>
-<p>This will run an nginx reverse proxy along with a companion container that will watch for additional containers in the same docker network and attempt to initialize them with valid TLS certificates.</p>
-<h3 id="github-actions-secrets">GitHub Actions secrets<a class="header-anchor" href="javascript:;" onclick="location.hash='#github-actions-secrets'" aria-label="Permalink">&ZeroWidthSpace;</a></h3>
-<p>The <code>release.yml</code> uses the following secrets.</p>
-<table>
-<thead>
-<tr>
-<th>Required Secrets</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>DEPLOY_HOST</code></td>
-<td>Hostname used to SSH deploy .NET App to, this can either be an IP address or subdomain with A record pointing to the server</td>
-</tr>
-<tr>
-<td><code>DEPLOY_USERNAME</code></td>
-<td>Username to log in with via SSH e.g, <strong>ubuntu</strong>, <strong>ec2-user</strong>, <strong>root</strong></td>
-</tr>
-<tr>
-<td><code>DEPLOY_KEY</code></td>
-<td>SSH private key used to remotely access deploy .NET App</td>
-</tr>
-<tr>
-<td><code>LETSENCRYPT_EMAIL</code></td>
-<td>Email required for Let's Encrypt automated TLS certificates</td>
-</tr>
-</tbody>
-</table>
-<p>These secrets can use the <a href="https://cli.github.com/manual/gh_secret_set">GitHub CLI</a> for ease of creation. Eg, using the GitHub CLI the following can be set.</p>
-<pre><code class="language-bash">gh secret set DEPLOY_HOST -b&quot;&lt;DEPLOY_HOST&gt;&quot;
-gh secret set DEPLOY_USERNAME -b&quot;&lt;DEPLOY_USERNAME&gt;&quot;
-gh secret set DEPLOY_KEY &lt; key.pem # DEPLOY_KEY
-gh secret set LETSENCRYPT_EMAIL -b&quot;&lt;LETSENCRYPT_EMAIL&gt;&quot;
+<p>Which uses the popular <a href="https://github.com/xoofx/markdig">Markdig</a> library to parse the frontmatter into a
+Dictionary that it populates the POCO with using the built-in <a href="https://docs.servicestack.net/auto-mapping">Automapping</a>:</p>
+<pre><code class="language-csharp">var content = VirtualFiles.GetFile(path).ReadAllText();
+var document = Markdown.Parse(content, pipeline);
+var block = document
+    .Descendants&lt;Markdig.Extensions.Yaml.YamlFrontMatterBlock&gt;()
+    .FirstOrDefault();
+var doc = block?
+    .Lines // StringLineGroup[]
+    .Lines // StringLine[]
+    .Select(x =&gt; $&quot;{x}\n&quot;)
+    .ToList()
+    .Select(x =&gt; x.Replace(&quot;---&quot;, string.Empty))
+    .Where(x =&gt; !string.IsNullOrWhiteSpace(x))
+    .Select(x =&gt; KeyValuePairs.Create(x.LeftPart(':').Trim(), x.RightPart(':').Trim()))
+    .ToObjectDictionary()
+    .ConvertTo&lt;MarkdownFileInfo&gt;();
 </code></pre>
-<p>These secrets are used to populate variables within GitHub Actions and other configuration files.</p>
-<h2 id="deployments">Deployments<a class="header-anchor" href="javascript:;" onclick="location.hash='#deployments'" aria-label="Permalink">&ZeroWidthSpace;</a></h2>
-<p>A published version of your .NET App created with the standard dotnet publish tool:</p>
-<pre><code class="language-yaml">dotnet publish -c Release
+<p>Since this is a <a href="https://jekyllrb.com/docs/step-by-step/08-blogging/">Jekyll inspired blog</a> it derives the <strong>date</strong> and <strong>slug</strong> for each
+post from its file name which has the nice property of maintaining markdown blog posts in chronological order:</p>
+<pre><code class="language-csharp">doc.Slug = file.Name.RightPart('_').LastLeftPart('.');
+doc.HtmlFileName = $&quot;{file.Name.RightPart('_').LastLeftPart('.')}.html&quot;;
+
+var datePart = file.Name.LeftPart('_');
+if (DateTime.TryParseExact(datePart, &quot;yyyy-MM-dd&quot;, CultureInfo.InvariantCulture,
+        DateTimeStyles.AdjustToUniversal, out var date))
+{
+    doc.Date = date;
+}
 </code></pre>
-<p>is used to build a production build of your .NET App inside the standard <code>Dockerfile</code> for dockerizing .NET Applications.</p>
-<p>Additional custom deployment tasks can be added to your project's package.json <strong>postinstall</strong> script which also gets run at deployment.</p>
-<p>If preferred additional MS Build tasks can be run by passing in custom parameters in the publish command, e.g:</p>
-<pre><code class="language-yaml">dotnet publish -c Release /p:APP_TASKS=prerender
+<p>The rendering itself is done using Markdig's <code>HtmlRenderer</code> which renders the Markdown content into a HTML fragment:</p>
+<pre><code class="language-csharp">var pipeline = new MarkdownPipelineBuilder()
+    .UseYamlFrontMatter()
+    .UseAdvancedExtensions()
+    .Build();
+var writer = new StringWriter();
+var renderer = new Markdig.Renderers.HtmlRenderer(writer);
+pipeline.Setup(renderer);
+//...
+
+renderer.Render(document);
+writer.Flush();
+doc.Preview = writer.ToString();
 </code></pre>
-<p>Which your <code>MyApp.csproj</code> can detect with a target that checks for it:</p>
-<pre><code class="language-xml">&lt;!-- Prerender tasks run in release.yml --&gt;
-&lt;Target Name=&quot;AppTasks&quot; AfterTargets=&quot;Build&quot; Condition=&quot;$(APP_TASKS) != ''&quot;&gt;
+<p>At this point we've populated Markdown Blog Posts into a POCO which is the data source used to implement all the blog's functionality.</p>
+<p>We can now start prerendering entire HTML Pages by rendering the markdown inside the
+<a href="https://github.com/NetCoreTemplates/vue-mjs/blob/main/MyApp/Pages/Posts/Post.cshtml">Post.cshtml</a> Razor Page by populating its PageModel
+from the <code>MarkdownFileInfo</code> POCO. It also sets a <code>Static</code> flag that tells the Razor Page that this page is being statically rendered so
+it can render the appropriate links.</p>
+<pre><code class="language-csharp">var page = razorPages.GetView(&quot;/Pages/Posts/Post.cshtml&quot;);
+var model = new Pages.Posts.PostModel(this) { Static = true }.Populate(doc);
+doc.HtmlPage = RenderToHtml(page.View, model);
+
+public string RenderToHtml(IView? page, PageModel model)
+{
+    using var ms = MemoryStreamFactory.GetStream();
+    razorPages.WriteHtmlAsync(ms, page, model).GetAwaiter().GetResult();
+    ms.Position = 0;
+    var html = Encoding.UTF8.GetString(ms.ReadFullyAsMemory().Span);
+    return html;
+}
+</code></pre>
+<p>The use of <code>GetResult()</code> on an async method isn't ideal, but something we have to live with until there's a better way
+to run async code on Startup.</p>
+<p>The actual rendering of the Razor Page is done with ServiceStack's <code>RazorPagesEngine</code> feature which sets up the necessary
+Http, View and Page contexts to render Razor Pages, registered in ASP.NET Core's IOC at:</p>
+<pre><code class="language-csharp">.ConfigureServices(services =&gt; {
+    services.AddSingleton&lt;RazorPagesEngine&gt;();
+})
+</code></pre>
+<p>The process of saving the prerendered content is then simply a matter of saving the rendered Razor Page at the preferred locations,
+done for each post and the <a href="https://vue-mjs.web-templates.io/blog">/blog</a> index page using the
+<a href="https://github.com/NetCoreTemplates/vue-mjs/blob/main/MyApp/Pages/Posts/Index.cshtml">Posts/Index.cshtml</a> Razor Page:</p>
+<pre><code class="language-csharp">foreach (var file in files)
+{
+    // prerender /blog/{slug}.html
+    if (renderTo != null)
+    {
+        log.InfoFormat(&quot;Writing {0}/{1}...&quot;, renderTo, doc.HtmlFileName);
+        fs.WriteFile($&quot;{renderTo}/{doc.HtmlFileName}&quot;, doc.HtmlPage);
+    }
+}
+
+// prerender /blog/index.html
+if (renderTo != null)
+{
+    log.InfoFormat(&quot;Writing {0}/index.html...&quot;, renderTo);
+    RenderToFile(razorPages.GetView(&quot;/Pages/Posts/Index.cshtml&quot;).View, 
+        new Pages.Posts.IndexModel { Static = true }, $&quot;{renderTo}/index.html&quot;);
+}
+</code></pre>
+<h3 id="prerendering-pages-task">Prerendering Pages Task<a class="header-anchor" href="javascript:;" onclick="location.hash='#prerendering-pages-task'" aria-label="Permalink">&ZeroWidthSpace;</a></h3>
+<p>Next we need to come up with a solution to run this from the command-line.
+<a href="https://docs.servicestack.net/app-tasks">App Tasks</a> is ideal for this which lets you run one-off tasks within the full context of your App
+but without the overhead of maintaining a separate .exe with duplicated App configuration &amp; logic, instead we can run the .NET App to
+run the specified Tasks then exit before launching its HTTP Server.</p>
+<p>To do this we'll register this task with the <strong>prerender</strong> AppTask name:</p>
+<pre><code class="language-csharp">AppTasks.Register(&quot;prerender&quot;, args =&gt; blogPosts.LoadPosts(&quot;_blog/posts&quot;, renderTo: &quot;blog&quot;));
+</code></pre>
+<p>Which we can run now from the command-line with:</p>
+<pre><code class="language-bash">$ dotnet run --AppTasks=prerender
+</code></pre>
+<p>To make it more discoverable, this is also registered as an npm script in <code>package.json</code>:</p>
+<pre><code class="language-json">{
+    &quot;scripts&quot;: {
+        &quot;prerender&quot;: &quot;dotnet run --AppTasks=prerender&quot;
+    }
+}
+</code></pre>
+<p>That can now be run to prerender this blog to <code>/wwwroot/blog</code> with:</p>
+<pre><code class="language-bash">$ npm run prerender
+</code></pre>
+<h3 id="prerendering-at-deployment">Prerendering at Deployment<a class="header-anchor" href="javascript:;" onclick="location.hash='#prerendering-at-deployment'" aria-label="Permalink">&ZeroWidthSpace;</a></h3>
+<p>To ensure this is always run at deployment it's also added as an MS Build task in <strong>MyApp.csproj</strong>:</p>
+<pre><code class="language-xml">&lt;Target Name=&quot;AppTasks&quot; AfterTargets=&quot;Build&quot; Condition=&quot;$(APP_TASKS) != ''&quot;&gt;
     &lt;CallTarget Targets=&quot;Prerender&quot; Condition=&quot;$(APP_TASKS.Contains('prerender'))&quot; /&gt;
 &lt;/Target&gt;
 &lt;Target Name=&quot;Prerender&quot;&gt;
     &lt;Message Text=&quot;Prerender...&quot; /&gt;
+    &lt;Exec Command=&quot;dotnet run --AppTasks=prerender&quot; /&gt;
 &lt;/Target&gt;
 </code></pre>
-<h2 id="pushing-updates-and-rollbacks">Pushing updates and rollbacks<a class="header-anchor" href="javascript:;" onclick="location.hash='#pushing-updates-and-rollbacks'" aria-label="Permalink">&ZeroWidthSpace;</a></h2>
-<p>By default, deployments occur on commit to your main branch. A new Docker image for your ServiceStack API is produced, pushed to GHCR.io and hosted on your Linux server with Docker Compose.</p>
-<p>The template also will run the release process on the creation of a GitHub Release making it easier to switch to manual production releases.</p>
-<p>Additionally, the <code>release.yml</code> workflow can be run manually specifying a version. This enables production rollbacks based on previously tagged releases.
-A release must have already been created for the rollback build to work, it doesn't create a new Docker build based on previous code state, only redeploys as existing Docker image.</p>
+<p>Configured to run when the .NET App is published in the GitHub Actions deployment task in
+<a href="https://github.com/NetCoreTemplates/vue-mjs/blob/main/.github/workflows/release.yml">/.github/workflows/release.yml</a>:</p>
+<pre><code class="language-yaml"> # Publish .NET Project
+ - name: Publish dotnet project
+   working-directory: ./MyApp
+   run: | 
+     dotnet publish -c Release /p:APP_TASKS=prerender
+</code></pre>
+<p>Where it's able to control which App Tasks are run at deployment.</p>
+<h3 id="pretty-urls-for-static.html-pages">Pretty URLs for static .html pages<a class="header-anchor" href="javascript:;" onclick="location.hash='#pretty-urls-for-static.html-pages'" aria-label="Permalink">&ZeroWidthSpace;</a></h3>
+<p>A nicety we can add to serving static <code>.html</code> pages is giving them <a href="https://en.wikipedia.org/wiki/Clean_URL">Pretty URLs</a>
+by registering the Plugin:</p>
+<pre><code class="language-csharp">Plugins.Add(new CleanUrlsFeature());
+</code></pre>
+<p>Which allows prerendered pages to be accessed with and without its file extension:</p>
+<ul>
+<li><a href="https://vue-mjs.web-templates.io/blog/prerendering">/blog/prerendering</a></li>
+<li><a href="https://vue-mjs.web-templates.io/blog/prerendering.html">/blog/prerendering.html</a></li>
+</ul>
+<h3 id="section"><a class="header-anchor" href="javascript:;" onclick="location.hash='#section'" aria-label="Permalink">&ZeroWidthSpace;</a></h3>
 
                 </div>
             </div>
@@ -378,33 +479,40 @@ A release must have already been created for the rollback build to work, it does
             <div class="max-w-3xl mx-auto">
                 <div class="flex justify-between">
                     <div>
-                            <a href="posts/author/gayle-smith"><img class="w-20 h-20 rounded-full text-cyan-600" src="img/authors/author2.svg"></a>
+                            <a href="posts/author/lucy-bates"><img class="w-20 h-20 rounded-full text-cyan-600" src="img/authors/author1.svg"></a>
 
                         <div class="mt-2 font-medium text-2xl">
-                            Written by Gayle Smith
+                            Written by Lucy Bates
                         </div>
                         <div class="text-gray-600">
-                            Gayle is an author, consultant, and founder focusing on improving tech.
+                            Works in software design, company building, and the aerospace industry.
                         </div>
                     </div>
                     <div class="flex items-end">
             <ul role="list" class="flex">
                     <li>
-                        <a title="Follow on Twitter" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500" href="https://twitter.com/gayle">
+                        <a title="Follow on Twitter" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500" href="https://twitter.com/lucy">
                             <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none text-zinc-500 fill-zinc-500 transition group-hover:fill-indigo-500">
                                 <path d="M20.055 7.983c.011.174.011.347.011.523 0 5.338-3.92 11.494-11.09 11.494v-.003A10.755 10.755 0 0 1 3 18.186c.308.038.618.057.928.058a7.655 7.655 0 0 0 4.841-1.733c-1.668-.032-3.13-1.16-3.642-2.805a3.753 3.753 0 0 0 1.76-.07C5.07 13.256 3.76 11.6 3.76 9.676v-.05a3.77 3.77 0 0 0 1.77.505C3.816 8.945 3.288 6.583 4.322 4.737c1.98 2.524 4.9 4.058 8.034 4.22a4.137 4.137 0 0 1 1.128-3.86A3.807 3.807 0 0 1 19 5.274a7.657 7.657 0 0 0 2.475-.98c-.29.934-.9 1.729-1.713 2.233A7.54 7.54 0 0 0 22 5.89a8.084 8.084 0 0 1-1.945 2.093Z"></path>
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a title="Follow on Mastodon" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500" href="https://mastodon.social/@gayle">
+                        <a title="Follow on threads.net" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500" href="https://threads.net/@lucy">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-none text-zinc-500 fill-zinc-500 transition group-hover:fill-indigo-500" width="24" height="24" viewBox="0 0 24 24">
-                                <path fill="currentColor" d="M20.94 14c-.28 1.41-2.44 2.96-4.97 3.26c-1.31.15-2.6.3-3.97.24c-2.25-.11-4-.54-4-.54v.62c.32 2.22 2.22 2.35 4.03 2.42c1.82.05 3.44-.46 3.44-.46l.08 1.65s-1.28.68-3.55.81c-1.25.07-2.81-.03-4.62-.5c-3.92-1.05-4.6-5.24-4.7-9.5l-.01-3.43c0-4.34 2.83-5.61 2.83-5.61C6.95 2.3 9.41 2 11.97 2h.06c2.56 0 5.02.3 6.47.96c0 0 2.83 1.27 2.83 5.61c0 0 .04 3.21-.39 5.43M18 8.91c0-1.08-.3-1.91-.85-2.56c-.56-.63-1.3-.96-2.23-.96c-1.06 0-1.87.41-2.42 1.23l-.5.88l-.5-.88c-.56-.82-1.36-1.23-2.43-1.23c-.92 0-1.66.33-2.23.96C6.29 7 6 7.83 6 8.91v5.26h2.1V9.06c0-1.06.45-1.62 1.36-1.62c1 0 1.5.65 1.5 1.93v2.79h2.07V9.37c0-1.28.5-1.93 1.51-1.93c.9 0 1.35.56 1.35 1.62v5.11H18V8.91Z"/>
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7.5c-1.333-3-3.667-4.5-7-4.5c-5 0-8 2.5-8 9s3.5 9 8 9s7-3 7-5s-1-5-7-5c-2.5 0-3 1.25-3 2.5C9 15 10 16 11.5 16c2.5 0 3.5-1.5 3.5-5s-2-4-3-4s-1.833.333-2.5 1"/>
                             </svg>
                         </a>
                     </li>
                     <li>
-                        <a title="Email Gayle Smith" href="mailto:gayle@email.org" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500">
+                        <a title="Follow on GitHub" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500" href="https://github.com/lucy">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" class="h-6 w-6 flex-none text-zinc-500 fill-zinc-500 transition group-hover:fill-indigo-500">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.475 2 2 6.588 2 12.253c0 4.537 2.862 8.369 6.838 9.727.5.09.687-.218.687-.487 0-.243-.013-1.05-.013-1.91C7 20.059 6.35 18.957 6.15 18.38c-.113-.295-.6-1.205-1.025-1.448-.35-.192-.85-.667-.013-.68.788-.012 1.35.744 1.538 1.051.9 1.551 2.338 1.116 2.912.846.088-.666.35-1.115.638-1.371-2.225-.256-4.55-1.14-4.55-5.062 0-1.115.387-2.038 1.025-2.756-.1-.256-.45-1.307.1-2.717 0 0 .837-.269 2.75 1.051.8-.23 1.65-.346 2.5-.346.85 0 1.7.115 2.5.346 1.912-1.333 2.75-1.05 2.75-1.05.55 1.409.2 2.46.1 2.716.637.718 1.025 1.628 1.025 2.756 0 3.934-2.337 4.806-4.562 5.062.362.32.675.936.675 1.897 0 1.371-.013 2.473-.013 2.82 0 .268.188.589.688.486a10.039 10.039 0 0 0 4.932-3.74A10.447 10.447 0 0 0 22 12.253C22 6.588 17.525 2 12 2Z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="Email Lucy Bates" href="mailto:lucy@email.org" class="mr-1 group flex text-sm font-medium text-zinc-800 transition hover:text-indigo-500 dark:text-zinc-200 dark:hover:text-indigo-500">
                             <svg class="h-6 w-6 flex-none text-zinc-500 fill-zinc-500 transition group-hover:fill-indigo-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20q-.825 0-1.413-.588T2 18V6q0-.825.588-1.413T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.588 1.413T20 20H4Zm8-7L4 8v10h16V8l-8 5Zm0-2l8-5H4l8 5ZM4 8V6v12V8Z"/></svg>
                         </a>
                     </li>
@@ -414,14 +522,14 @@ A release must have already been created for the rollback build to work, it does
 
                 <div class="mt-4 border-t">
                     <div class="py-8 text-lg text-gray-700 font-medium">
-                        More from Gayle Smith
+                        More from Lucy Bates
                     </div>
                     <div class="grid grid-cols-2 gap-8">
                             <div>
                                 <div class="flex flex-col overflow-hidden">
                                     <div class="flex-shrink-0">
-                                        <a href="posts/start">
-                                            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=420&amp;q=80" alt="">
+                                        <a href="posts/razor-ssg-new-blog-features">
+                                            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=420&amp;q=80" alt="">
                                         </a>
                                     </div>
                                     <div class="flex flex-1 flex-col justify-between bg-white dark:bg-black p-6">
@@ -429,28 +537,28 @@ A release must have already been created for the rollback build to work, it does
                                             <p class="text-sm font-medium text-indigo-600 dark:text-indigo-300">
                                                 Article
                                             </p>
-                                            <a href="posts/start" class="mt-2 block">
-                                                <p class="text-xl font-semibold text-gray-900 dark:text-gray-50 whitespace-nowrap overflow-hidden text-ellipsis" title="Getting Started">
-                                                    Getting Started
+                                            <a href="posts/razor-ssg-new-blog-features" class="mt-2 block">
+                                                <p class="text-xl font-semibold text-gray-900 dark:text-gray-50 whitespace-nowrap overflow-hidden text-ellipsis" title="New Blogging features in Razor SSG">
+                                                    New Blogging features in Razor SSG
                                                 </p>
-                                                <p class="mt-3 text-base text-gray-500">Found out how to use these template features</p>
+                                                <p class="mt-3 text-base text-gray-500">Explore the new Blogging Features in Razor SSG</p>
                                             </a>
                                         </div>
                                         <div class="mt-6 flex items-center">
                                             <div class="flex-shrink-0">
                                                 <a href="">
-                                                    <span class="sr-only">Gayle Smith</span>
-                                                    <img class="h-10 w-10 rounded-full" src="img/authors/author2.svg" alt="Getting Started background">
+                                                    <span class="sr-only">Lucy Bates</span>
+                                                    <img class="h-10 w-10 rounded-full" src="img/authors/author1.svg" alt="New Blogging features in Razor SSG background">
                                                 </a>
                                             </div>
                                             <div class="ml-3">
                                                 <p class="text-sm font-medium text-gray-900">
-                                                        <a href="posts/author/gayle-smith" class="hover:underline">Gayle Smith</a>
+                                                        <a href="posts/author/lucy-bates" class="hover:underline">Lucy Bates</a>
                                                 </p>
                                                 <div class="flex space-x-1 text-sm text-gray-500">
-                                                    <time datetime="2023-01-21T00:00:00.0000000">January 21, 2023</time>
+                                                    <time datetime="2023-08-23T00:00:00.0000000">August 23, 2023</time>
                                                     <span aria-hidden="true">&middot;</span>
-                                                    <span>2 min read</span>
+                                                    <span>6 min read</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -461,8 +569,8 @@ A release must have already been created for the rollback build to work, it does
                             <div>
                                 <div class="flex flex-col overflow-hidden">
                                     <div class="flex-shrink-0">
-                                        <a href="posts/rider">
-                                            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=420&amp;q=80" alt="">
+                                        <a href="posts/razor-ssg">
+                                            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1579767684138-a57e917d30aa?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=420&amp;q=80" alt="">
                                         </a>
                                     </div>
                                     <div class="flex flex-1 flex-col justify-between bg-white dark:bg-black p-6">
@@ -470,26 +578,108 @@ A release must have already been created for the rollback build to work, it does
                                             <p class="text-sm font-medium text-indigo-600 dark:text-indigo-300">
                                                 Article
                                             </p>
-                                            <a href="posts/rider" class="mt-2 block">
-                                                <p class="text-xl font-semibold text-gray-900 dark:text-gray-50 whitespace-nowrap overflow-hidden text-ellipsis" title="Develop using JetBrains Rider">
-                                                    Develop using JetBrains Rider
+                                            <a href="posts/razor-ssg" class="mt-2 block">
+                                                <p class="text-xl font-semibold text-gray-900 dark:text-gray-50 whitespace-nowrap overflow-hidden text-ellipsis" title="Introducing Razor SSG">
+                                                    Introducing Razor SSG
                                                 </p>
-                                                <p class="mt-3 text-base text-gray-500">Setting up &amp; exploring development workflow in Rider</p>
+                                                <p class="mt-3 text-base text-gray-500">Create fast, beautiful statically rendered Razor Websites &amp; Blogs</p>
                                             </a>
                                         </div>
                                         <div class="mt-6 flex items-center">
                                             <div class="flex-shrink-0">
                                                 <a href="">
-                                                    <span class="sr-only">Gayle Smith</span>
-                                                    <img class="h-10 w-10 rounded-full" src="img/authors/author2.svg" alt="Develop using JetBrains Rider background">
+                                                    <span class="sr-only">Lucy Bates</span>
+                                                    <img class="h-10 w-10 rounded-full" src="img/authors/author1.svg" alt="Introducing Razor SSG background">
                                                 </a>
                                             </div>
                                             <div class="ml-3">
                                                 <p class="text-sm font-medium text-gray-900">
-                                                        <a href="posts/author/gayle-smith" class="hover:underline">Gayle Smith</a>
+                                                        <a href="posts/author/lucy-bates" class="hover:underline">Lucy Bates</a>
                                                 </p>
                                                 <div class="flex space-x-1 text-sm text-gray-500">
-                                                    <time datetime="2023-01-11T00:00:00.0000000">January 11, 2023</time>
+                                                    <time datetime="2023-03-30T00:00:00.0000000">March 30, 2023</time>
+                                                    <span aria-hidden="true">&middot;</span>
+                                                    <span>14 min read</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div class="flex flex-col overflow-hidden">
+                                    <div class="flex-shrink-0">
+                                        <a href="posts/vs">
+                                            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=420&amp;q=80" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-1 flex-col justify-between bg-white dark:bg-black p-6">
+                                        <div class="flex-1">
+                                            <p class="text-sm font-medium text-indigo-600 dark:text-indigo-300">
+                                                Article
+                                            </p>
+                                            <a href="posts/vs" class="mt-2 block">
+                                                <p class="text-xl font-semibold text-gray-900 dark:text-gray-50 whitespace-nowrap overflow-hidden text-ellipsis" title="Develop using Visual Studio">
+                                                    Develop using Visual Studio
+                                                </p>
+                                                <p class="mt-3 text-base text-gray-500">Exploring development workflow in VS Code and Visual Studio .NET</p>
+                                            </a>
+                                        </div>
+                                        <div class="mt-6 flex items-center">
+                                            <div class="flex-shrink-0">
+                                                <a href="">
+                                                    <span class="sr-only">Lucy Bates</span>
+                                                    <img class="h-10 w-10 rounded-full" src="img/authors/author1.svg" alt="Develop using Visual Studio background">
+                                                </a>
+                                            </div>
+                                            <div class="ml-3">
+                                                <p class="text-sm font-medium text-gray-900">
+                                                        <a href="posts/author/lucy-bates" class="hover:underline">Lucy Bates</a>
+                                                </p>
+                                                <div class="flex space-x-1 text-sm text-gray-500">
+                                                    <time datetime="2023-01-10T00:00:00.0000000">January 10, 2023</time>
+                                                    <span aria-hidden="true">&middot;</span>
+                                                    <span>6 min read</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div>
+                                <div class="flex flex-col overflow-hidden">
+                                    <div class="flex-shrink-0">
+                                        <a href="posts/typography">
+                                            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=420&amp;q=80" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="flex flex-1 flex-col justify-between bg-white dark:bg-black p-6">
+                                        <div class="flex-1">
+                                            <p class="text-sm font-medium text-indigo-600 dark:text-indigo-300">
+                                                Article
+                                            </p>
+                                            <a href="posts/typography" class="mt-2 block">
+                                                <p class="text-xl font-semibold text-gray-900 dark:text-gray-50 whitespace-nowrap overflow-hidden text-ellipsis" title="Tailwind Typography">
+                                                    Tailwind Typography
+                                                </p>
+                                                <p class="mt-3 text-base text-gray-500">tailwindcss/typography enabled for Markdown pages</p>
+                                            </a>
+                                        </div>
+                                        <div class="mt-6 flex items-center">
+                                            <div class="flex-shrink-0">
+                                                <a href="">
+                                                    <span class="sr-only">Lucy Bates</span>
+                                                    <img class="h-10 w-10 rounded-full" src="img/authors/author1.svg" alt="Tailwind Typography background">
+                                                </a>
+                                            </div>
+                                            <div class="ml-3">
+                                                <p class="text-sm font-medium text-gray-900">
+                                                        <a href="posts/author/lucy-bates" class="hover:underline">Lucy Bates</a>
+                                                </p>
+                                                <div class="flex space-x-1 text-sm text-gray-500">
+                                                    <time datetime="2022-12-31T00:00:00.0000000">December 31, 2022</time>
                                                     <span aria-hidden="true">&middot;</span>
                                                     <span>3 min read</span>
                                                 </div>

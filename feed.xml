@@ -10,7 +10,7 @@
     </image>
     <generator>razor-ssg</generator>
     <copyright></copyright>
-    <lastBuildDate>Thu, 24 Oct 2024 11:25:05 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 21 Mar 2025 06:34:52 GMT</lastBuildDate>
     <managingEditor>email@example.org (Razor SSG)</managingEditor>
     <webMaster>email@example.org (Razor SSG)</webMaster>
     <atom:link href="https://razor-ssg.web-templates.io/feed.xml" rel="self" type="application/rss+xml" />
@@ -75,6 +75,18 @@
         <description>Setting up &amp; exploring development workflow in Rider</description>
     </item>
     <item>
+        <title>Prerendering Razor Pages</title>
+        <link>https://razor-ssg.web-templates.io/posts/prerendering</link>
+        <author>lucy@email.org (Lucy Bates)</author>
+        <guid isPermaLink="false">https://razor-ssg.web-templates.io/posts/prerendering</guid>
+        <pubDate>Wed, 11 Jan 2023 00:00:00 GMT</pubDate>
+        <atom:updated>2023-01-11T00:00:00Z</atom:updated>
+        <category>c#</category>
+        <category>dev</category>
+        <category>markdown</category>
+        <description>Improving Blog Performance with Prerendering</description>
+    </item>
+    <item>
         <title>Develop using Visual Studio</title>
         <link>https://razor-ssg.web-templates.io/posts/vs</link>
         <author>lucy@email.org (Lucy Bates)</author>
@@ -118,17 +130,6 @@
         <category>hosting</category>
         <category>devops</category>
         <description>We&#x27;ve been using AWS at ServiceStack for 10&#x2B; years, it&#x27;s served us well but suffers from complex &amp; expensive pricing</description>
-    </item>
-    <item>
-        <title>Real-time search with Typesense</title>
-        <link>https://razor-ssg.web-templates.io/posts/typesense</link>
-        <author>lucy@email.org (Lucy Bates)</author>
-        <guid isPermaLink="false">https://razor-ssg.web-templates.io/posts/typesense</guid>
-        <pubDate>Mon, 08 Nov 2021 00:00:00 GMT</pubDate>
-        <atom:updated>2021-11-08T00:00:00Z</atom:updated>
-        <category>dev</category>
-        <category>docs</category>
-        <description>As part of migrating docs to VitePress we&#x27;ve added UX improvements like instant search powered by Typesense!</description>
     </item>
 </channel>
 </rss>
