@@ -17,7 +17,7 @@
         </h1>
         <div class="flex lg:my-4 my-2 justify-center">
             <button onclick="openDownloadModal()"
-                class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900">
+                class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 text-white hover:opacity-90 active:opacity-75 focus-visible:outline-[#eb8a0c]" style="background-color: #eb8a0c;">
                 Download .exe
             </button>
         </div>
@@ -461,20 +461,19 @@
         justify-content: center;
         gap: 7px;
         border-radius: 8px;
-        background: #0f172a;
-        color: #f8fafc;
+        background: #eb8a0c;
+        color: #ffffff;
         border: none;
         cursor: pointer;
-        transition: background 0.15s, opacity 0.15s;
+        transition: opacity 0.15s;
         margin-top: 4px;
     }
-
-    .submit-btn:hover:not(:disabled) { background: #1e293b; }
+    
+    .submit-btn:hover:not(:disabled) { opacity: 0.9; }
     .submit-btn:disabled { opacity: 0.65; cursor: not-allowed; }
-
+    
     @@media (prefers-color-scheme: dark) {
-        .submit-btn { background: #f1f5f9; color: #0f172a; }
-        .submit-btn:hover:not(:disabled) { background: #e2e8f0; }
+        .submit-btn { background: #eb8a0c; color: #ffffff; }
     }
 
     .form-hint {
