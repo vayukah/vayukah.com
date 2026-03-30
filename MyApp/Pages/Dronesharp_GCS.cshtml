@@ -2,6 +2,9 @@
 @attribute [RenderStatic]
 @{
     ViewData["Title"] = "Dronesharp GCS";
+
+    const string Web3FormsAccessKey = "ebc811c0-947f-4216-9781-4ffb0db915b2";
+    const string ExeDownloadUrl = "http://192.168.0.105:9000/dronesharpgcs/latest/DronesharpGCS-installer.exe";
 }
 
 <div class="text-center lg:pt-2 sm:pt-4 pt-8 ">
@@ -13,9 +16,10 @@
             Dronesharp GCS is our custom ground control software to optimally configure and fly Vigor UAV.
         </h1>
         <div class="flex lg:my-4 my-2 justify-center">
-            <a class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900" href="/products">
+            <button onclick="openDownloadModal()"
+                class="group inline-flex items-center justify-center rounded-full py-2 px-4 text-sm font-semibold focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 bg-slate-900 text-white hover:bg-slate-700 hover:text-slate-100 active:bg-slate-800 active:text-slate-300 focus-visible:outline-slate-900">
                 Download .exe
-            </a>
+            </button>
         </div>
         <div class="hidden lg:flex">
             <div class="grid lg:grid-cols-2 grid-cols-1 lg:gap-y-4 text-center ">
@@ -100,3 +104,432 @@
         </div>
     </div>
 </div>
+
+<div id="download-modal" class="modal-overlay" onclick="handleOverlayClick(event)">
+    <div class="modal-box">
+
+        <div class="modal-header">
+            <div>
+                <p class="modal-title">Download Dronesharp GCS</p>
+                <p class="modal-subtitle">Fill in your details to get the installer.</p>
+            </div>
+            <button class="modal-close" onclick="closeDownloadModal()" aria-label="Close">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <div id="form-area">
+            <div class="form-fields">
+
+                <div class="field-group">
+                    <label class="field-label">Name <span class="required">*</span></label>
+                    <input type="text" id="f-name" placeholder="John Smith" class="field-input" />
+                    <span class="field-error" id="err-name"></span>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label">Phone number <span class="required">*</span></label>
+                    <input type="tel" id="f-phone" placeholder="+91 98765 43210" class="field-input" />
+                    <span class="field-error" id="err-phone"></span>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label">Email <span class="required">*</span></label>
+                    <input type="email" id="f-email" placeholder="john@example.com" class="field-input" />
+                    <span class="field-error" id="err-email"></span>
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label">Organisation <span class="optional">(optional)</span></label>
+                    <input type="text" id="f-org" placeholder="Acme Corp" class="field-input" />
+                </div>
+
+                <div class="field-group">
+                    <label class="field-label">Comment <span class="optional">(optional)</span></label>
+                    <textarea id="f-comment" placeholder="Anything you'd like to tell us" rows="3" class="field-input field-textarea"></textarea>
+                </div>
+
+                <div id="submit-error" class="submit-error" style="display:none;">
+                    Something went wrong. Please try again.
+                </div>
+
+                <button id="submit-btn" onclick="handleSubmit()" class="submit-btn">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;">
+                        <path d="M8 2v8m0 0L5 7m3 3l3-3M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span id="submit-label">Submit &amp; Download .exe</span>
+                </button>
+
+                <p class="form-hint">Your download will start automatically after submission.</p>
+
+            </div>
+        </div>
+        <div id="success-area" style="display:none;" class="success-area">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" class="success-icon">
+                <circle cx="20" cy="20" r="19" stroke="#22c55e" stroke-width="1.5" />
+                <path d="M12 20l6 6 10-12" stroke="#22c55e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <p class="success-title">Thank you!</p>
+            <p class="success-msg">Your download has started. Check your downloads folder.</p>
+            <button onclick="closeDownloadModal()" class="success-close-btn">Close</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const WEB3FORMS_KEY = '@Web3FormsAccessKey';
+    const EXE_URL = '@ExeDownloadUrl';
+
+    function openDownloadModal() {
+        document.getElementById('download-modal').classList.add('modal-visible');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeDownloadModal() {
+        document.getElementById('download-modal').classList.remove('modal-visible');
+        document.body.style.overflow = '';
+        resetForm();
+    }
+
+    function handleOverlayClick(e) {
+        if (e.target === document.getElementById('download-modal')) {
+            closeDownloadModal();
+        }
+    }
+
+    function resetForm() {
+        ['f-name','f-phone','f-email','f-org','f-comment'].forEach(id => {
+            document.getElementById(id).value = '';
+        });
+        ['err-name','err-phone','err-email'].forEach(id => {
+            document.getElementById(id).innerText = '';
+        });
+        document.getElementById('submit-error').style.display = 'none';
+        document.getElementById('form-area').style.display = '';
+        document.getElementById('success-area').style.display = 'none';
+        document.getElementById('submit-label').innerText = 'Submit & Download .exe';
+        document.getElementById('submit-btn').disabled = false;
+    }
+
+    function validate() {
+        let valid = true;
+
+        const name = document.getElementById('f-name').value.trim();
+        const phone = document.getElementById('f-phone').value.trim();
+        const email = document.getElementById('f-email').value.trim();
+
+        document.getElementById('err-name').innerText  = '';
+        document.getElementById('err-phone').innerText = '';
+        document.getElementById('err-email').innerText = '';
+
+        if (!name) {
+            document.getElementById('err-name').innerText = 'Name is required.';
+            valid = false;
+        }
+        if (!phone) {
+            document.getElementById('err-phone').innerText = 'Phone number is required.';
+            valid = false;
+        }
+        if (!email) {
+            document.getElementById('err-email').innerText = 'Email is required.';
+            valid = false;
+        } else if (!/^[^\s@@]+@@[^\s@@]+\.[^\s@@]+$/.test(email)) {
+            document.getElementById('err-email').innerText = 'Enter a valid email address.';
+            valid = false;
+        }
+
+        return valid;
+    }
+
+    async function handleSubmit() {
+        if (!validate()) return;
+
+        const btn   = document.getElementById('submit-btn');
+        const label = document.getElementById('submit-label');
+
+        btn.disabled = true;
+        label.innerText = 'Submitting\u2026';
+        document.getElementById('submit-error').style.display = 'none';
+
+        const payload = {
+            access_key: WEB3FORMS_KEY,
+            subject: 'Dronesharp GCS Download Request',
+            name:         document.getElementById('f-name').value.trim(),
+            phone:        document.getElementById('f-phone').value.trim(),
+            email:        document.getElementById('f-email').value.trim(),
+            organisation: document.getElementById('f-org').value.trim() || 'N/A',
+            comment:      document.getElementById('f-comment').value.trim() || 'N/A',
+        };
+
+        try {
+            const res = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            const data = await res.json();
+
+            if (data.success) {
+                triggerExeDownload();
+                document.getElementById('form-area').style.display = 'none';
+                document.getElementById('success-area').style.display = 'flex';
+            } else {
+                throw new Error('Web3Forms error');
+            }
+        } catch (err) {
+            document.getElementById('submit-error').style.display = 'block';
+            label.innerText = 'Submit & Download .exe';
+            btn.disabled = false;
+            console.error(err);
+        }
+    }
+
+    async function triggerExeDownload() {
+        try {
+            const response = await fetch(EXE_URL);
+            if (!response.ok) throw new Error('Fetch failed');
+            const blob = await response.blob();
+            const blobUrl = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = blobUrl;
+            a.download = 'DronesharpGCS-installer.exe';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(blobUrl);
+        } catch (err) {
+            console.error('Download error:', err);
+        }
+    }
+</script>
+
+<style>
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .modal-overlay.modal-visible {
+        display: flex;
+    }
+
+    .modal-box {
+        background: #ffffff;
+        border-radius: 14px;
+        width: 100%;
+        max-width: 460px;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding: 1.5rem;
+        box-sizing: border-box;
+    }
+
+    @@media (prefers-color-scheme: dark) {
+        .modal-box { background: #1e293b; }
+    }
+
+    .modal-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .modal-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #0f172a;
+        margin: 0 0 3px;
+    }
+
+    .modal-subtitle {
+        font-size: 0.82rem;
+        color: #64748b;
+        margin: 0;
+    }
+
+    @@media (prefers-color-scheme: dark) {
+        .modal-title  { color: #f1f5f9; }
+        .modal-subtitle { color: #94a3b8; }
+    }
+
+    .modal-close {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        color: #64748b;
+        flex-shrink: 0;
+        line-height: 1;
+    }
+
+    .modal-close:hover { color: #0f172a; }
+
+    @@media (prefers-color-scheme: dark) {
+        .modal-close { color: #94a3b8; }
+        .modal-close:hover { color: #f1f5f9; }
+    }
+
+    .form-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .field-group {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .field-label {
+        font-size: 0.78rem;
+        color: #64748b;
+        font-weight: 500;
+    }
+
+    @@media (prefers-color-scheme: dark) {
+        .field-label { color: #94a3b8; }
+    }
+
+    .required { color: #e24b4a; }
+
+    .optional {
+        font-weight: 400;
+        color: #94a3b8;
+    }
+
+    .field-input {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 0.85rem;
+        padding: 8px 10px;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+        background: #f8fafc;
+        color: #0f172a;
+        outline: none;
+        transition: border-color 0.15s;
+    }
+
+    .field-input:focus {
+        border-color: #94a3b8;
+    }
+
+    @@media (prefers-color-scheme: dark) {
+        .field-input {
+            background: #0f172a;
+            border-color: #334155;
+            color: #f1f5f9;
+        }
+        .field-input:focus { border-color: #64748b; }
+    }
+
+    .field-textarea {
+        resize: vertical;
+        min-height: 72px;
+    }
+
+    .field-error {
+        font-size: 0.75rem;
+        color: #e24b4a;
+        min-height: 14px;
+    }
+
+    .submit-error {
+        font-size: 0.8rem;
+        color: #e24b4a;
+        text-align: center;
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        border-radius: 8px;
+        background: #0f172a;
+        color: #f8fafc;
+        border: none;
+        cursor: pointer;
+        transition: background 0.15s, opacity 0.15s;
+        margin-top: 4px;
+    }
+
+    .submit-btn:hover:not(:disabled) { background: #1e293b; }
+    .submit-btn:disabled { opacity: 0.65; cursor: not-allowed; }
+
+    @@media (prefers-color-scheme: dark) {
+        .submit-btn { background: #f1f5f9; color: #0f172a; }
+        .submit-btn:hover:not(:disabled) { background: #e2e8f0; }
+    }
+
+    .form-hint {
+        font-size: 0.72rem;
+        color: #94a3b8;
+        text-align: center;
+        margin: 0;
+    }
+
+    .success-area {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 1.5rem 0 0.5rem;
+        text-align: center;
+    }
+
+    .success-icon { display: block; }
+
+    .success-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #0f172a;
+        margin: 0;
+    }
+
+    .success-msg {
+        font-size: 0.85rem;
+        color: #64748b;
+        margin: 0;
+    }
+
+    @@media (prefers-color-scheme: dark) {
+        .success-title { color: #f1f5f9; }
+        .success-msg   { color: #94a3b8; }
+    }
+
+    .success-close-btn {
+        margin-top: 8px;
+        padding: 7px 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        border-radius: 8px;
+        border: 1px solid #e2e8f0;
+        background: transparent;
+        color: #0f172a;
+        cursor: pointer;
+        transition: background 0.15s;
+    }
+
+    .success-close-btn:hover { background: #f1f5f9; }
+
+    @@media (prefers-color-scheme: dark) {
+        .success-close-btn { border-color: #334155; color: #f1f5f9; }
+        .success-close-btn:hover { background: #334155; }
+    }
+</style>
