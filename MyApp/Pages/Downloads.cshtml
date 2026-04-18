@@ -1,0 +1,458 @@
+﻿@page "/downloads"
+@attribute [RenderStatic]
+@{
+    ViewData["Title"] = "Downloads";
+
+    var latestWindows = new VersionEntry
+    {
+        Version = "v1.1.0",
+        Date = "02 April 2026",
+        Notes = "Added new configuration parameters for improved flexibility and customization",
+        DownloadUrl = "https://dronesharpgcs-downloads.s3.ap-south-1.amazonaws.com/releases/windows/v1.1.0/DronesharpGCS-installer.exe",
+        FileName = "DronesharpGCS-installer.exe" 
+    };
+
+    var previousWindows = new List<VersionEntry>
+    {
+        new VersionEntry { Version = "v1.0.0", Date = "10 Dec 2025",  Notes = "Added weather forecast, navigation lights controls, and telemetry improvements", DownloadUrl = "", FileName = "DronesharpGCS-v1.0.0-installer.exe" },
+        /* new VersionEntry { Version = "v3.0.0", Date = "10 Oct 2024", Notes = "Major release — multi drone support, audible prompts", DownloadUrl = "/files/DroneSharpGCS_v3.0.0_Setup.exe", FileName = "DronesharpGCS-v3.0.0-installer.exe" },
+        new VersionEntry { Version = "v2.8.4", Date = "3 Jul 2024",  Notes = "Stability patches, telemetry improvements",           DownloadUrl = "/files/DroneSharpGCS_v2.8.4_Setup.exe", FileName = "DronesharpGCS-v2.8.4-installer.exe" }, */
+    };
+
+    var latestAndroid = new VersionEntry
+    {
+        Version = "v1.1.0",
+        Date = "02 April 2026",
+        Notes = "Added new configuration parameters for improved flexibility and customization",
+        PlayStoreUrl = ""
+    };
+
+    var previousAndroid = new List<VersionEntry>
+    {
+        new VersionEntry { Version = "v1.0.0", Date = "10 Dec 2025",  Notes = "Added weather forecast, navigation lights controls, and telemetry improvements", PlayStoreUrl = "/downloads" },
+        /*new VersionEntry { Version = "v3.0.1", Date = "18 Oct 2024", Notes = "Hotfix — multi drone sync crash on Android 14",     PlayStoreUrl = "https://play.google.com/store/apps/details?id=com.aerogcs.aerogcsenterprise.hellodrone&pli=1" },
+        new VersionEntry { Version = "v2.9.0", Date = "15 Jul 2024", Notes = "Telemetry redesign, audible alert improvements",    PlayStoreUrl = "https://play.google.com/store/apps/details?id=com.aerogcs.aerogcsenterprise.hellodrone&pli=1" },*/
+    };
+}
+
+@functions {
+    class VersionEntry
+    {
+        public string Version      { get; set; } = "";
+        public string Date         { get; set; } = "";
+        public string Notes        { get; set; } = "";
+        public string DownloadUrl  { get; set; } = "";
+        public string FileName     { get; set; } = "";
+        public string PlayStoreUrl { get; set; } = "";
+    }
+}
+
+<div class="downloads-page">
+
+    <div class="downloads-header">
+        <h1 class="product-title text-slate-900 dark:text-slate-50">Dronesharp GCS</h1>
+        <p class="product-subtitle text-slate-800 dark:text-slate-50">Ground Control Software for Vigor UAV</p>
+    </div>
+
+    <div class="platform-grid">
+
+        <div class="platform-col">
+            <p class="platform-label">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style="flex-shrink:0;">
+                    <rect x="1" y="1" width="6.5" height="6.5" rx="1" fill="currentColor"/>
+                    <rect x="8.5" y="1" width="6.5" height="6.5" rx="1" fill="currentColor"/>
+                    <rect x="1" y="8.5" width="6.5" height="6.5" rx="1" fill="currentColor"/>
+                    <rect x="8.5" y="8.5" width="6.5" height="6.5" rx="1" fill="currentColor"/>
+                </svg>
+                Windows
+            </p>
+
+            <section class="section">
+                <div class="section-label">
+                    <span class="badge-latest">Latest release</span>
+                </div>
+                <div class="card card-latest">
+                    <div class="card-body">
+                        <div class="version-info">
+                            <span class="version-number">@latestWindows.Version</span>
+                            <span class="version-meta">Released @latestWindows.Date &nbsp;·&nbsp; Stable</span>
+                            <p class="version-notes">@latestWindows.Notes</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button onclick="triggerDownload('@latestWindows.DownloadUrl', '@latestWindows.FileName', this)"
+                                class="btn-download btn-download-primary">
+                            <svg class="btn-icon" viewBox="0 0 16 16" fill="none">
+                                <path d="M8 2v8m0 0L5 7m3 3l3-3M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="btn-label">Download .exe</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <p class="prev-label">Previous versions</p>
+                <div class="versions-list">
+                    @foreach (var v in previousWindows)
+                    {
+                        <div class="card card-prev">
+                            <div class="card-body">
+                                <div class="version-info">
+                                    <span class="version-number version-number-sm">@v.Version</span>
+                                    <span class="version-meta">@v.Date</span>
+                                    <p class="version-notes version-notes-sm">@v.Notes</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <button onclick="triggerDownload('@v.DownloadUrl', '@v.FileName', this)"
+                                        class="btn-download btn-download-secondary">
+                                    <svg class="btn-icon" viewBox="0 0 16 16" fill="none">
+                                        <path d="M8 2v8m0 0L5 7m3 3l3-3M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span class="btn-label">Download .exe</span>
+                                </button>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </section>
+        </div>
+
+        <div class="platform-col">
+            <p class="platform-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;">
+                    <path d="M4 16.5C4 17.88 5.12 19 6.5 19h11c1.38 0 2.5-1.12 2.5-2.5V10H4v6.5zM14.5 5.27L15.77 4 15 3.23l-1.4 1.4A6 6 0 0012 4.5c-.57 0-1.12.1-1.6.13L9 3.23 8.23 4l1.27 1.27A5 5 0 004 10h16a5 5 0 00-5.5-4.73zM10 8.5a.5.5 0 110-1 .5.5 0 010 1zm4 0a.5.5 0 110-1 .5.5 0 010 1z" fill="currentColor"/>
+                </svg>
+                Android
+            </p>
+
+            <section class="section">
+                <div class="section-label">
+                    <span class="badge-latest">Latest release</span>
+                </div>
+                <div class="card card-latest">
+                    <div class="card-body">
+                        <div class="version-info">
+                            <span class="version-number">@latestAndroid.Version</span>
+                            <span class="version-meta">Released @latestAndroid.Date &nbsp;·&nbsp; Stable</span>
+                            <p class="version-notes">@latestAndroid.Notes</p>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="@latestAndroid.PlayStoreUrl" target="_blank" class="btn-download btn-playstore">
+                            <svg class="btn-icon" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 2.5L13 8 3 13.5V2.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                            </svg>
+                            Play Store
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <p class="prev-label ">Previous versions</p>
+                <div class="versions-list">
+                    @foreach (var v in previousAndroid)
+                    {
+                        <div class="card card-prev">
+                            <div class="card-body">
+                                <div class="version-info">
+                                    <span class="version-number version-number-sm">@v.Version</span>
+                                    <span class="version-meta">@v.Date</span>
+                                    <p class="version-notes version-notes-sm">@v.Notes</p>
+                                </div>
+                            </div>
+                            @if (!string.IsNullOrEmpty(v.PlayStoreUrl))
+                            {
+                                <div class="card-footer">
+                                    <a href="@v.PlayStoreUrl" target="_blank" class="btn-download btn-playstore btn-playstore-sm">
+                                        <svg class="btn-icon" viewBox="0 0 16 16" fill="none">
+                                            <path d="M3 2.5L13 8 3 13.5V2.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                                        </svg>
+                                        Play Store
+                                    </a>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            </section>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    async function triggerDownload(url, fileName, btn) {
+        const label = btn.querySelector('.btn-label');
+        const originalText = label.innerText;
+
+        btn.disabled = true;
+        label.innerText = 'Downloading\u2026';
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error('Network response was not ok');
+
+            const blob = await response.blob();
+            const blobUrl = URL.createObjectURL(blob);
+
+            const a = document.createElement('a');
+            a.href = blobUrl;
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(blobUrl);
+
+            label.innerText = 'Done!';
+            setTimeout(() => {
+                label.innerText = originalText;
+                btn.disabled = false;
+            }, 2000);
+        } catch (err) {
+            label.innerText = 'Failed \u2014 retry';
+            btn.disabled = false;
+            console.error('Download error:', err);
+        }
+    }
+</script>
+
+<style>
+    .downloads-page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2.5rem 1.5rem 4rem;
+        font-family: inherit;
+    }
+
+    .downloads-header {
+        margin-bottom: 2rem;
+    }
+
+    .product-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin: 0 0 0.25rem;
+    }
+
+    .product-subtitle {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .platform-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 16px;
+        align-items: start;
+    }
+
+    .platform-col {
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 14px;
+        padding: 1.25rem;
+    }
+
+    @@media (prefers-color-scheme: dark) {
+        .platform-col { background: #1e293b; border-color: #334155; }
+    }
+
+    .platform-label {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #0f172a;
+        margin: 0 0 1rem;
+    }
+
+    @@media (prefers-color-scheme: dark) {
+        .platform-label { color: #f1f5f9; }
+    }
+
+    .section {
+        margin-bottom: 1.5rem;
+    }
+
+    .section-label {
+        margin-bottom: 0.75rem;
+    }
+
+    .badge-latest {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 500;
+        background: #dcfce7;
+        color: #166534;
+        padding: 3px 10px;
+        border-radius: 6px;
+    }
+
+    @@media (prefers-color-scheme: dark) {
+        .badge-latest { background: #14532d; color: #86efac; }
+    }
+
+    .card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+    }
+
+    @@media (prefers-color-scheme: dark) {
+        .card { background: #0f172a; border-color: #334155; }
+    }
+
+    .card-latest {
+        border-left: 3px solid #22c55e;
+    }
+
+    .card-body {
+        padding: 1rem 1.1rem 0.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .card-footer {
+        padding: 0.5rem 1.1rem 1rem;
+    }
+
+    .version-info {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .version-number {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #0f172a;
+    }
+
+    .version-number-sm {
+        font-size: 0.9rem;
+    }
+
+    .version-meta {
+        font-size: 0.8rem;
+        color: #64748b;
+    }
+
+    .version-notes {
+        font-size: 0.82rem;
+        color: #64748b;
+        margin: 2px 0 0;
+    }
+
+    .version-notes-sm {
+        font-size: 0.78rem;
+    }
+
+    @@media (prefers-color-scheme: dark) {
+        .version-number { color: #f1f5f9; }
+        .version-meta   { color: #94a3b8; }
+        .version-notes  { color: #94a3b8; }
+    }
+
+    .prev-label {
+        font-size: 0.72rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin: 0 0 0.75rem;
+    }
+
+     @@media (prefers-color-scheme: dark) {
+        .prev-label { color: #f1f5f9; }
+    }
+
+    .versions-list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btn-download {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
+        border-radius: 8px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: background 0.15s, border-color 0.15s, opacity 0.15s;
+        cursor: pointer;
+        border: 1px solid transparent;
+    }
+
+    .btn-download:disabled {
+        opacity: 0.65;
+        cursor: not-allowed;
+    }
+
+    .btn-icon {
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+    }
+
+    .btn-download-primary {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+        background: #0f172a;
+        color: #f8fafc;
+        border-color: #0f172a;
+    }
+
+    .btn-download-primary:hover:not(:disabled) {
+        background: #1e293b;
+        border-color: #1e293b;
+    }
+
+    .btn-download-secondary {
+        font-size: 0.8rem;
+        padding: 6px 14px;
+        background: transparent;
+        color: #0f172a;
+        border-color: #cbd5e1;
+    }
+
+    .btn-download-secondary:hover:not(:disabled) {
+        background: #f8fafc;
+        border-color: #94a3b8;
+    }
+
+    .btn-playstore {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+        background: transparent;
+        color: #16a34a;
+        border-color: #22c55e;
+    }
+
+    .btn-playstore:hover {
+        background: #f0fdf4;
+    }
+
+    .btn-playstore-sm {
+        font-size: 0.8rem;
+        padding: 6px 14px;
+    }
+
+    @@media (prefers-color-scheme: dark) {
+        .btn-download-primary { background: #f1f5f9; color: #0f172a; border-color: #f1f5f9; }
+        .btn-download-primary:hover:not(:disabled) { background: #e2e8f0; border-color: #e2e8f0; }
+        .btn-download-secondary { color: #f1f5f9; border-color: #475569; }
+        .btn-download-secondary:hover:not(:disabled) { background: #334155; border-color: #64748b; }
+        .btn-playstore { color: #4ade80; border-color: #4ade80; }
+        .btn-playstore:hover { background: #052e16; }
+    }
+
+    @@media (max-width: 640px) {
+        .btn-download { width: 100%; justify-content: center; }
+    }
+</style>
