@@ -1,45 +1,91 @@
-# razor-ssg
+# Next.js
 
-.NET 6.0 razor-ssg Static Generated Razor Pages Project Template
+A modern Next.js 15 application built with TypeScript and Tailwind CSS.
 
-[![](https://raw.githubusercontent.com/ServiceStack/Assets/master/csharp-templates/razor-ssg.png)](https://razor-ssg.web-templates.io)
+## 🚀 Features
 
-> Browse [source code](https://github.com/NetCoreTemplates/razor-ssg), view live demo [razor-ssg.web-templates.io](https://razor-ssg.web-templates.io) and install with [dotnet-new](https://docs.servicestack.net/dotnet-new):
+- **Next.js 15** - Latest version with improved performance and features
+- **React 19** - Latest React version with enhanced capabilities
+- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
 
-    $ dotnet tool install -g x
+## 🛠️ Installation
 
-    $ x new razor-ssg ProjectName
+1. Install dependencies:
+  ```bash
+  npm install
+  # or
+  yarn install
+  ```
 
-Alternatively write new project files directly into an razor-ssg repository, using the Directory Name as the ProjectName:
+2. Start the development server:
+  ```bash
+  npm run dev
+  # or
+  yarn dev
+  ```
+3. Open [http://localhost:4028](http://localhost:4028) with your browser to see the result.
 
-    $ git clone https://github.com/<User>/<ProjectName>.git
-    $ cd <ProjectName>
-    $ x new razor-ssg
+## 📁 Project Structure
 
-## Documentation
+```
+nextjs/
+├── public/             # Static assets
+├── src/
+│   ├── app/            # App router components
+│   │   ├── layout.tsx  # Root layout component
+│   │   └── page.tsx    # Main page component
+│   ├── components/     # Reusable UI components
+│   ├── styles/         # Global styles and Tailwind configuration
+├── next.config.mjs     # Next.js configuration
+├── package.json        # Project dependencies and scripts
+├── postcss.config.js   # PostCSS configuration
+└── tailwind.config.js  # Tailwind CSS configuration
 
-Documentation for this template is included at [/posts/razor-ssg](https://razor-ssg.web-templates.io/posts/razor-ssg).
+```
 
-## Development Tasks
+## 🧩 Page Editing
 
-Tasks to run live reload Tailwind and .NET Razor Pages App during development:
+You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
 
-### Run Tailwind in Background
+## 🎨 Styling
 
-    $ npm run ui:dev
+This project uses Tailwind CSS for styling with the following features:
+- Utility-first approach for rapid development
+- Custom theme configuration
+- Responsive design utilities
+- PostCSS and Autoprefixer integration
 
-### Run .NET App with Live Reload
+## 📦 Available Scripts
 
-    $ dotnet watch
+- `npm run dev` - Start development server on port 4028
+- `npm run build` - Build the application for production
+- `npm run start` - Start the development server
+- `npm run serve` - Start the production server
+- `npm run lint` - Run ESLint to check code quality
+- `npm run lint:fix` - Fix ESLint issues automatically
+- `npm run format` - Format code with Prettier
 
-## Local Production Tasks
+## 📱 Deployment
 
-Tasks to prerender and preview production ssg website build:
+Build the application for production:
 
-### Prerender website
+  ```bash
+  npm run build
+  ```
 
-    $ npm run prerender
+## 📚 Learn More
 
-### Preview pre-rendered website
+To learn more about Next.js, take a look at the following resources:
 
-    $ npm run serve
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial
+
+You can check out the [Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## 🙏 Acknowledgments
+
+- Built with [Rocket.new](https://rocket.new)
+- Powered by Next.js and React
+- Styled with Tailwind CSS
+
+Built with ❤️ on Rocket.new
