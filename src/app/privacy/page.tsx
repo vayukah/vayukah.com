@@ -1,0 +1,140 @@
+import React from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+
+export const metadata = {
+  title: 'Privacy Policy | Vayukah Drone Systems',
+  description: 'Privacy Policy for Vayukah Drone Systems And Services Pvt Ltd.',
+};
+
+export default function PrivacyPage() {
+  return (
+    <div className="min-h-screen bg-bg text-foreground font-body relative">
+      <div className="scan-line" />
+      <Header />
+
+      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        {/* Page Header */}
+        <div className="mb-12 text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#0656D6]/30 bg-[#0656D6]/10 text-[#4B9EFF] text-xs font-semibold uppercase tracking-widest mb-4">
+            Legal
+          </div>
+          <h1 className="text-4xl sm:text-5xl font-display font-bold text-foreground mb-4">
+            Privacy Policy
+          </h1>
+          <p className="text-muted text-sm">Last updated: March 31, 2025</p>
+        </div>
+
+        {/* Content */}
+        <div className="space-y-10 text-muted leading-relaxed">
+
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3 border-l-2 border-[#0656D6] pl-4">1. Introduction</h2>
+            <p>
+              Vayukah Drone Systems And Services Pvt Ltd ("Vayukah", "we", "our", or "us") is committed to protecting your personal information and your right to privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our products and services.
+            </p>
+            <p className="mt-3">
+              Please read this policy carefully. If you disagree with its terms, please discontinue use of our site and services.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3 border-l-2 border-[#0656D6] pl-4">2. Information We Collect</h2>
+            <p className="mb-3">We may collect information about you in a variety of ways, including:</p>
+            <ul className="list-disc list-inside space-y-2 pl-2">
+              <li><span className="text-foreground font-medium">Personal Data:</span> Name, email address, phone number, company name, and other contact details you voluntarily provide when filling out forms or contacting us.</li>
+              <li><span className="text-foreground font-medium">Usage Data:</span> Information about how you interact with our website, including IP address, browser type, pages visited, time spent, and referring URLs.</li>
+              <li><span className="text-foreground font-medium">Device Data:</span> Information about the device you use to access our site, including hardware model, operating system, and unique device identifiers.</li>
+              <li><span className="text-foreground font-medium">Cookies & Tracking:</span> We use cookies and similar tracking technologies to enhance your experience and analyze site traffic.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3 border-l-2 border-[#0656D6] pl-4">3. How We Use Your Information</h2>
+            <p className="mb-3">We use the information we collect to:</p>
+            <ul className="list-disc list-inside space-y-2 pl-2">
+              <li>Respond to your inquiries and provide customer support</li>
+              <li>Send you product updates, newsletters, and marketing communications (with your consent)</li>
+              <li>Improve and personalize your experience on our website</li>
+              <li>Analyze usage trends and monitor the effectiveness of our services</li>
+              <li>Comply with legal obligations and enforce our agreements</li>
+              <li>Prevent fraudulent or unauthorized activity</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3 border-l-2 border-[#0656D6] pl-4">4. Sharing Your Information</h2>
+            <p className="mb-3">We do not sell, trade, or rent your personal information to third parties. We may share your data with:</p>
+            <ul className="list-disc list-inside space-y-2 pl-2">
+              <li><span className="text-foreground font-medium">Service Providers:</span> Trusted third-party vendors who assist us in operating our website and delivering services (e.g., hosting, analytics, email delivery).</li>
+              <li><span className="text-foreground font-medium">Business Partners:</span> With your consent, we may share information with partners for joint offerings or promotions.</li>
+              <li><span className="text-foreground font-medium">Legal Requirements:</span> When required by law, regulation, or legal process, or to protect the rights and safety of Vayukah and its users.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3 border-l-2 border-[#0656D6] pl-4">5. Data Retention</h2>
+            <p>
+              We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required or permitted by law. When data is no longer needed, we securely delete or anonymize it.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3 border-l-2 border-[#0656D6] pl-4">6. Security</h2>
+            <p>
+              We implement industry-standard technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3 border-l-2 border-[#0656D6] pl-4">7. Your Rights</h2>
+            <p className="mb-3">Depending on your location, you may have the following rights regarding your personal data:</p>
+            <ul className="list-disc list-inside space-y-2 pl-2">
+              <li>Right to access and receive a copy of your personal data</li>
+              <li>Right to correct inaccurate or incomplete data</li>
+              <li>Right to request deletion of your personal data</li>
+              <li>Right to restrict or object to processing</li>
+              <li>Right to data portability</li>
+              <li>Right to withdraw consent at any time</li>
+            </ul>
+            <p className="mt-3">To exercise any of these rights, please contact us at <a href="mailto:info@vayukah.com" className="text-[#4B9EFF] hover:underline">info@vayukah.com</a>.</p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3 border-l-2 border-[#0656D6] pl-4">8. Third-Party Links</h2>
+            <p>
+              Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of those sites. We encourage you to review the privacy policies of any third-party sites you visit.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3 border-l-2 border-[#0656D6] pl-4">9. Children's Privacy</h2>
+            <p>
+              Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have inadvertently collected such information, please contact us immediately.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3 border-l-2 border-[#0656D6] pl-4">10. Changes to This Policy</h2>
+            <p>
+              We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page with an updated date. Your continued use of our services after changes are posted constitutes your acceptance of the revised policy.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3 border-l-2 border-[#0656D6] pl-4">11. Contact Us</h2>
+            <p className="mb-3">If you have any questions or concerns about this Privacy Policy, please contact us:</p>
+            <div className="bg-white/[0.03] border border-white/[0.08] rounded-xl p-6 space-y-2">
+              <p className="text-foreground font-semibold">Vayukah Drone Systems And Services Pvt Ltd</p>
+              <p>Email: <a href="mailto:info@vayukah.com" className="text-[#4B9EFF] hover:underline">info@vayukah.com</a></p>
+              <p>Website: <a href="https://vayukah.com" className="text-[#4B9EFF] hover:underline">vayukah.com</a></p>
+            </div>
+          </section>
+
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
