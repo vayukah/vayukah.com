@@ -1,0 +1,17 @@
+1:"$Sreact.fragment"
+2:I[5244,[],""]
+3:I[3866,[],""]
+4:I[2533,["837","static/chunks/837-6572e8e0625010e7.js","345","static/chunks/app/not-found-e1660de2b342905e.js"],"default"]
+5:I[7033,[],"ClientPageRoot"]
+6:I[913,["837","static/chunks/837-6572e8e0625010e7.js","173","static/chunks/173-9f1de7f7cb0702ee.js","565","static/chunks/565-2289d2c83d43bbc7.js","96","static/chunks/96-7e34c94bfd011f3f.js","150","static/chunks/app/dronesharpcloud/page-f8bb2d626229dec4.js"],"default"]
+9:I[6213,[],"OutletBoundary"]
+b:I[6213,[],"MetadataBoundary"]
+d:I[6213,[],"ViewportBoundary"]
+f:I[4835,[],""]
+:HL["/_next/static/css/88483691ac3a4e03.css","style"]
+0:{"P":null,"b":"BZnTQ2fy-RMVMdp406xpV","p":"","c":["","dronesharpcloud",""],"i":false,"f":[[["",{"children":["dronesharpcloud",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/88483691ac3a4e03.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[],["$","$L4",null,{}]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["dronesharpcloud",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","segmentPath":["children","dronesharpcloud","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L5",null,{"Component":"$6","searchParams":{},"params":{},"promises":["$@7","$@8"]}],null,["$","$L9",null,{"children":"$La"}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","O05e2G9d1nQRpK8kuASAX",{"children":[["$","$Lb",null,{"children":"$Lc"}],["$","$Ld",null,{"children":"$Le"}],null]}]]}],false]],"m":"$undefined","G":["$f","$undefined"],"s":false,"S":true}
+7:{}
+8:{}
+e:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+c:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Vayukah Drones — Survey & Mapping UAV Ecosystem"}],["$","meta","2",{"name":"description","content":"Vayukah builds end-to-end drone solutions for survey and mapping — from the VIGOR S50 UAV and smart battery to DroneSharp GCS and cloud photogrammetry software."}],["$","link","3",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon"}]]
+a:null
