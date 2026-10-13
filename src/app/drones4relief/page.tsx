@@ -166,7 +166,7 @@ export default function Drones4ReliefPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="col-span-2 rounded-2xl overflow-hidden border border-white/[0.07] relative h-56 sm:h-72">
                     <AppImage
-                      src="/assets/images/Drones4relief/Drones_4_Relief.png"
+                      src="/assets/images/Drones4relief/floodimage.png"
                       alt="Multiple drones flying in formation over disaster affected area for humanitarian mapping mission"
                       fill
                       priority
