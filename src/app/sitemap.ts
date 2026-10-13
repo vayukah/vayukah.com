@@ -1,11 +1,8 @@
 import { MetadataRoute } from 'next';
 
-export const dynamic = 'force-static';
-
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://vayukah.com';
+  const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://vayukah6650.builtwithrocket.new';
   return [
-    { url: `${base}/`, lastModified: new Date(), priority: 1.0 },
     { url: `${base}/home-page`, lastModified: new Date(), priority: 1.0 },
     { url: `${base}/drone`, lastModified: new Date(), priority: 0.9 },
     { url: `${base}/dronesharpgcs`, lastModified: new Date(), priority: 0.8 },

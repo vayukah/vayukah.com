@@ -37,10 +37,12 @@ const values = [
 ];
 
 const milestones = [
-  { year: '2021', event: 'Vayukah founded in Vijayawada, Andhra Pradesh' },
-  { year: '2022', event: 'VIGOR S50 prototype construction begins' },
-  { year: '2023', event: 'DroneSharp GCS development initiated' },
-  { year: '2024', event: 'VIGOR S50 available — survey & mapping ready' },
+  { year: '2021', event: 'Vayukah Inception ' },
+  { year: '2022', event: 'Vigor S50 Design initiated' },
+  { year: '2023', event: 'Functional Prototype is ready and tested' },
+  { year: '2024', event: 'Updated Vigor S50 with Obstacle detection sensors' },
+  { year: '2025', event: 'Introduced Payload swapabillity and gimbal payload' },
+  { year: '2026', event: 'Currently undergoing Type certification' },
 ];
 
 const socialLinks = [
@@ -52,17 +54,6 @@ const socialLinks = [
     icon: (
       <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-      </svg>
-    ),
-  },
-  {
-    name: 'GitHub',
-    href: 'https://github.com/vayukah',
-    desc: 'Explore our open source work',
-    color: '#F0F4FF',
-    icon: (
-      <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
       </svg>
     ),
   },
@@ -223,6 +214,78 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className="py-16 lg:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div
+            className="absolute inset-0 pointer-events-none"
+            style={{
+              background:
+                'radial-gradient(circle at 50% 30%, rgba(6,86,214,0.06) 0%, transparent 60%)',
+            }}
+          />
+
+          <div className="max-w-3xl mx-auto text-center">
+
+            <div
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full mb-5 text-sm font-semibold"
+              style={{
+                background: 'rgba(6,86,214,0.1)',
+                color: '#0656D6',
+              }}
+            >
+              🏆 Runner-Up – Drone Hackathon (Disaster Management) – Amaravati Drone Summit 2024
+            </div>
+
+            <h2
+              className="font-heading font-black text-foreground tracking-tight mb-4"
+              style={{ fontSize: 'clamp(1.8rem, 3vw, 2.5rem)' }}
+            >
+              Disaster Response with Drones
+            </h2>
+
+            <p className="text-muted leading-relaxed">
+              Vigor S50 was deployed during the Vijayawada floods of 2024 to support aerial
+              mapping, damage assessment, and planning of drone-based relief operations —
+              demonstrating real-world impact in disaster management.
+            </p>
+
+          </div>
+        </section>
+
+         <section className="py-16 lg:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  'radial-gradient(circle at 50% 30%, rgba(6,86,214,0.06) 0%, transparent 60%)',
+              }}
+            />
+
+            <div className="max-w-3xl mx-auto text-center">
+
+              <div
+                className="inline-flex items-center gap-2 px-5 py-2 rounded-full mb-5 text-sm font-semibold"
+                style={{
+                  background: 'rgba(6,86,214,0.1)',
+                  color: '#EB8A0C',
+                }}
+              >
+                    🛰️ Stage 1 finalists - ISRO NavIC grant challenge 2024
+              </div>
+
+              <h2
+                className="font-heading font-black text-foreground tracking-tight mb-4"
+                style={{ fontSize: 'clamp(1.8rem, 3vw, 2.5rem)' }}
+              >
+                NavIC integration in Drones
+              </h2>
+
+              <p className="text-muted leading-relaxed">
+                Vayukah is one of the company among the 20 finalists across India for integrating NavIC based Navigation systems into drones, which removes the need on GPS and also offers much precise local navigation.
+              </p>
+
+            </div>
+         </section>
+
         {/* Values */}
         <section className="py-20 lg:py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 pointer-events-none"
@@ -270,7 +333,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {socialLinks?.map((link, i) => (
                 <a key={link?.name} href={link?.href} target="_blank" rel="noopener noreferrer"
                   className={`card-lift reveal reveal-delay-${i + 1} group bg-surface border border-white/[0.07] rounded-2xl p-6 flex flex-col gap-4 hover:border-white/[0.15] transition-all duration-300`}>

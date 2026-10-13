@@ -49,7 +49,7 @@ export default function HeroSection({ onWatchVideo }: HeroSectionProps) {
 
       {/* Main content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <div className="grid lg:grid-cols-[1fr_1.8fr] gap-12 lg:gap-8 items-center">
           {/* Left: Text */}
           <div className="space-y-8">
             {/* Eyebrow */}
@@ -72,7 +72,7 @@ export default function HeroSection({ onWatchVideo }: HeroSectionProps) {
                 
                 Survey &amp; Mapping
                 <br />
-                <span className="text-gradient-blue">Made Easy.</span>
+                <span className="text-gradient-brand ">Made Easy.</span>
               </h1>
             </div>
 
@@ -111,8 +111,8 @@ export default function HeroSection({ onWatchVideo }: HeroSectionProps) {
             <div className="flex flex-wrap gap-6 pt-4 reveal active reveal-delay-4">
               {[
               { val: '50 min', label: 'Flight Time' },
-              { val: '1.5 km', label: 'Control Range' },
-              { val: '15 m/s', label: 'Top Speed' }].
+              { val: '1 kg', label: 'Max Payload' },
+              { val: '10 m/s', label: 'Top Speed' }].
               map((stat) =>
               <div key={stat.label} className="flex flex-col gap-0.5">
                   <span className="text-xl font-black font-heading text-foreground tracking-tight">{stat.val}</span>
@@ -123,7 +123,7 @@ export default function HeroSection({ onWatchVideo }: HeroSectionProps) {
           </div>
 
           {/* Right: Drone image */}
-          <div className="relative flex items-center justify-center">
+          <div className="relative  items-center justify-center">
             {/* Orbital rings */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div
@@ -150,14 +150,14 @@ export default function HeroSection({ onWatchVideo }: HeroSectionProps) {
             
 
             {/* Drone image */}
-            <div className="relative z-10 animate-float">
+            <div className="relative z-10 animate-float scale-[2] origin-center">
               <AppImage
-                src="/img/products/Drone/dronelayout.png"
+                src="/assets/images/Drones/dronelayout.png"
                 alt="Vayukah VIGOR S50 drone top-down layout view showing quad-rotor configuration"
-                width={580}
-                height={420}
+                width={1160}
+                height={840}
                 priority
-                className="w-full max-w-[480px] lg:max-w-none object-contain drop-shadow-2xl"
+                className="w-full max-w-[960px] lg:max-w-none object-contain drop-shadow-2xl"
                 style={{ filter: 'drop-shadow(0 0 40px rgba(6,86,214,0.35))' } as React.CSSProperties} />
               
             </div>

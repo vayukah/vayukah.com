@@ -71,12 +71,55 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
     if (!validate()) return;
+
     setSubmitting(true);
-    // Simulate submission
-    await new Promise((r) => setTimeout(r, 1200));
-    setSubmitting(false);
-    setSubmitted(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "2876b931-485c-4de1-80ed-3646cb764430",
+          subject: "New Contact Form Submission",
+
+          first_name: form.firstName,
+          last_name: form.lastName,
+          email: form.email,
+          phone: form.phone,
+          message: form.message,
+
+          from_name: `${form.firstName} ${form.lastName}`,
+          replyto: form.email,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+
+        // Clear form
+        setForm({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        alert(result.message || "Failed to send message.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const contactInfo = [

@@ -12,41 +12,40 @@ const highlights = [
   title: 'Powerhouse of a UAV',
   desc: 'Multi-directional range finders and obstacle detection keep your mission safe and your data clean.',
   features: ['Multi-directional range finders', 'Obstacle detection and stop'],
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1973fe118-1774948846395.png",
+  image: "/assets/images/Drones/VS50_top.png",
   imageAlt: 'VIGOR S50 top-down layout showing quad-rotor arm configuration',
   accent: 'primary',
-  accentColor: '#EB8A0C',
-  accentBg: 'rgba(235,138,12,0.12)'
-},
-{
-  title: 'Compact to Transport',
-  desc: 'Folds down to fit in a standard backpack. Deploy in minutes, not hours.',
-  features: ['Fits into a backpack', 'Quick and easy deployment'],
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_180d1bbf7-1774948845848.png",
-  imageAlt: 'VIGOR S50 folded compact form factor for transport',
-  accent: 'orange',
-  accentColor: '#EB8A0C',
-  accentBg: 'rgba(235,138,12,0.1)'
+  accentColor: '#0c7feb',
+  accentBg: 'rgba(29, 92, 175, 0.12)'
 },
 {
   title: 'Payload Quick Release',
   desc: 'Swap payloads in seconds. Up to 15 lens combinations supported for any survey scenario.',
   features: ['Instant payload swap', 'Up to 15 lens combinations'],
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1f8eb4b6b-1774948844707.png",
+  image: "/assets/images/Drones/Quick_release.png",
   imageAlt: 'VIGOR S50 payload quick-release mechanism detail',
   accent: 'green',
+  accentColor: '#EB8A0C',
+  accentBg: 'rgba(235,138,12,0.1)'
+},
+{
+  title: 'Compact to Transport',
+  desc: 'Folds down to fit in a standard backpack. Deploy in minutes, not hours.',
+  features: ['Fits into a backpack', 'Quick and easy deployment'],
+  image: "/assets/images/Drones/Drone_compact.png",
+  imageAlt: 'VIGOR S50 folded compact form factor for transport',
+  accent: 'orange',
   accentColor: '#3EBA3A',
-  accentBg: 'rgba(62,186,58,0.1)'
+  accentBg: ' rgba(62,186,58,0.1)'
 }];
 
 
 const keySpecs = [
 { label: 'Flight Time', value: '50 min', sub: 'with payload' },
-{ label: 'Control Range', value: '1.5 km', sub: 'SIYI MK 15E' },
-{ label: 'Top Speed', value: '15 m/s', sub: 'max velocity' },
-{ label: 'Max Payload', value: '1.5 kg', sub: 'quick release' },
-{ label: 'MTOW', value: '7.0 kg', sub: 'gross takeoff' },
-{ label: 'Propellers', value: '22"', sub: 'carbon fiber' }];
+{ label: 'Control Range', value: '1 km', sub: 'SIYI MK 15E' },
+{ label: 'Top Speed', value: '10 m/s', sub: 'max velocity' },
+{ label: 'Max Payload', value: '1 kg', sub: 'quick release' },
+{ label: 'MTOW', value: '6.4 kg', sub: 'gross takeoff' }];
 
 const cameras = [
 {
@@ -54,26 +53,28 @@ const cameras = [
   gimbal: '1-Axis Pivot Mount',
   gimbalColor: '#EB8A0C',
   gimbalBg: 'rgba(235,138,12,0.12)',
+  image: "/assets/images/Drones/A6100_payload.png",
   specs: [
     { label: 'Sensor', value: '24.2 MP APS-C' },
     { label: 'Lens Mount', value: 'Sony E-Mount' },
     { label: 'Video', value: '4K 30fps' },
     { label: 'Stabilisation', value: '1-Axis Pivot Mount' },
   ],
-  description: 'High-resolution APS-C sensor camera ideal for aerial photography, survey mapping, and inspection tasks with single-axis stabilisation.',
+  description: 'Beginner friendly camera with 90 degree tilt range, suitable for Survey mapping and inspection tasks.',
 },
 {
   name: 'Sony ILX-LR1',
   gimbal: '3-Axis Gimbal',
   gimbalColor: '#3EBA3A',
   gimbalBg: 'rgba(62,186,58,0.12)',
+  image: "/assets/images/Drones/ILX-LR1_payload.png",
   specs: [
     { label: 'Sensor', value: '61 MP Full-Frame' },
     { label: 'Lens Mount', value: 'Sony E-Mount' },
     { label: 'Video', value: '4K 60fps' },
     { label: 'Stabilisation', value: '3-Axis Gimbal' },
   ],
-  description: 'Industrial-grade full-frame 61 MP camera engineered for UAV use, paired with a 3-axis gimbal for ultra-stable, high-detail aerial imaging.',
+  description: 'High - resolution camera engineered for UAVs, paired with a 3-axis gimbal for ultra stable high-detail aerial imaging, large scale surveys and inspection applications.',
 },
 ];
 
@@ -107,8 +108,8 @@ export default function DronePage() {
         onClose={() => setModalOpen(false)}
         title="Download VIGOR S50 Brochure"
         subtitle="Fill in your details to get the brochure."
-        web3FormsKey="ebc811c0-947f-4216-9781-4ffb0db915b2"
-        fileUrl="http://192.168.0.105:9000/dronesharpgcs/latest/Vigor%20S50%20Brochure.pdf"
+        web3FormsKey="2876b931-485c-4de1-80ed-3646cb764430"
+        fileUrl="https://dronesharpgcs-downloads.s3.ap-south-1.amazonaws.com/releases/VIGOR-S50-Brochure.pdf"
         fileName="VIGOR-S50-Brochure.pdf"
         submitLabel="Submit & Download Brochure"
         successMessage="Your brochure download has started. Check your downloads folder."
@@ -157,7 +158,7 @@ export default function DronePage() {
                 </div>
 
                 <p className="text-base sm:text-lg text-muted leading-relaxed max-w-lg reveal active reveal-delay-2">
-                  A stable platform for Survey, Mapping and Inspection projects with a wide range of lens. Equipped with RTK module, pivoting camera mount and obstacle detection.
+                  A stable platform for Survey, Mapping and Inspection projects with a wide range of lens. Equipped with PPK module, pivoting camera mount and obstacle detection.
                 </p>
 
                 <div className="flex flex-wrap gap-3 reveal active reveal-delay-3">
@@ -179,18 +180,18 @@ export default function DronePage() {
                 </div>
 
                 {/* Key specs row */}
-                <div className="flex flex-wrap gap-5 pt-2 reveal active reveal-delay-4">
-                  {[{ val: '50 min', label: 'Flight Time' }, { val: '1.5 km', label: 'Range' }, { val: '15 m/s', label: 'Top Speed' }].map((s) =>
+                {/*<div className="flex flex-wrap gap-5 pt-2 reveal active reveal-delay-4">
+                  {[{ val: '45 min', label: 'Flight Time' }, { val: '1 km', label: 'Range' }, { val: '10 m/s', label: 'Top Speed' }].map((s) =>
                   <div key={s.label} className="flex flex-col gap-0.5">
                       <span className="text-xl font-black font-heading text-foreground tracking-tight">{s.val}</span>
                       <span className="text-xs text-muted font-medium uppercase tracking-widest">{s.label}</span>
                     </div>
                   )}
-                </div>
+                </div>*/}
               </div>
 
               {/* Right: Drone image */}
-              <div className="relative flex items-center justify-center">
+              <div className="relative  items-center justify-center">
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <div className="w-[460px] h-[460px] rounded-full" style={{ border: '1px solid rgba(235,138,12,0.1)', animation: 'spin 30s linear infinite' }} />
                   <div className="absolute w-[340px] h-[340px] rounded-full" style={{ border: '1px solid rgba(235,138,12,0.1)', animation: 'spin 20s linear infinite reverse' }} />
@@ -200,18 +201,18 @@ export default function DronePage() {
                 style={{ background: 'radial-gradient(circle, rgba(235,138,12,0.18) 0%, transparent 70%)', filter: 'blur(40px)' }} />
                 <div className="relative z-10 animate-float">
                   <AppImage
-                    src="/img/products/Drone/dronelayout.png"
+                    src="/assets/images/Drones/dronelayout.png"
                     alt="Vayukah VIGOR S50 quad-rotor survey drone top-down layout"
-                    width={520}
-                    height={380}
+                    width={1160}
+                    height={840}
                     priority
-                    className="w-full max-w-[440px] object-contain drop-shadow-2xl"
+                    className="w-full max-w-[960px] object-contain drop-shadow-2xl"
                     style={{ filter: 'drop-shadow(0 0 40px rgba(235,138,12,0.35))' } as React.CSSProperties} />
                   
                 </div>
                 {/* Floating cards */}
                 <div className="absolute top-6 right-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
-                  <div className="text-xs text-muted font-medium mb-0.5">RTK Module</div>
+                  <div className="text-xs text-muted font-medium mb-0.5">PPK Module</div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
                     <span className="text-sm font-bold text-foreground">Integrated</span>
@@ -232,7 +233,7 @@ export default function DronePage() {
         {/* Key Specs Strip */}
         <section className="py-10 px-4 sm:px-6 lg:px-8 border-y border-white/[0.05] bg-surface/40">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
               {keySpecs.map((spec, i) =>
               <div key={spec.label} className={`reveal ${i > 0 ? `reveal-delay-${Math.min(i, 4)}` : ''} text-center`}>
                   <div className="text-2xl font-black font-heading text-foreground tracking-tight">{spec.value}</div>
@@ -304,6 +305,14 @@ export default function DronePage() {
               )}
             </div>
 
+            <div className="my-20 reveal">
+              <div className="card-lift card-lift-blue reveal reveal-delay-${i + 1} group bg-surface relative rounded-2xl overflow-hidden border border-white/[0.08] bg-black">
+                <div className="relative w-full h-[320px] md:h-[420px] lg:h-[520px]">
+                  <AppImage src="/assets/images/Drones/Drone_giff.gif" alt="Drone animation preview" fill unoptimized className="object-contain" />
+                </div>
+              </div>
+            </div>
+
             {/* Camera Details */}
             <div className="mt-20 reveal">
               <div className="flex items-center gap-3 mb-4">
@@ -330,13 +339,9 @@ export default function DronePage() {
                         <span className="text-xs font-bold tracking-wide" style={{ color: cam.gimbalColor }}>{cam.gimbal}</span>
                       </div>
                       {/* Camera icon */}
-                      <div className="flex items-center gap-4 mb-4">
-                        <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                          style={{ background: cam.gimbalBg, border: `1px solid ${cam.gimbalColor}33` }}>
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={cam.gimbalColor} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z" />
-                            <circle cx="12" cy="13" r="4" />
-                          </svg>
+                      <div className="flex flex-col items-center text-center gap-4 mb-4">
+                        <div className="w-full max-w-[220px] rounded-xl overflow-hidden border" style={{ background: cam.gimbalBg, borderColor: `${cam.gimbalColor}33` }}>
+                          <img src={cam.image} alt={cam.name} width={400} height={300} className="w-full object-contain p-2" style={{ filter: `drop-shadow(0 0 20px ${cam.gimbalColor}55)` }} />
                         </div>
                         <h3 className="font-heading font-black text-xl text-foreground tracking-tight">{cam.name}</h3>
                       </div>

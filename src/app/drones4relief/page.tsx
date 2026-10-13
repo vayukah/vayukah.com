@@ -166,7 +166,7 @@ export default function Drones4ReliefPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div className="col-span-2 rounded-2xl overflow-hidden border border-white/[0.07] relative h-56 sm:h-72">
                     <AppImage
-                      src="/img/products/Drones4relief/drones_4_relief_01.png"
+                      src="https://www.vayukah.com/img/products/Drones4relief/drones_4_relief_01.png"
                       alt="Multiple drones flying in formation over disaster affected area for humanitarian mapping mission"
                       fill
                       priority
@@ -182,7 +182,7 @@ export default function Drones4ReliefPage() {
                   </div>
                   <div className="col-span-2 rounded-2xl overflow-hidden border border-white/[0.07] relative h-40 sm:h-52">
                     <AppImage
-                      src="/img/products/Drones4relief/Drones_4_Relief_03.png"
+                      src="https://www.vayukah.com/img/products/Drones4relief/Drones_4_Relief_03.png"
                       alt="Drone delivering aid package to remote disaster relief location during emergency response operation"
                       fill
                       className="object-cover object-center" />

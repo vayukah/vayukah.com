@@ -6,8 +6,8 @@ import AppImage from '@/components/ui/AppImage';
 
 const specs_drone = [
   { label: 'Flight Time', value: '50 min' },
-  { label: 'Control Range', value: '1.5 km' },
-  { label: 'Top Speed', value: '15 m/s' },
+  { label: 'Swappable Payloads', value: 'Multi Camera' },
+  { label: 'Top Speed', value: '10 m/s' },
 ];
 
 export default function ProductsSection() {
@@ -97,7 +97,7 @@ export default function ProductsSection() {
                 style={{ background: 'radial-gradient(ellipse at center, rgba(249,115,22,0.15) 0%, transparent 70%)' }}
               />
               <AppImage
-                src="/img/products/Drone/dronelayout.png"
+                src="/assets/images/Drones/VS50_front.png"
                 alt="VIGOR S50 quad-rotor survey drone top-down layout showing arm configuration and motor placement"
                 fill
                 className="object-contain p-8 group-hover:scale-105 transition-transform duration-700"
