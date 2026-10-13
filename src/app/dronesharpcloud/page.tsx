@@ -11,7 +11,7 @@ const workflowSteps = [
   step: '01',
   title: 'Project Creation',
   desc: 'Create a new survey project, define the area of interest, and configure processing parameters.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1658e56ea-1768726512478.png",
+  image: "/assets/images/Dronesharp.io/Dronesharpio_project.png",
   imageAlt: 'DroneSharp Cloud project creation dashboard',
   color: '#0656D6',
   bg: 'rgba(6,86,214,0.1)'
@@ -20,29 +20,36 @@ const workflowSteps = [
   step: '02',
   title: 'Image Upload',
   desc: 'Upload your aerial imagery directly from the field. Supports batch uploads with automatic metadata extraction.',
-  image: "https://images.unsplash.com/photo-1595872018818-97555653a011",
+  image: "/assets/images/Dronesharp.io/Dronesharp_image.png",
   imageAlt: 'DroneSharp Cloud image upload interface',
-  color: '#4B9EFF',
-  bg: 'rgba(75,158,255,0.1)'
+  color: '#ffba4b',
+  bg: 'rgba(255, 246, 75, 0.1)'
 },
 {
   step: '03',
   title: 'View Results',
   desc: 'Access your photogrammetry outputs — orthomosaics, point clouds, DSMs — directly in the browser.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_153b3f5d6-1767611507638.png",
+  image: "/assets/images/Dronesharp.io/Dronesharp_result.png",
   imageAlt: 'DroneSharp Cloud photogrammetry results viewer',
-  color: '#0656D6',
-  bg: 'rgba(6,86,214,0.1)'
+  color: '#14d606',
+  bg: 'rgba(51, 214, 6, 0.1)'
 },
 {
   step: '04',
   title: 'GCP Interface',
   desc: 'Mark Ground Control Points to achieve centimetre-level accuracy in your final deliverables.',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1a753e348-1774950652082.png",
+  image: "/assets/images/Dronesharp.io/Dronesharpio_GCPS.png",
   imageAlt: 'DroneSharp Cloud GCP marking interface',
   color: '#4B9EFF',
   bg: 'rgba(75,158,255,0.1)'
 }];
+
+
+const outputs = [
+  { name: 'Orthomosaic', desc: 'High-resolution stitched imagery', format: '.GeoTIFF' },
+  { name: 'Point Cloud', desc: 'Dense 3D reconstruction data', format: '.LAS' },
+  { name: 'DSM / DTM', desc: 'Surface and terrain elevation models', format: '.TIFF' }
+];
 
 
 const cloudFeatures = [
@@ -136,7 +143,7 @@ export default function DroneSharpCloudPage() {
 
                 {/* Key features pills */}
                 <div className="flex flex-wrap gap-2 reveal active reveal-delay-4">
-                  {['Photogrammetry', 'Project Mgmt', 'GCP Interface', 'Cloud Scale']?.map((tag) =>
+                  {['Photogrammetry', 'Project Mgmt', 'GCP Interface']?.map((tag) =>
                   <span key={tag} className="spec-pill badge-hover" style={{ background: 'rgba(6,86,214,0.1)', borderColor: 'rgba(6,86,214,0.25)', color: '#4B9EFF' }}>
                       {tag}
                     </span>
@@ -150,7 +157,7 @@ export default function DroneSharpCloudPage() {
                 style={{ background: 'radial-gradient(ellipse at center, rgba(6,86,214,0.12) 0%, transparent 70%)', filter: 'blur(30px)' }} />
                 <div className="relative z-10 rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl">
                   <AppImage
-                    src="/img/products/Dronesharp.io/Dronesharpio_project.png"
+                    src="/assets/images/Dronesharp.io/Dronesharp_result.png"
                     alt="DroneSharp Cloud project dashboard showing photogrammetry processing status"
                     width={700}
                     height={480}
@@ -244,6 +251,93 @@ export default function DroneSharpCloudPage() {
                   </div>
                 )}
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 lg:py-28 bg-surface/20 relative overflow-hidden">
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+          </div>
+
+          <div className="max-w-7xl mx-auto px-5 lg:px-10">
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 items-center">
+
+              {/* Image */}
+              <div className="lg:col-span-3 relative rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl">
+                <div
+                  className="absolute inset-0 z-10"
+                  style={{
+                    background: 'linear-gradient(to top, rgba(6,86,214,0.15), transparent)'
+                  }}
+                />
+
+                <AppImage
+                  src="https://img.rocket.new/generatedImages/rocket_gen_img_11cd46328-1774941888207.png"
+                  alt="DroneSharp Cloud dashboard"
+                  width={700}
+                  height={500}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="lg:col-span-2 flex flex-col gap-5">
+
+                <div>
+                  <span className="text-xs font-bold uppercase tracking-widest mb-2 block"
+                    style={{ color: '#0656D6' }}>
+                    Output Formats
+                  </span>
+
+                  <h3 className="text-2xl font-heading font-black text-foreground tracking-tight">
+                    Industry-Standard <span style={{ color: '#0656D6' }}>Deliverables</span>
+                  </h3>
+
+                  <p className="text-sm text-muted mt-2 leading-relaxed">
+                    Export your processed data in formats compatible with GIS software, CAD tools, and reporting systems.
+                  </p>
+                </div>
+
+                {/* Cards */}
+                <div className="flex flex-col gap-3">
+                  {outputs.map((out, i) => (
+                    <div
+                      key={i}
+                      className="rounded-lg p-4 border border-white/[0.08] bg-surface transition-all duration-300 flex items-center justify-between hover:shadow-lg"
+                      style={{
+                        boxShadow: '0 0 0 transparent'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.borderColor = '#0656D6';
+                        e.currentTarget.style.boxShadow = '0 8px 24px rgba(6,86,214,0.2)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}
+                    >
+                      <div>
+                        <p className="text-sm font-semibold text-foreground">{out.name}</p>
+                        <p className="text-xs text-muted">{out.desc}</p>
+                      </div>
+
+                      <span
+                        className="text-[10px] font-mono px-2 py-1 rounded ml-3"
+                        style={{
+                          color: '#0656D6',
+                          background: 'rgba(6,86,214,0.12)'
+                        }}
+                      >
+                        {out.format}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+
             </div>
           </div>
         </section>

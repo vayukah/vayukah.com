@@ -5,12 +5,12 @@ import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 
 const productLinks = [
-  { label: 'VIGOR S50 Drone', href: '/drone', desc: '50 min flight, 1.5 km range' },
+  { label: 'VIGOR S50 Drone', href: '/drone', desc: '50 min flight, 1 kg payload' },
 ];
 
 const solutionLinks = [
-  { label: 'DroneSharp GCS', href: '/dronesharpgcs', desc: 'Ground control station' },
   { label: 'DroneSharp Cloud', href: '/dronesharpcloud', desc: 'Cloud photogrammetry' },
+  { label: 'DroneSharp GCS', href: '/dronesharpgcs', desc: 'Ground control station' },
 ];
 
 export default function Header() {
@@ -102,12 +102,11 @@ export default function Header() {
                 </Link>
               </div>
             </div>
-
-            <Link href="/about" className="px-4 py-2 text-sm font-medium text-muted hover:text-foreground transition-colors duration-200 rounded-lg hover:bg-white/[0.04]">
-              About Us
-            </Link>
             <Link href="/downloads" className="px-4 py-2 text-sm font-medium text-muted hover:text-foreground transition-colors duration-200 rounded-lg hover:bg-white/[0.04]">
               Downloads
+            </Link>
+            <Link href="/about" className="px-4 py-2 text-sm font-medium text-muted hover:text-foreground transition-colors duration-200 rounded-lg hover:bg-white/[0.04]">
+              About Us
             </Link>
             <Link
               href="/contact"

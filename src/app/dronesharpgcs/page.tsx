@@ -10,8 +10,7 @@ import DownloadModal from '@/components/DownloadModal';
 const flyingFeatures = [
 'Mission repository',
 'Context specific telemetry',
-'Multi drone support',
-'Windows, Linux or Android',
+'Windows, Android',
 'Audible prompts'];
 
 
@@ -24,14 +23,13 @@ const planningFeatures = [
 
 const platforms = [
 { name: 'Windows', icon: '🖥️', desc: 'Full-featured desktop client' },
-{ name: 'Linux', icon: '🐧', desc: 'Native Linux support' },
 { name: 'Android', icon: '📱', desc: 'Mobile field operations' }];
 
 
 const capabilities = [
 { title: 'Real-time Telemetry', desc: 'Context-specific data panels that surface exactly what you need during each phase of flight.', color: '#EB8A0C', bg: 'rgba(235,138,12,0.1)' },
-{ title: 'Multi-drone Support', desc: 'Manage and monitor multiple VIGOR S50 drones simultaneously from a single interface.', color: '#3EBA3A', bg: 'rgba(62,186,58,0.1)' },
-{ title: 'Inflight Survey Preview', desc: 'See your survey coverage build in real time as the drone captures imagery.', color: '#EB8A0C', bg: 'rgba(235,138,12,0.1)' },
+{ title: 'Inflight Survey Preview', desc: 'See your survey coverage build in real time as the drone captures imagery.', color: '#0c7feb', bg: 'rgba(29, 92, 175, 0.12)' },
+{ title: 'Weather Forecast', desc: 'Real-time weather insights including temperature, wind speed, humidity, and forecast to ensure safe and efficient drone operations.', color: '#3EBA3A', bg: 'rgba(62,186,58,0.1)' },
 { title: 'Terrain-aware Planning', desc: 'Import terrain data to automatically adjust flight altitude for consistent GSD across hilly terrain.', color: '#EB8A0C', bg: 'rgba(235,138,12,0.1)' }];
 
 
@@ -63,8 +61,8 @@ export default function DroneSharpGCSPage() {
         onClose={() => setModalOpen(false)}
         title="Download Dronesharp GCS"
         subtitle="Fill in your details to get the installer."
-        web3FormsKey="ebc811c0-947f-4216-9781-4ffb0db915b2"
-        fileUrl="http://192.168.0.105:9000/dronesharpgcs/latest/DronesharpGCS-installer.exe"
+        web3FormsKey="2876b931-485c-4de1-80ed-3646cb764430"
+        fileUrl="https://dronesharpgcs-downloads.s3.ap-south-1.amazonaws.com/releases/windows/v1.1.1/DronesharpGCS-installer.exe"
         fileName="DronesharpGCS-installer.exe"
         submitLabel="Submit & Download .exe"
         successMessage="Your download has started. Check your downloads folder."
@@ -117,7 +115,7 @@ export default function DroneSharpGCSPage() {
                     style={{ background: '#EB8A0C', boxShadow: '0 8px 24px rgba(235,138,12,0.25)' }}>
                     Download
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <path d="M8 2v8m0 0L5 7m3 3l3-3M2 12h12" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17" />
                     </svg>
                   </button>
                   <Link href="/dronesharpcloud"
@@ -143,7 +141,7 @@ export default function DroneSharpGCSPage() {
                 style={{ background: 'radial-gradient(ellipse at center, rgba(235,138,12,0.15) 0%, transparent 70%)', filter: 'blur(30px)' }} />
                 <div className="relative z-10 rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl">
                   <AppImage
-                    src="/img/products/dronesharp/drone_map_01.png"
+                    src="/assets/images/DronesharpGCS/drone_map_01.png"
                     alt="DroneSharp GCS mission planning interface showing drone flight path on map"
                     width={700}
                     height={480}
@@ -227,7 +225,7 @@ export default function DroneSharpGCSPage() {
                 <div className="relative h-52 overflow-hidden">
                   <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, rgba(235,138,12,0.12) 0%, transparent 70%)' }} />
                   <AppImage
-                    src="/img/products/dronesharp/drone_map_01.png"
+                    src="/assets/images/DronesharpGCS/drone_map_01.png"
                     alt="DroneSharp GCS flying interface with telemetry panels"
                     fill
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-700" />
@@ -260,7 +258,7 @@ export default function DroneSharpGCSPage() {
                 <div className="relative h-52 overflow-hidden">
                   <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, rgba(235,138,12,0.1) 0%, transparent 70%)' }} />
                   <AppImage
-                    src="/img/products/dronesharp/drone_map_01.png"
+                    src="/assets/images/DronesharpGCS/drone_map_02.png"
                     alt="DroneSharp GCS mission planning map view with waypoints"
                     fill
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-700" />
@@ -268,6 +266,80 @@ export default function DroneSharpGCSPage() {
                   <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(15,21,32,0.8), transparent)' }} />
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            
+            <div className="text-center mb-14 reveal">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-orange/10 border border-accent-orange/20 mb-4">
+                <span className="text-xs font-bold text-accent-orange tracking-wide">USE CASES</span>
+              </div>
+
+              <h2
+                className="font-heading font-black text-foreground tracking-tight"
+                style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}
+              >
+                Industries We Serve
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  title: 'Land Survey',
+                  desc: 'High-accuracy topographic surveys for infrastructure and construction projects.',
+                  icon: '🌍'
+                },
+                {
+                  title: 'Precision Agriculture',
+                  desc: 'Crop health monitoring, NDVI mapping, and field analytics for modern farming.',
+                  icon: '🌱'
+                },
+                {
+                  title: 'Construction Monitoring',
+                  desc: 'Progress tracking, volumetric analysis, and site documentation at scale.',
+                  icon: '🏗️'
+                },
+                {
+                  title: 'Disaster Relief',
+                  desc: 'Rapid aerial assessment and logistics support in humanitarian operations.',
+                  icon: '🌊'
+                },
+                {
+                  title: 'Infrastructure Inspection',
+                  desc: 'Power lines, pipelines, and bridges inspected safely and efficiently.',
+                  icon: '⚡'
+                },
+                {
+                  title: 'Heritage Documentation',
+                  desc: '3D digitization of historical sites and cultural heritage preservation.',
+                  icon: '🏛️'
+                }
+              ].map((item, i) => (
+                <div
+                  key={item.title}
+                  className={`card-lift reveal reveal-delay-${i + 1} bg-surface border border-white/[0.07] rounded-2xl p-6 relative overflow-hidden hover:border-accent-orange/20 transition-all duration-300`}
+                >
+                  {/* Top gradient line */}
+                  <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-accent-orange to-transparent" />
+
+                  {/* Icon */}
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 bg-accent-orange/10 border border-accent-orange/20">
+                    <span className="text-lg">{item.icon}</span>
+                  </div>
+
+                  <h3 className="font-heading font-black text-lg text-foreground mb-2">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-sm text-muted leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

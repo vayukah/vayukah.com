@@ -14,30 +14,30 @@ interface VersionEntry {
 }
 
 const latestWindows: VersionEntry = {
-  version: 'v3.2.1',
-  date: '12 March 2025',
-  notes: 'New terrain-follow mode, bug fixes for multi-drone sync, improved UI',
-  downloadUrl: 'http://192.168.0.105:9000/dronesharpgcs/latest/DronesharpGCS-installer.exe',
+  version: 'v1.1.1',
+  date: '23 June 2026',
+  notes: 'Added RTK support, flight log download, firmware update, and UI enhancements for an improved user experience',
+  downloadUrl: 'https://dronesharpgcs-downloads.s3.ap-south-1.amazonaws.com/releases/windows/v1.1.1/DronesharpGCS-installer.exe',
   fileName: 'DronesharpGCS-installer.exe',
 };
 
 const previousWindows: VersionEntry[] = [
-  { version: 'v3.1.0', date: '5 Jan 2025',  notes: 'Added mission presets, multiple map providers',       downloadUrl: '/files/DroneSharpGCS_v3.1.0_Setup.exe', fileName: 'DronesharpGCS-v3.1.0-installer.exe' },
-  { version: 'v3.0.0', date: '10 Oct 2024', notes: 'Major release — multi drone support, audible prompts', downloadUrl: '/files/DroneSharpGCS_v3.0.0_Setup.exe', fileName: 'DronesharpGCS-v3.0.0-installer.exe' },
-  { version: 'v2.8.4', date: '3 Jul 2024',  notes: 'Stability patches, telemetry improvements',           downloadUrl: '/files/DroneSharpGCS_v2.8.4_Setup.exe', fileName: 'DronesharpGCS-v2.8.4-installer.exe' },
+  { version: 'v1.1.0', date: '02 April 2026', notes: 'Added new configuration parameters for improved flexibility and customization', downloadUrl: 'https://dronesharpgcs-downloads.s3.ap-south-1.amazonaws.com/releases/windows/v1.1.0/DronesharpGCS-installer.exe', fileName: 'DronesharpGCS-v1.1.0-installer.exe' },
+  { version: 'v1.0.0', date: '10 Dec 2025',  notes: 'Added weather forecast, navigation lights controls, and telemetry improvements',       downloadUrl: 'https://dronesharpgcs-downloads.s3.ap-south-1.amazonaws.com/releases/windows/v1.0.0/DronesharpGCS-installer.exe', fileName: 'DronesharpGCS-v1.0.0-installer.exe' },
+  /*{ version: 'v2.8.4', date: '3 Jul 2024',  notes: 'Stability patches, telemetry improvements',           downloadUrl: '/files/DroneSharpGCS_v2.8.4_Setup.exe', fileName: 'DronesharpGCS-v2.8.4-installer.exe' },*/
 ];
 
 const latestAndroid: VersionEntry = {
-  version: 'v3.2.0',
-  date: '20 March 2025',
-  notes: 'UI improvements, terrain-follow support, stability fixes',
-  playStoreUrl: 'https://play.google.com/store/apps/details?id=com.aerogcs.aerogcsenterprise.hellodrone&pli=1',
+  version: 'v1.1.0',
+  date: '02 April 2026',
+  notes: 'Added new configuration parameters for improved flexibility and customization',
+  playStoreUrl: 'https://play.google.com/store/apps/details?id=org.mavlink.vayukah&pli=1',
 };
 
 const previousAndroid: VersionEntry[] = [
-  { version: 'v3.1.0', date: '10 Jan 2025', notes: 'Mission presets, map provider switching',        playStoreUrl: 'https://play.google.com/store/apps/details?id=com.aerogcs.aerogcsenterprise.hellodrone&pli=1' },
-  { version: 'v3.0.1', date: '18 Oct 2024', notes: 'Hotfix — multi drone sync crash on Android 14', playStoreUrl: 'https://play.google.com/store/apps/details?id=com.aerogcs.aerogcsenterprise.hellodrone&pli=1' },
-  { version: 'v2.9.0', date: '15 Jul 2024', notes: 'Telemetry redesign, audible alert improvements', playStoreUrl: 'https://play.google.com/store/apps/details?id=com.aerogcs.aerogcsenterprise.hellodrone&pli=1' },
+  { version: 'v1.0.0', date: '10 Dec 2025',  notes: 'Added weather forecast, navigation lights controls, and telemetry improvements',        playStoreUrl: 'https://play.google.com/store/apps/details?id=org.mavlink.vayukah&pli=1' },
+  /*{ version: 'v3.0.1', date: '18 Oct 2024', notes: 'Hotfix — multi drone sync crash on Android 14', playStoreUrl: 'https://play.google.com/store/apps/details?id=com.aerogcs.aerogcsenterprise.hellodrone&pli=1' },
+  { version: 'v2.9.0', date: '15 Jul 2024', notes: 'Telemetry redesign, audible alert improvements', playStoreUrl: 'https://play.google.com/store/apps/details?id=com.aerogcs.aerogcsenterprise.hellodrone&pli=1' },*/
 ];
 
 function DownloadButton({ url, fileName }: { url: string; fileName: string }) {

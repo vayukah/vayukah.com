@@ -19,7 +19,7 @@ const solutions = [
   'Real-time telemetry'],
 
   href: '/dronesharpgcs',
-  image: '/img/products/dronesharp/drone_map_01.png',
+  image: '/assets/images/DronesharpGCS/drone_map_01.png',
   imageAlt: 'DroneSharp GCS mission planning interface showing drone flight path on map',
   ctaColor: 'text-primary-light',
   hoverGlow: 'rgba(6,86,214,0.12)'
@@ -38,7 +38,7 @@ const solutions = [
   'GCP interface & control'],
 
   href: '/dronesharpcloud',
-  image: "https://img.rocket.new/generatedImages/rocket_gen_img_1f87a68bc-1774950937733.png",
+  image: '/assets/images/Dronesharp.io/Dronesharp_result.png',
   imageAlt: 'DroneSharp Cloud project dashboard showing photogrammetry processing status and 3D model preview',
   ctaColor: 'text-accent-green',
   hoverGlow: 'rgba(62,186,58,0.12)'
