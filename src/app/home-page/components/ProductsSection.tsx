@@ -97,7 +97,7 @@ export default function ProductsSection() {
                 style={{ background: 'radial-gradient(ellipse at center, rgba(249,115,22,0.15) 0%, transparent 70%)' }}
               />
               <AppImage
-                src="/assets/images/Drones/VS50_front.png"
+                src="/assets/images/Drones/VS50front.png"
                 alt="VIGOR S50 quad-rotor survey drone top-down layout showing arm configuration and motor placement"
                 fill
                 className="object-contain p-8 group-hover:scale-105 transition-transform duration-700"
