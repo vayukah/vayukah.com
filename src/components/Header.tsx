@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 
 const productLinks = [
-  { label: 'VIGOR S50 Drone', href: '/drone', desc: '50 min flight, 1 kg payload' },
+  { label: 'VIGOR S50 Drone', href: '/drone', desc: '45 min flight, 1 kg payload' },
 ];
 
 const solutionLinks = [

@@ -41,7 +41,7 @@ const highlights = [
 
 
 const keySpecs = [
-{ label: 'Flight Time', value: '50 min', sub: 'with payload' },
+{ label: 'Flight Time', value: '45 min', sub: 'with payload' },
 { label: 'Control Range', value: '1 km', sub: 'SIYI MK 15E' },
 { label: 'Top Speed', value: '10 m/s', sub: 'max velocity' },
 { label: 'Max Payload', value: '1 kg', sub: 'quick release' },

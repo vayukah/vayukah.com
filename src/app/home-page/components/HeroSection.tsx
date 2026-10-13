@@ -110,7 +110,7 @@ export default function HeroSection({ onWatchVideo }: HeroSectionProps) {
             {/* Stats row */}
             <div className="flex flex-wrap gap-6 pt-4 reveal active reveal-delay-4">
               {[
-              { val: '50 min', label: 'Flight Time' },
+              { val: '45 min', label: 'Flight Time' },
               { val: '1 kg', label: 'Max Payload' },
               { val: '10 m/s', label: 'Top Speed' }].
               map((stat) =>

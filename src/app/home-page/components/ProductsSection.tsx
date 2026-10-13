@@ -5,7 +5,7 @@ import Link from 'next/link';
 import AppImage from '@/components/ui/AppImage';
 
 const specs_drone = [
-  { label: 'Flight Time', value: '50 min' },
+  { label: 'Flight Time', value: '45 min' },
   { label: 'Swappable Payloads', value: 'Multi Camera' },
   { label: 'Top Speed', value: '10 m/s' },
 ];
