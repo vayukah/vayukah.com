@@ -90,7 +90,7 @@ export default function Drones4ReliefSection() {
               {/* Main image */}
               <div className="col-span-2 rounded-2xl overflow-hidden border border-white/[0.07] relative h-56 sm:h-72">
                 <AppImage
-                  src="/assets/images/Drones4relief/Drones_4_Relief_01.png"
+                  src="/assets/images/Drones4relief/Drones_4_Relief.png"
                   alt="Multiple drones flying in formation over disaster affected area for humanitarian mapping mission"
                   fill
                   className="object-cover object-center" />
