@@ -42,13 +42,13 @@ const products: Product[] = [
     ],
   },
   {
-    name: 'Product Two',
+    name: 'Delivery Drone',
     category: 'UAV Platform',
     subtitle: 'Advanced aerial platform',
     description:
       'Add the product description here, including its capabilities and intended applications.',
-    image: '/assets/images/Drones/product-two.PNG',
-    imageAlt: 'Product Two UAV',
+    image: '/assets/images/Drones/DD_drone.PNG',
+    imageAlt: 'Delivery Drone',
     href: '/dddronedddrone',
     theme: 'blue',
     specs: [
@@ -58,13 +58,13 @@ const products: Product[] = [
     ],
   },
   {
-    name: 'Product Three',
+    name: 'Viper VTOL',
     category: 'UAV Platform',
     subtitle: 'Precision aerial platform',
     description:
       'Add the product description here, including its capabilities and intended applications.',
-    image: '/assets/images/Drones/product-three.PNG',
-    imageAlt: 'Product Three UAV',
+    image: '/assets/images/Drones/vtol_drone.PNG',
+    imageAlt: 'Viper VTOL UAV',
     href: '/vtoldrone',
     theme: 'green',
     specs: [
