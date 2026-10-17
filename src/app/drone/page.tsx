@@ -148,12 +148,11 @@ export default function DronePage() {
                 </div>
 
                 <div className="reveal active reveal-delay-1">
-                  <div className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-muted mb-2">VIGOR</div>
                   <h1 className="font-heading font-black tracking-tighter leading-[0.9] text-foreground"
                   style={{ fontSize: 'clamp(3rem, 7vw, 6rem)' }}>
-                    S50
+                    VIGOR
                     <br />
-                    <span style={{ color: '#EB8A0C' }}>Drone</span>
+                    <span style={{ color: '#EB8A0C' }}>S50</span>
                   </h1>
                 </div>
 

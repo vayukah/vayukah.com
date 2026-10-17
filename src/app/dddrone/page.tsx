@@ -128,7 +128,7 @@ export default function DronePage() {
             <div
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white font-heading font-black uppercase whitespace-nowrap select-none"
               style={{ fontSize: 'clamp(5rem, 18vw, 22rem)', lineHeight: 1, letterSpacing: '-0.08em', opacity: 0.018 }}>
-              VIGOR
+              Delivery
             </div>
           </div>
 
@@ -142,16 +142,15 @@ export default function DronePage() {
                   <div className="badge-hover flex items-center gap-1.5 px-3 py-1 rounded-full" style={{ border: '1px solid rgba(75,158,255,0.3)', background: 'rgba(75,158,255,0.1)', transition: 'background 0.25s ease, border-color 0.25s ease' }}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(75,158,255,0.2)'; (e.currentTarget as HTMLElement).style.borderColor = 'rgba(75,158,255,0.5)'; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(75,158,255,0.1)'; (e.currentTarget as HTMLElement).style.borderColor = 'rgba(75,158,255,0.3)'; }}>
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent-green animate-pulse" />
-                    <span className="text-xs font-bold tracking-wide" style={{ color: '#0656D6' }}>Available Now</span>
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent-orange animate-pulse" />
+                    <span className="text-xs font-bold tracking-wide" style={{ color: '#0656D6' }}>Coming Soon</span>
                   </div>
                 </div>
 
                 <div className="reveal active reveal-delay-1">
-                  <div className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-muted mb-2">VIGOR</div>
                   <h1 className="font-heading font-black tracking-tighter leading-[0.9] text-foreground"
                   style={{ fontSize: 'clamp(3rem, 7vw, 6rem)' }}>
-                    S50
+                    Delivery
                     <br />
                     <span style={{ color: '#0656D6' }}>Drone</span>
                   </h1>
@@ -201,8 +200,8 @@ export default function DronePage() {
                 style={{ background: 'radial-gradient(circle, rgba(75,158,255,0.18) 0%, transparent 70%)', filter: 'blur(40px)' }} />
                 <div className="relative z-10 animate-float">
                   <AppImage
-                    src="/assets/images/Drones/dronelayout.png"
-                    alt="Vayukah VIGOR S50 quad-rotor survey drone top-down layout"
+                    src="/assets/images/Drones/DD_drone.PNG"
+                    alt="Vayukah Delivery Drone top-down layout"
                     width={1160}
                     height={840}
                     priority

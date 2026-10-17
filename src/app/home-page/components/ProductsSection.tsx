@@ -49,7 +49,7 @@ const products: Product[] = [
       'Add the product description here, including its capabilities and intended applications.',
     image: '/assets/images/Drones/DD_drone.PNG',
     imageAlt: 'Delivery Drone',
-    href: '/dddronedddrone',
+    href: '/dddrone',
     theme: 'blue',
     specs: [
       { label: 'Flight Time', value: '40 min' },
