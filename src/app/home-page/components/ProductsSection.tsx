@@ -49,7 +49,7 @@ const products: Product[] = [
       'Add the product description here, including its capabilities and intended applications.',
     image: '/assets/images/Drones/product-two.PNG',
     imageAlt: 'Product Two UAV',
-    href: '/product-two',
+    href: '/dddronedddrone',
     theme: 'blue',
     specs: [
       { label: 'Flight Time', value: '40 min' },
@@ -65,7 +65,7 @@ const products: Product[] = [
       'Add the product description here, including its capabilities and intended applications.',
     image: '/assets/images/Drones/product-three.PNG',
     imageAlt: 'Product Three UAV',
-    href: '/product-three',
+    href: '/vtoldrone',
     theme: 'green',
     specs: [
       { label: 'Flight Time', value: '35 min' },
