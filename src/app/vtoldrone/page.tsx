@@ -161,21 +161,18 @@ export default function DronePage() {
                 </p>
 
                 <div className="flex flex-wrap gap-3 reveal active reveal-delay-3">
-                  <button
-                    onClick={() => setModalOpen(true)}
-                    className="inline-flex items-center gap-2 px-7 py-3.5 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-lg hover:-translate-y-0.5"
-                    style={{ background: '#3EBA3A', boxShadow: '0 8px 24px rgba(62,186,58,0.25)' }}
-                    onMouseEnter={e => (e.currentTarget.style.background = '#4bb44b')}
-                    onMouseLeave={e => (e.currentTarget.style.background = '#3EBA3A')}>
-                    Download Brochure
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17" />
-                    </svg>
-                  </button>
                   <Link href="/contact"
+                  className="btn-green inline-flex items-center gap-2 px-7 py-3.5 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-lg"
+                  style={{ background: '#0656D6', boxShadow: '0 8px 24px rgba(6,86,214,0.25)' }}>
+                    Join the Waitlist
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M7 17L17 7M17 7H7M17 7v10" />
+                    </svg>
+                  </Link>
+                  {/*<Link href="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-white/10 text-sm font-semibold text-foreground hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300">
                     Request a Demo
-                  </Link>
+                  </Link>*/}
                 </div>
 
                 {/* Key specs row */}

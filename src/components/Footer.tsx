@@ -11,6 +11,8 @@ export default function Footer() {
             Products:
           </div>
           <Link href="/drone" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Vigor S50</Link>
+          <Link href="/dddrone" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Delivery Drone</Link>
+          <Link href="/vtoldrone" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Viper VTOL</Link>
           <span className="text-white/10">|</span>
           <div className="flex items-center gap-1 text-xs font-semibold text-muted uppercase tracking-widest">
             Solutions:
