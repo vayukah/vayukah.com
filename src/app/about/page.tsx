@@ -69,6 +69,17 @@ const socialLinks = [
     ),
   },
   {
+    name: 'Instagram',
+    href: 'https://www.instagram.com/vayukahdrones?cplk=MXEyN3Y1YWtzZ3Iwaw==',
+    desc: 'Follow us on Instagram',
+    color: '#E1306C',
+    icon: (
+      <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-3.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Z" />
+      </svg>
+    ),
+  },
+  {
     name: 'Email',
     href: 'mailto:info@vayukah.com',
     desc: 'info@vayukah.com',
@@ -333,7 +344,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {socialLinks?.map((link, i) => (
                 <a key={link?.name} href={link?.href} target="_blank" rel="noopener noreferrer"
                   className={`card-lift reveal reveal-delay-${i + 1} group bg-surface border border-white/[0.07] rounded-2xl p-6 flex flex-col gap-4 hover:border-white/[0.15] transition-all duration-300`}>

@@ -163,7 +163,7 @@ export default function DronePage() {
                 <div className="flex flex-wrap gap-3 reveal active reveal-delay-3">
                   <Link href="/contact"
                   className="btn-green inline-flex items-center gap-2 px-7 py-3.5 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-lg"
-                  style={{ background: '#0656D6', boxShadow: '0 8px 24px rgba(6,86,214,0.25)' }}>
+                  style={{ background: '#3EBA3A', boxShadow: '0 8px 24px rgba(62,186,58,0.2)' }}>
                     Join the Waitlist
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <path d="M7 17L17 7M17 7H7M17 7v10" />
