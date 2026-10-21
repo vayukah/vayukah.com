@@ -230,35 +230,53 @@ export default function AboutPage() {
             className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                'radial-gradient(circle at 50% 30%, rgba(6,86,214,0.06) 0%, transparent 60%)',
+                "radial-gradient(circle at 50% 30%, rgba(6,86,214,0.06) 0%, transparent 60%)",
             }}
           />
 
-          <div className="max-w-3xl mx-auto text-center">
-
-            <div
-              className="inline-flex items-center gap-2 px-5 py-2 rounded-full mb-5 text-sm font-semibold"
-              style={{
-                background: 'rgba(6,86,214,0.1)',
-                color: '#0656D6',
-              }}
-            >
-              🏆 Runner-Up – Drone Hackathon (Disaster Management) – Amaravati Drone Summit 2024
+          <div className="max-w-6xl mx-auto relative">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+          
+              {/* Existing content — unchanged */}
+              <div className="text-center lg:text-left">
+                <div
+                  className="inline-flex items-center gap-2 px-5 py-2 rounded-full mb-5 text-sm font-semibold"
+                  style={{
+                    background: "rgba(6,86,214,0.1)",
+                    color: "#0656D6",
+                  }}
+                >
+                  🏆 Runner-Up – Drone Hackathon – Amaravati Drone Summit 2024
+                </div>
+                
+                <h2
+                  className="font-heading font-black text-foreground tracking-tight mb-4"
+                  style={{ fontSize: "clamp(1.8rem, 3vw, 2.5rem)" }}
+                >
+                  Disaster Response with Drones
+                </h2>
+                
+                <p className="text-muted leading-relaxed">
+                  Vigor S50 was deployed during the Vijayawada floods of 2024 to support aerial
+                  mapping, damage assessment, and planning of drone-based relief operations —
+                  demonstrating real-world impact in disaster management.
+                </p>
+              </div>
+                
+              {/* Award-receiving photo: 1600 × 738 aspect ratio */}
+              <div className="w-full overflow-hidden rounded-2xl border border-blue-500/20 shadow-xl">
+                <img
+                  src="/assets/images/award-receiving.jpg"
+                  alt="Vigor S50 team receiving the award at Amaravati Drone Summit 2024"
+                  width={1600}
+                  height={738}
+                  loading="lazy"
+                  className="block w-full h-auto object-contain transition-transform duration-500 ease-in-out group-hover:scale-105"
+                  style={{ aspectRatio: "1600 / 738" }}
+                />
+              </div>
+                
             </div>
-
-            <h2
-              className="font-heading font-black text-foreground tracking-tight mb-4"
-              style={{ fontSize: 'clamp(1.8rem, 3vw, 2.5rem)' }}
-            >
-              Disaster Response with Drones
-            </h2>
-
-            <p className="text-muted leading-relaxed">
-              Vigor S50 was deployed during the Vijayawada floods of 2024 to support aerial
-              mapping, damage assessment, and planning of drone-based relief operations —
-              demonstrating real-world impact in disaster management.
-            </p>
-
           </div>
         </section>
 
