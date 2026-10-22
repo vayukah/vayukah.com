@@ -242,7 +242,7 @@ export default function DronePage() {
         </section>
 
         {/* Feature Highlights */}
-        <section ref={sectionRef} className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+         {/*<section ref={sectionRef} className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-px" style={{ background: 'linear-gradient(to right, transparent, rgba(235,138,12,0.3), transparent)' }} />
           <div className="max-w-7xl mx-auto">
             <div className="mb-14 reveal">
@@ -265,7 +265,7 @@ export default function DronePage() {
                   <div className="absolute top-0 left-0 right-0 h-[2px]"
                 style={{ background: `linear-gradient(to right, ${h.accentColor}, transparent)` }} />
                   <div className={`grid md:grid-cols-2 gap-0 ${i % 2 === 1 ? 'md:grid-flow-dense' : ''}`}>
-                    {/* Text */}
+                  
                     <div className={`p-8 lg:p-10 flex flex-col justify-center ${i % 2 === 1 ? 'md:col-start-2' : ''}`}>
                       <div className="badge-hover inline-flex items-center gap-2 px-3 py-1 rounded-full border mb-4 transition-all duration-250"
                     style={{ background: h.accentBg, borderColor: `${h.accentColor}33` }}
@@ -287,7 +287,6 @@ export default function DronePage() {
                       )}
                       </ul>
                     </div>
-                    {/* Image */}
                     <div className={`relative min-h-[240px] md:min-h-0 overflow-hidden ${i % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}`}>
                       <div className="absolute inset-0"
                     style={{ background: `radial-gradient(ellipse at center, ${h.accentBg} 0%, transparent 70%)` }} />
@@ -309,7 +308,6 @@ export default function DronePage() {
               </div>
             </div>
 
-            {/* Camera Details */}
             <div className="mt-20 reveal">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-[2px] h-5" style={{ background: '#0656D6' }} />
@@ -328,13 +326,11 @@ export default function DronePage() {
                     <div className="absolute top-0 left-0 right-0 h-[2px]"
                       style={{ background: `linear-gradient(to right, ${cam.gimbalColor}, transparent)` }} />
                     <div className="p-8">
-                      {/* Badge */}
                       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border mb-5"
                         style={{ background: cam.gimbalBg, borderColor: `${cam.gimbalColor}33` }}>
                         <div className="w-1.5 h-1.5 rounded-full" style={{ background: cam.gimbalColor }} />
                         <span className="text-xs font-bold tracking-wide" style={{ color: cam.gimbalColor }}>{cam.gimbal}</span>
                       </div>
-                      {/* Camera icon */}
                       <div className="flex flex-col items-center text-center gap-4 mb-4">
                         <div className="w-full max-w-[220px] rounded-xl overflow-hidden border" style={{ background: cam.gimbalBg, borderColor: `${cam.gimbalColor}33` }}>
                           <img src={cam.image} alt={cam.name} width={400} height={300} className="w-full object-contain p-2" style={{ filter: `drop-shadow(0 0 20px ${cam.gimbalColor}55)` }} />
@@ -342,7 +338,6 @@ export default function DronePage() {
                         <h3 className="font-heading font-black text-xl text-foreground tracking-tight">{cam.name}</h3>
                       </div>
                       <p className="text-sm text-muted leading-relaxed mb-6">{cam.description}</p>
-                      {/* Specs grid */}
                       <div className="grid grid-cols-2 gap-3">
                         {cam.specs.map((spec) => (
                           <div key={spec.label} className="bg-white/[0.03] border border-white/[0.06] rounded-xl px-4 py-3">
@@ -357,7 +352,6 @@ export default function DronePage() {
               </div>
             </div>
 
-            {/* Why Vigor S50 - Key Features */}
             <div className="mt-20 reveal">
               <div className="text-center mb-12">
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border mb-6"
@@ -369,7 +363,6 @@ export default function DronePage() {
                 </h2>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                {/* PPK */}
                 <div className="reveal reveal-delay-1 bg-surface border border-white/[0.07] rounded-2xl p-7 flex flex-col gap-5 hover:border-white/[0.14] transition-all duration-300">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{ background: 'rgba(235,138,12,0.12)', border: '1px solid rgba(235,138,12,0.25)' }}>
@@ -383,7 +376,6 @@ export default function DronePage() {
                     <p className="text-sm text-muted leading-relaxed">Post-Processed Kinematic positioning for centimeter-level accuracy in survey and mapping workflows.</p>
                   </div>
                 </div>
-                {/* 50-Min Endurance */}
                 <div className="reveal reveal-delay-2 bg-surface border border-white/[0.07] rounded-2xl p-7 flex flex-col gap-5 hover:border-white/[0.14] transition-all duration-300">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{ background: 'rgba(62,186,58,0.12)', border: '1px solid rgba(62,186,58,0.25)' }}>
@@ -398,7 +390,6 @@ export default function DronePage() {
                     <p className="text-sm text-muted leading-relaxed">Industry-leading flight time powered by our intelligent smart battery system.</p>
                   </div>
                 </div>
-                {/* Autonomous Missions */}
                 <div className="reveal reveal-delay-3 bg-surface border border-white/[0.07] rounded-2xl p-7 flex flex-col gap-5 hover:border-white/[0.14] transition-all duration-300">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{ background: 'rgba(235,138,12,0.12)', border: '1px solid rgba(235,138,12,0.25)' }}>
@@ -413,7 +404,6 @@ export default function DronePage() {
                     <p className="text-sm text-muted leading-relaxed">Pre-planned waypoint missions with Dronesharp GCS for fully automated surveys.</p>
                   </div>
                 </div>
-                {/* Made in India */}
                 <div className="reveal reveal-delay-4 bg-surface border border-white/[0.07] rounded-2xl p-7 flex flex-col gap-5 hover:border-white/[0.14] transition-all duration-300">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{ background: 'rgba(62,186,58,0.12)', border: '1px solid rgba(62,186,58,0.25)' }}>
@@ -430,7 +420,6 @@ export default function DronePage() {
               </div>
             </div>
 
-            {/* CTA */}
             <div className="mt-14 reveal text-center">
               <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-8 bg-surface border border-white/[0.07] rounded-2xl transition-all duration-400 hover:border-accent-blue/20">
                 <div className="text-left">
@@ -457,7 +446,7 @@ export default function DronePage() {
               </div>
             </div>
           </div>
-        </section>
+        </section>*/}
       </main>
 
       <Footer />
