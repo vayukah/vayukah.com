@@ -27,7 +27,7 @@ type Product = {
 const products: Product[] = [
   {
     name: 'VIGOR S50',
-    category: 'UAV Platform',
+    category: 'Survey and Mapping Platform',
     subtitle: 'Powerhouse survey UAV',
     description:
       'Built to exacting quality standards, the VIGOR S50 has gone through a rigorous test regime so you can fly confidently on every mission.',
@@ -43,7 +43,7 @@ const products: Product[] = [
   },
   {
     name: 'Delivery Drone',
-    category: 'UAV Platform',
+    category: 'Delivery Platform',
     subtitle: 'Advanced aerial platform',
     description:
       'Add the product description here, including its capabilities and intended applications.',
@@ -59,7 +59,7 @@ const products: Product[] = [
   },
   {
     name: 'Viper VTOL',
-    category: 'UAV Platform',
+    category: 'Survey and Mapping Platform',
     subtitle: 'Precision aerial platform',
     description:
       'Add the product description here, including its capabilities and intended applications.',

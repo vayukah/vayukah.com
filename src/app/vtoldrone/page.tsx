@@ -138,7 +138,7 @@ export default function DronePage() {
               <div className="space-y-7">
                 <div className="flex items-center gap-3 reveal active">
                   <div className="w-[2px] h-5" style={{ background: '#3EBA3A' }} />
-                  <span className="text-xs font-bold uppercase tracking-[0.35em] text-muted">UAV Platform</span>
+                  <span className="text-xs font-bold uppercase tracking-[0.35em] text-muted">Survey and Mapping Platform</span>
                   <div className="badge-hover flex items-center gap-1.5 px-3 py-1 rounded-full" style={{ border: '1px solid rgba(62,186,58,0.3)', background: 'rgba(62,186,58,0.1)', transition: 'background 0.25s ease, border-color 0.25s ease' }}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(62,186,58,0.2)'; (e.currentTarget as HTMLElement).style.borderColor = 'rgba(62,186,58,0.5)'; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(62,186,58,0.1)'; (e.currentTarget as HTMLElement).style.borderColor = 'rgba(62,186,58,0.3)'; }}>
