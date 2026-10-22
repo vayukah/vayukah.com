@@ -111,13 +111,12 @@ export default function DroneSharpCloudPage() {
                 </div>
 
                 <div className="reveal active reveal-delay-1">
-                  <div className="text-xs font-bold uppercase tracking-[0.3em] text-muted mb-2">DroneSharp</div>
                   <h1 className="font-heading font-black tracking-tighter leading-[0.9] text-foreground"
                   style={{ fontSize: 'clamp(3rem, 7vw, 6rem)' }}>
-                    Cloud
+                    DroneSharp
                     <br />
                     <span style={{ background: 'linear-gradient(135deg, #0656D6 0%, #4B9EFF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                      Platform
+                      Cloud
                     </span>
                   </h1>
                 </div>

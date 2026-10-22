@@ -303,14 +303,13 @@ export default function AboutPage() {
                 <img
                   src="/assets/images/award-receiving.jpg"
                   alt="Vigor S50 team receiving the award at Amaravati Drone Summit 2024"
-                  width={1600}
+                  width={1400}
                   height={738}
                   loading="lazy"
-                  className="block w-full h-auto object-contain transition-transform duration-500 ease-in-out group-hover:scale-105"
+                  className="block w-full h-auto object-contain transition-transform duration-500 ease-in-out group-hover:scale-250"
                   style={{ aspectRatio: "1600 / 738" }}
                 />
               </div>
-                
             </div>
           </div>
         </section>
