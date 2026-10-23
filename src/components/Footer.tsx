@@ -22,6 +22,7 @@ export default function Footer() {
           <Link href="/drones4relief" className="text-sm font-medium text-muted hover:text-accent-green transition-colors">Drones4Relief</Link>
           <span className="text-white/10">|</span>
           <Link href="/downloads" className="text-sm font-medium text-muted hover:text-[#0C7FEB] transition-colors duration-300">Downloads</Link>
+          <Link href="/career" className="text-sm font-medium text-muted hover:text-[#0C7FEB] transition-colors duration-300">Careers</Link>
           <Link href="/about" className="text-sm font-medium text-muted hover:text-accent-orange transition-colors">About Us</Link>
           <Link href="/contact" className="text-sm font-medium text-muted hover:text-accent-green transition-colors">Contact Us</Link>
         </div>
