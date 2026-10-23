@@ -40,32 +40,32 @@ const values = [
 const founders = [
   {
     id: "founder-1",
-    name: "Founder One",
-    designation: "Co-Founder & [Designation]",
+    name: "Vinay Pavan Kumar Kotagiri",
+    designation: "Co-Founder & CEO",
     description:
       "Add a short introduction about their vision, expertise, and contribution to Vayukah.",
     image: "/assets/images/founders/founder-1.jpg",
-    linkedin: "https://www.linkedin.com/in/founder-one/",
+    linkedin: "https://www.linkedin.com/in/vinaykotagiri-tech/",
     isDeceased: false,
   },
   {
     id: "founder-2",
-    name: "Founder Two",
-    designation: "Co-Founder & [Designation]",
+    name: "Vijay Kumar Kotagiri",
+    designation: "Founder",
     description:
       "Honoring their vision, contributions, and lasting legacy in Vayukah's journey.",
-    image: "/assets/images/founders/founder-2.jpg",
-    linkedin: "https://www.linkedin.com/in/founder-two/",
+    image: "/assets/images/Persons/Vijay_photo.jpg",
+    //linkedin: "https://www.linkedin.com/in/founder-two/",
     isDeceased: true,
   },
   {
     id: "founder-3",
-    name: "Founder Three",
-    designation: "Co-Founder & [Designation]",
+    name: " Kali Prasad Damera",
+    designation: "Co-Founder & CRO",
     description:
       "Add a short introduction about their role, expertise, and contribution to Vayukah.",
     image: "/assets/images/founders/founder-3.jpg",
-    linkedin: "https://www.linkedin.com/in/founder-three/",
+    linkedin: "https://www.linkedin.com/in/kali-prasad-damera-7b754223b/",
     isDeceased: false,
   },
 ];
@@ -417,9 +417,7 @@ export default function AboutPage() {
                           width={112}
                           height={112}
                           loading="lazy"
-                          className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${
-                            founder.isDeceased ? "grayscale" : ""
-                          }`}
+                          className={`w-full h-full object-cover grayscale transition-all duration-500 ease-in-out group-hover:grayscale-0 group-hover:scale-110`}
                         />
                       </div>
 
