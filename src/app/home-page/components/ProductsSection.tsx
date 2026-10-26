@@ -311,7 +311,7 @@ export default function ProductsSection() {
                       src={product.image}
                       alt={product.imageAlt}
                       fill
-                      className="object-contain object-center p-8 group-hover:scale-105 transition-transform duration-700"
+                      className="object-contain object-center p-11 group-hover:scale-105 transition-transform duration-700"
                     />
 
                     {/* Directional overlay — same alternating pattern */}

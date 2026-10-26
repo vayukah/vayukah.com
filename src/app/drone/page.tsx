@@ -219,7 +219,7 @@ export default function DronePage() {
                 </div>
                 <div className="absolute bottom-10 left-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
                   <div className="text-xs text-muted font-medium mb-0.5">Obstacle Detection</div>
-                  <div className="text-lg font-black font-heading" style={{ color: '#EB8A0C' }}>360°</div>
+                  <div className="text-sm font-black font-heading" style={{ color: '#EB8A0C' }}>Multi-directional</div>
                 </div>
               </div>
             </div>

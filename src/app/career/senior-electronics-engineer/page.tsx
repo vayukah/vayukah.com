@@ -128,6 +128,12 @@ const jobDetails: Record<string, JobDetail> = {
           'A good team player.',
         ],
       },
+      {
+        heading: 'Send Resume to',
+        items: [
+          'info@vayukah.com',
+        ],
+      },
     ],
   },
 };

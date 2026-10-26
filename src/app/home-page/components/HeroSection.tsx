@@ -163,13 +163,13 @@ export default function HeroSection({ onWatchVideo }: HeroSectionProps) {
             </div>
 
             {/* Floating data cards */}
-            <div className="absolute top-8 right-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
+            {/*<div className="absolute top-8 right-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
               <div className="text-xs text-muted font-medium mb-0.5">Status</div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
                 <span className="text-sm font-bold text-foreground">Systems Nominal</span>
               </div>
-            </div>
+            </div>*/}
             <div className="absolute bottom-12 left-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
               <div className="text-xs text-muted font-medium mb-0.5">Altitude</div>
               <div className="text-lg font-black text-primary font-heading">120 m</div>
