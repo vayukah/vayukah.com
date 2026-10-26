@@ -17,11 +17,22 @@ const openPositions = [
     department: 'Electronics & Hardware',
     location: 'Vijayawada, Andhra Pradesh',
     employmentType: 'Full-time',
-    experience: '4 - 5 years',
+    experience: '5+ years',
     summary:
       'Design, develop, and optimize electronic systems and components. Lead engineering projects, apply hands-on technical expertise, and mentor junior engineers.',
     slug: 'senior-electronics-engineer',
   },
+  {
+  id: 'mechanical-engineer',
+  title: 'Mechanical Engineer',
+  department: 'Mechanical Design & UAV Airframes',
+  location: 'Vijayawada, Andhra Pradesh',
+  employmentType: 'Full-time',
+  experience: '3+ years',
+  summary:
+    'Design, develop, manufacture, and test UAV airframes and structural components. Work on 3D CAD modelling, lightweight material selection, payload integration, vibration analysis, and design for manufacturing.',
+  slug: 'mechanical-engineer',
+},
 ];
 
 export default function CareerPage() {

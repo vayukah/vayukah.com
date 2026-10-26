@@ -44,7 +44,7 @@ const founders = [
     designation: "Co-Founder & CEO",
     description:
       "Add a short introduction about their vision, expertise, and contribution to Vayukah.",
-    image: "/assets/images/founders/founder-1.jpg",
+    image: "/assets/images/Persons/vinay_photo.png",
     linkedin: "https://www.linkedin.com/in/vinaykotagiri-tech/",
     isDeceased: false,
   },

@@ -95,7 +95,7 @@ const jobDetails: Record<string, JobDetail> = {
     department: 'Electronics & Hardware',
     location: 'Vijayawada, Andhra Pradesh',
     reportsTo: 'Engineering',
-    experience: '3–5 years',
+    experience: '5+ years',
     employmentType: 'Full-time',
     applyButtonText: 'Apply Now',
     sections: [
@@ -118,7 +118,7 @@ const jobDetails: Record<string, JobDetail> = {
       {
         heading: 'Required skills',
         items: [
-          '3 or more years of strong Electronics design, manufacturing and testing experience.',
+          'At least 4 – 5 years of hands-on experience in electronics design, manufacturing, integration, and testing of UAV/drone avionics systems, including flight controllers, power distribution systems, sensors, and communication interfaces.',
           'Deep understanding of Electronics components, circuit theory, circuit analysis, power electronics and power calculations.',
           'Experience in Electronics design simulation and validation.',
           'Experience in PCB Design, Analysis and Manufacturing.',
