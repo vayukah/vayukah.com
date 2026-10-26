@@ -52,9 +52,9 @@ const products: Product[] = [
     href: '/dddrone',
     theme: 'blue',
     specs: [
-      { label: 'Flight Time', value: '40 min' },
-      { label: 'Payload', value: 'Multi Camera' },
-      { label: 'Top Speed', value: '12 m/s' },
+      { label: 'Flight Time', value: '25 min' },
+      { label: 'Payload', value: 'Cargo box' },
+      { label: 'Top Speed', value: '10 m/s' },
     ],
   },
   {
@@ -68,9 +68,9 @@ const products: Product[] = [
     href: '/vtoldrone',
     theme: 'green',
     specs: [
-      { label: 'Flight Time', value: '35 min' },
-      { label: 'Payload', value: 'Survey Camera' },
-      { label: 'Top Speed', value: '10 m/s' },
+      { label: 'Flight Time', value: '120 min' },
+      { label: 'Control Range', value: '10 km' },
+      { label: 'Top Speed', value: '15 m/s' },
     ],
   },
   /*{

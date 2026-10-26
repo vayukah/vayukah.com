@@ -42,8 +42,6 @@ const founders = [
     id: "founder-1",
     name: "Vinay Pavan Kumar Kotagiri",
     designation: "Co-Founder & CEO",
-    description:
-      "Add a short introduction about their vision, expertise, and contribution to Vayukah.",
     image: "/assets/images/Persons/vinay_photo.png",
     linkedin: "https://www.linkedin.com/in/vinaykotagiri-tech/",
     isDeceased: false,
@@ -53,7 +51,7 @@ const founders = [
     name: "Vijay Kumar Kotagiri",
     designation: "Founder",
     description:
-      "Honoring their vision, contributions, and lasting legacy in Vayukah's journey.",
+      "Vayukah forever honors his excellence, vision and lasting legacy",
     image: "/assets/images/Persons/Vijay_photo.jpg",
     //linkedin: "https://www.linkedin.com/in/founder-two/",
     isDeceased: true,
@@ -62,8 +60,6 @@ const founders = [
     id: "founder-3",
     name: " Kali Prasad Damera",
     designation: "Co-Founder & CRO",
-    description:
-      "Add a short introduction about their role, expertise, and contribution to Vayukah.",
     image: "/assets/images/founders/founder-3.jpg",
     linkedin: "https://www.linkedin.com/in/kali-prasad-damera-7b754223b/",
     isDeceased: false,

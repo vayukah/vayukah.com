@@ -157,7 +157,7 @@ export default function DronePage() {
                 </div>
 
                 <p className="text-base sm:text-lg text-muted leading-relaxed max-w-lg reveal active reveal-delay-2">
-                  A stable platform for Survey, Mapping and Inspection projects with a wide range of lens. Equipped with PPK module, pivoting camera mount and obstacle detection.
+                  A stable platform for Survey, Mapping and Inspection projects with multiple payload options. Equipped with RTK and PPK modules, visual navigation and obstacle detection.
                 </p>
 
                 <div className="flex flex-wrap gap-3 reveal active reveal-delay-3">
@@ -210,8 +210,8 @@ export default function DronePage() {
                   
                 </div>
                 {/* Floating cards */}
-                <div className="absolute top-6 right-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
-                  <div className="text-xs text-muted font-medium mb-0.5">PPK Module</div>
+                <div className="absolute bottom-12 right-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
+                  <div className="text-xs text-muted font-medium mb-0.5">RTK & PPK Modules</div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
                     <span className="text-sm font-bold text-foreground">Integrated</span>

@@ -41,11 +41,11 @@ const highlights = [
 
 
 const keySpecs = [
-{ label: 'Flight Time', value: '45 min', sub: 'with payload' },
-{ label: 'Control Range', value: '1 km', sub: 'SIYI MK 15E' },
+{ label: 'Flight Time', value: '25 min', sub: 'with payload' },
+{ label: 'Control Range', value: '15 km', sub: 'SIYI MK 15E' },
 { label: 'Top Speed', value: '10 m/s', sub: 'max velocity' },
-{ label: 'Max Payload', value: '1 kg', sub: 'quick release' },
-{ label: 'MTOW', value: '6.4 kg', sub: 'gross takeoff' }];
+{ label: 'Max Payload', value: '15 kg', sub: 'Cargo box' },
+{ label: 'MTOW', value: '40 kg', sub: 'gross takeoff' }];
 
 const cameras = [
 {
@@ -157,7 +157,7 @@ export default function DronePage() {
                 </div>
 
                 <p className="text-base sm:text-lg text-muted leading-relaxed max-w-lg reveal active reveal-delay-2">
-                  A stable platform for Survey, Mapping and Inspection projects with a wide range of lens. Equipped with PPK module, pivoting camera mount and obstacle detection.
+                  A stable platform for Cargo delivery with a variable payload capacity. Equipped with FPV camera and obstacle detection.
                 </p>
 
                 <div className="flex flex-wrap gap-3 reveal active reveal-delay-3">
@@ -208,15 +208,15 @@ export default function DronePage() {
                 </div>
                 {/* Floating cards */}
                 <div className="absolute top-6 right-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
-                  <div className="text-xs text-muted font-medium mb-0.5">PPK Module</div>
+                  <div className="text-xs text-muted font-medium mb-0.5">FPV live</div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
-                    <span className="text-sm font-bold text-foreground">Integrated</span>
+                    <span className="text-sm font-bold text-foreground">1 axis Gimbal</span>
                   </div>
                 </div>
                 <div className="absolute bottom-10 left-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
                   <div className="text-xs text-muted font-medium mb-0.5">Obstacle Detection</div>
-                  <div className="text-lg font-black font-heading" style={{ color: '#0656D6' }}>360°</div>
+                  <div className="text-lg font-black font-heading" style={{ color: '#0656D6' }}>Front radar</div>
                 </div>
               </div>
             </div>

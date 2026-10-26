@@ -41,11 +41,11 @@ const highlights = [
 
 
 const keySpecs = [
-{ label: 'Flight Time', value: '45 min', sub: 'with payload' },
-{ label: 'Control Range', value: '1 km', sub: 'SIYI MK 15E' },
-{ label: 'Top Speed', value: '10 m/s', sub: 'max velocity' },
-{ label: 'Max Payload', value: '1 kg', sub: 'quick release' },
-{ label: 'MTOW', value: '6.4 kg', sub: 'gross takeoff' }];
+{ label: 'Flight Time', value: '120 min', sub: 'with payload' },
+{ label: 'Control Range', value: '10 km', sub: 'XLRS' },
+{ label: 'Top Speed', value: '15 m/s', sub: 'max velocity' },
+{ label: 'Max Payload', value: '300 gm', sub: 'integrated' },
+{ label: 'MTOW', value: '4.5 kg', sub: 'gross takeoff' }];
 
 const cameras = [
 {
@@ -157,7 +157,7 @@ export default function DronePage() {
                 </div>
 
                 <p className="text-base sm:text-lg text-muted leading-relaxed max-w-lg reveal active reveal-delay-2">
-                  A stable platform for Survey, Mapping and Inspection projects with a wide range of lens. Equipped with PPK module, pivoting camera mount and obstacle detection.
+                  A stable platform for high endurance Survey and Mapping projects.
                 </p>
 
                 <div className="flex flex-wrap gap-3 reveal active reveal-delay-3">
