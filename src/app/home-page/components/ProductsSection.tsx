@@ -53,7 +53,7 @@ const products: Product[] = [
     theme: 'blue',
     specs: [
       { label: 'Flight Time', value: '25 min' },
-      { label: 'Payload', value: 'Cargo box' },
+      { label: 'Payload', value: '15 kg' },
       { label: 'Top Speed', value: '10 m/s' },
     ],
   },
