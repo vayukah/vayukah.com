@@ -207,7 +207,7 @@ export default function DronePage() {
                   
                 </div>
                 {/* Floating cards */}
-                <div className="absolute top-6 right-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
+                {/*<div className="absolute top-6 right-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
                   <div className="text-xs text-muted font-medium mb-0.5">PPK Module</div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
@@ -217,7 +217,7 @@ export default function DronePage() {
                 <div className="absolute bottom-10 left-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
                   <div className="text-xs text-muted font-medium mb-0.5">Obstacle Detection</div>
                   <div className="text-lg font-black font-heading" style={{ color: '#3EBA3A' }}>360°</div>
-                </div>
+                </div>*/}
               </div>
             </div>
           </div>
