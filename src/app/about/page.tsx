@@ -60,7 +60,7 @@ const founders = [
     id: "founder-3",
     name: " Kali Prasad Damera",
     designation: "Co-Founder & CRO",
-    image: "/assets/images/founders/founder-3.jpg",
+    image: "/assets/images/Persons/Kail_photo.jpg",
     linkedin: "https://www.linkedin.com/in/kali-prasad-damera-7b754223b/",
     isDeceased: false,
   },
