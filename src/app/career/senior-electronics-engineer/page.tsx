@@ -50,9 +50,9 @@ const careerDetailCopy = {
     emailPlaceholder: 'you@example.com',
     phoneLabel: 'Phone number',
     phonePlaceholder: '+91 98765 43210',
-    linkedinLabel: 'LinkedIn profile (optional)',
+    linkedinLabel: 'LinkedIn profile',
     linkedinPlaceholder: 'https://linkedin.com/in/your-profile',
-    resumeLabel: 'Resume / portfolio link (optional)',
+    resumeLabel: 'Resume / portfolio link',
     resumePlaceholder: 'Paste a shareable link to your resume or portfolio',
     messageLabel: 'Cover note (optional)',
     messagePlaceholder: 'Briefly tell us why you are a good fit for this role.',
@@ -582,12 +582,13 @@ export default function SeniorElectronicsEngineerPage() {
                 </div>
                 <div>
                   <label htmlFor="application-linkedin" className="block text-xs font-bold uppercase tracking-widest text-muted mb-2">
-                    {careerDetailCopy.applicationDialog.linkedinLabel}
+                    {careerDetailCopy.applicationDialog.linkedinLabel} <span className="text-primary-light">*</span>
                   </label>
                   <input
                     id="application-linkedin"
                     type="url"
                     value={form.linkedin}
+                    required
                     onChange={(event) => updateForm('linkedin', event.target.value)}
                     placeholder={careerDetailCopy.applicationDialog.linkedinPlaceholder}
                     className={fieldClassName}
@@ -597,12 +598,13 @@ export default function SeniorElectronicsEngineerPage() {
 
               <div>
                 <label htmlFor="application-resume" className="block text-xs font-bold uppercase tracking-widest text-muted mb-2">
-                  {careerDetailCopy.applicationDialog.resumeLabel}
+                  {careerDetailCopy.applicationDialog.resumeLabel} <span className="text-primary-light">*</span>
                 </label>
                 <input
                   id="application-resume"
                   type="url"
                   value={form.resumeUrl}
+                  required
                   onChange={(event) => updateForm('resumeUrl', event.target.value)}
                   placeholder={careerDetailCopy.applicationDialog.resumePlaceholder}
                   className={fieldClassName}
