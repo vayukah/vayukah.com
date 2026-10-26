@@ -33,7 +33,7 @@ const capabilities = [
 { title: 'Terrain-aware Planning', desc: 'Import terrain data to automatically adjust flight altitude for consistent GSD across hilly terrain.', color: '#EB8A0C', bg: 'rgba(235,138,12,0.1)' }];
 
 
-export default function DroneSharpGCSPage() {
+export default function DronesharpGCSPage() {
   const [modalOpen, setModalOpen] = React.useState(false);
 
   useEffect(() => {
@@ -96,15 +96,15 @@ export default function DroneSharpGCSPage() {
 
                 <div className="reveal active reveal-delay-1">
                   <h1 className="font-heading font-black tracking-tighter leading-[0.9] text-foreground"
-                  style={{ fontSize: 'clamp(3rem, 7vw, 6rem)' }}>
-                    DroneSharp 
+                  style={{ fontSize: 'clamp(3rem, 7vw, 4.7rem)' }}>
+                    Dronesharp  
                     <br />
                     <span style={{ color: '#EB8A0C' }}>GCS</span>
                   </h1>
                 </div>
 
                 <p className="text-base sm:text-lg text-muted leading-relaxed max-w-lg reveal active reveal-delay-2">
-                  DroneSharp GCS is our custom ground control software to optimally configure and fly the VIGOR UAV. Specialized for survey and mapping from the ground up.
+                  Dronesharp GCS is our custom ground control software to optimally configure and fly the VIGOR UAV. Specialized for survey and mapping from the ground up.
                 </p>
 
                 <div className="flex flex-wrap gap-3 reveal active reveal-delay-3">
@@ -119,7 +119,7 @@ export default function DroneSharpGCSPage() {
                   </button>
                   <Link href="/dronesharpcloud"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-white/10 text-sm font-semibold text-foreground hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300">
-                    DroneSharp Cloud
+                    Dronesharp Cloud
                   </Link>
                 </div>
 
@@ -141,7 +141,7 @@ export default function DroneSharpGCSPage() {
                 <div className="relative z-10 rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl">
                   <AppImage
                     src="/assets/images/DronesharpGCS/drone_map_01.png"
-                    alt="DroneSharp GCS mission planning interface showing drone flight path on map"
+                    alt="Dronesharp GCS mission planning interface showing drone flight path on map"
                     width={700}
                     height={480}
                     priority
@@ -225,7 +225,7 @@ export default function DroneSharpGCSPage() {
                   <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, rgba(235,138,12,0.12) 0%, transparent 70%)' }} />
                   <AppImage
                     src="/assets/images/DronesharpGCS/drone_map_01.png"
-                    alt="DroneSharp GCS flying interface with telemetry panels"
+                    alt="Dronesharp GCS flying interface with telemetry panels"
                     fill
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-700" />
                   
@@ -258,7 +258,7 @@ export default function DroneSharpGCSPage() {
                   <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, rgba(235,138,12,0.1) 0%, transparent 70%)' }} />
                   <AppImage
                     src="/assets/images/DronesharpGCS/drone_map_02.png"
-                    alt="DroneSharp GCS mission planning map view with waypoints"
+                    alt="Dronesharp GCS mission planning map view with waypoints"
                     fill
                     className="object-cover object-top group-hover:scale-105 transition-transform duration-700" />
                   
@@ -359,7 +359,7 @@ export default function DroneSharpGCSPage() {
                   Ready to take control?
                 </h2>
                 <p className="text-muted text-sm leading-relaxed mb-7 max-w-lg mx-auto">
-                  DroneSharp GCS comes bundled with the VIGOR S50. Contact us to learn more or request a demonstration.
+                  Dronesharp GCS comes bundled with the VIGOR S50. Contact us to learn more or request a demonstration.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/contact"

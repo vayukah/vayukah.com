@@ -17,8 +17,8 @@ export default function Footer() {
           <div className="flex items-center gap-1 text-xs font-semibold text-muted uppercase tracking-widest">
             Solutions:
           </div>
-          <Link href="/dronesharpcloud" className="text-sm font-medium text-muted hover:text-[#0C7FEB] transition-colors duration-300">DroneSharp.io</Link>
-          <Link href="/dronesharpgcs" className="text-sm font-medium text-muted hover:text-accent-orange transition-colors">DroneSharp-GCS</Link>
+          <Link href="/dronesharpcloud" className="text-sm font-medium text-muted hover:text-[#0C7FEB] transition-colors duration-300">Dronesharp.io</Link>
+          <Link href="/dronesharpgcs" className="text-sm font-medium text-muted hover:text-accent-orange transition-colors">Dronesharp-GCS</Link>
           <Link href="/drones4relief" className="text-sm font-medium text-muted hover:text-accent-green transition-colors">Drones4Relief</Link>
           <span className="text-white/10">|</span>
           <Link href="/downloads" className="text-sm font-medium text-muted hover:text-[#0C7FEB] transition-colors duration-300">Downloads</Link>

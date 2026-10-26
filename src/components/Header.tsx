@@ -11,8 +11,8 @@ const productLinks = [
 ];
 
 const solutionLinks = [
-  { label: 'DroneSharp Cloud', href: '/dronesharpcloud', desc: 'Cloud photogrammetry' },
-  { label: 'DroneSharp GCS', href: '/dronesharpgcs', desc: 'Ground control station' },
+  { label: 'Dronesharp Cloud', href: '/dronesharpcloud', desc: 'Cloud photogrammetry' },
+  { label: 'Dronesharp GCS', href: '/dronesharpgcs', desc: 'Ground control station' },
 ];
 
 export default function Header() {

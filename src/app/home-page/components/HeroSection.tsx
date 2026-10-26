@@ -79,7 +79,7 @@ export default function HeroSection({ onWatchVideo }: HeroSectionProps) {
             {/* Sub */}
             <p className="text-base sm:text-lg text-muted leading-relaxed max-w-lg reveal active reveal-delay-2">
               Vayukah builds the complete drone stack — precision UAV hardware,
-              intelligent batteries, and DroneSharp software — so your team
+              intelligent batteries, and Dronesharp software — so your team
               maps more ground in less time.
             </p>
 

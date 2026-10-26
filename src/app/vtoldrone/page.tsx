@@ -149,7 +149,7 @@ export default function DronePage() {
 
                 <div className="reveal active reveal-delay-1">
                   <h1 className="font-heading font-black tracking-tighter leading-[0.9] text-foreground"
-                  style={{ fontSize: 'clamp(3rem, 7vw, 6rem)' }}>
+                  style={{ fontSize: 'clamp(3rem, 7vw, 4.7rem)' }}>
                     Viper
                     <br />
                     <span style={{ color: '#3EBA3A' }}>Vtol</span>

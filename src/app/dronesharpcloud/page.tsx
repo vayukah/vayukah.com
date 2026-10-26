@@ -12,7 +12,7 @@ const workflowSteps = [
   title: 'Project Creation',
   desc: 'Create a new survey project, define the area of interest, and configure processing parameters.',
   image: "/assets/images/Dronesharp.io/Dronesharpio_project.png",
-  imageAlt: 'DroneSharp Cloud project creation dashboard',
+  imageAlt: 'Dronesharp Cloud project creation dashboard',
   color: '#0656D6',
   bg: 'rgba(6,86,214,0.1)'
 },
@@ -21,7 +21,7 @@ const workflowSteps = [
   title: 'Image Upload',
   desc: 'Upload your aerial imagery directly from the field. Supports batch uploads with automatic metadata extraction.',
   image: "/assets/images/Dronesharp.io/Dronesharp_image.png",
-  imageAlt: 'DroneSharp Cloud image upload interface',
+  imageAlt: 'Dronesharp Cloud image upload interface',
   color: '#ffba4b',
   bg: 'rgba(255, 246, 75, 0.1)'
 },
@@ -30,7 +30,7 @@ const workflowSteps = [
   title: 'View Results',
   desc: 'Access your photogrammetry outputs — orthomosaics, point clouds, DSMs — directly in the browser.',
   image: "/assets/images/Dronesharp.io/Dronesharp_result.png",
-  imageAlt: 'DroneSharp Cloud photogrammetry results viewer',
+  imageAlt: 'Dronesharp Cloud photogrammetry results viewer',
   color: '#14d606',
   bg: 'rgba(51, 214, 6, 0.1)'
 },
@@ -39,7 +39,7 @@ const workflowSteps = [
   title: 'GCP Interface',
   desc: 'Mark Ground Control Points to achieve centimetre-level accuracy in your final deliverables.',
   image: "/assets/images/Dronesharp.io/Dronesharpio_GCPS.png",
-  imageAlt: 'DroneSharp Cloud GCP marking interface',
+  imageAlt: 'Dronesharp Cloud GCP marking interface',
   color: '#4B9EFF',
   bg: 'rgba(75,158,255,0.1)'
 }];
@@ -61,7 +61,7 @@ const cloudFeatures = [
 { title: 'Secure Storage', desc: 'All your data stored securely in the cloud with access controls.', icon: '🔒' }];
 
 
-export default function DroneSharpCloudPage() {
+export default function DronesharpCloudPage() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -112,8 +112,8 @@ export default function DroneSharpCloudPage() {
 
                 <div className="reveal active reveal-delay-1">
                   <h1 className="font-heading font-black tracking-tighter leading-[0.9] text-foreground"
-                  style={{ fontSize: 'clamp(3rem, 7vw, 6rem)' }}>
-                    DroneSharp
+                  style={{ fontSize: 'clamp(3rem, 7vw, 4.7rem)' }}>
+                    Dronesharp
                     <br />
                     <span style={{ background: 'linear-gradient(135deg, #0656D6 0%, #4B9EFF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                       Cloud
@@ -122,7 +122,7 @@ export default function DroneSharpCloudPage() {
                 </div>
 
                 <p className="text-base sm:text-lg text-muted leading-relaxed max-w-lg reveal active reveal-delay-2">
-                  DroneSharp Cloud is our photogrammetry offering that is cloud scale. Process, manage, and deliver survey projects from anywhere in the world.
+                  Dronesharp Cloud is our photogrammetry offering that is cloud scale. Process, manage, and deliver survey projects from anywhere in the world.
                 </p>
 
                 <div className="flex flex-wrap gap-3 reveal active reveal-delay-3">
@@ -136,7 +136,7 @@ export default function DroneSharpCloudPage() {
                   </Link>
                   <Link href="/dronesharpgcs"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-white/10 text-sm font-semibold text-foreground hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300">
-                    DroneSharp GCS
+                    Dronesharp GCS
                   </Link>
                 </div>
 
@@ -157,7 +157,7 @@ export default function DroneSharpCloudPage() {
                 <div className="relative z-10 rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl">
                   <AppImage
                     src="/assets/images/Dronesharp.io/Dronesharp_result.png"
-                    alt="DroneSharp Cloud project dashboard showing photogrammetry processing status"
+                    alt="Dronesharp Cloud project dashboard showing photogrammetry processing status"
                     width={700}
                     height={480}
                     priority
@@ -274,7 +274,7 @@ export default function DroneSharpCloudPage() {
 
                 <AppImage
                   src="https://img.rocket.new/generatedImages/rocket_gen_img_11cd46328-1774941888207.png"
-                  alt="DroneSharp Cloud dashboard"
+                  alt="Dronesharp Cloud dashboard"
                   width={700}
                   height={500}
                   className="w-full h-auto object-cover"
@@ -359,7 +359,7 @@ export default function DroneSharpCloudPage() {
                   Process at cloud scale
                 </h2>
                 <p className="text-muted text-sm leading-relaxed mb-7 max-w-lg mx-auto">
-                  DroneSharp Cloud is available for early access. Get in touch to start processing your survey data in the cloud.
+                  Dronesharp Cloud is available for early access. Get in touch to start processing your survey data in the cloud.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/contact"

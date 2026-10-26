@@ -24,7 +24,7 @@ const latestWindows: VersionEntry = {
 const previousWindows: VersionEntry[] = [
   { version: 'v1.1.0', date: '02 April 2026', notes: 'Added new configuration parameters for improved flexibility and customization', downloadUrl: 'https://dronesharpgcs-downloads.s3.ap-south-1.amazonaws.com/releases/windows/v1.1.0/DronesharpGCS-installer.exe', fileName: 'DronesharpGCS-v1.1.0-installer.exe' },
   { version: 'v1.0.0', date: '10 Dec 2025',  notes: 'Added weather forecast, navigation lights controls, and telemetry improvements',       downloadUrl: 'https://dronesharpgcs-downloads.s3.ap-south-1.amazonaws.com/releases/windows/v1.0.0/DronesharpGCS-installer.exe', fileName: 'DronesharpGCS-v1.0.0-installer.exe' },
-  /*{ version: 'v2.8.4', date: '3 Jul 2024',  notes: 'Stability patches, telemetry improvements',           downloadUrl: '/files/DroneSharpGCS_v2.8.4_Setup.exe', fileName: 'DronesharpGCS-v2.8.4-installer.exe' },*/
+  /*{ version: 'v2.8.4', date: '3 Jul 2024',  notes: 'Stability patches, telemetry improvements',           downloadUrl: '/files/DronesharpGCS_v2.8.4_Setup.exe', fileName: 'DronesharpGCS-v2.8.4-installer.exe' },*/
 ];
 
 const latestAndroid: VersionEntry = {
@@ -145,7 +145,7 @@ export default function DownloadsPage() {
               <span className="text-xs font-bold uppercase tracking-[0.35em] text-muted">Software</span>
             </div>
             <h1 className="font-heading font-black text-4xl sm:text-5xl text-foreground mb-3">
-              DroneSharp <span className="text-primary">GCS</span>
+              Dronesharp <span className="text-primary">GCS</span>
             </h1>
             <p className="text-muted text-base sm:text-lg max-w-xl">
               Ground Control Software for Vigor UAV — available on Windows and Android.

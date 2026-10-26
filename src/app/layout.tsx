@@ -10,7 +10,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: 'Vayukah Drones — Survey & Mapping UAV Ecosystem',
-  description: 'Vayukah builds end-to-end drone solutions for survey and mapping — from the VIGOR S50 UAV and smart battery to DroneSharp GCS and cloud photogrammetry software.',
+  description: 'Vayukah builds end-to-end drone solutions for survey and mapping — from the VIGOR S50 UAV and smart battery to Dronesharp GCS and cloud photogrammetry software.',
   icons: {
     icon: [
       { url: '/favicon.ico', type: 'image/x-icon' }
