@@ -28,6 +28,7 @@ interface JobDetail {
   employmentType: string;
   sections: JobSection[];
   applyButtonText: string;
+  workmode: string;
 }
 
 const careerDetailCopy = {
@@ -92,13 +93,14 @@ const jobDetails: Record<string, JobDetail> = {
     title: 'Senior Electronics Engineer',
     intro:
       'Drones or unmanned systems are revolutionizing many industries e.g. Agriculture, logistics, mining, infrastructure, disaster management and public services. This trend will only be multiplying as drones are enhanced with AI/ML, Beyond Visual Line of Sight operations and operational infrastructure. Do you want to be part of this exciting industry and work for a company that is fully aligned to realize the big opportunities offered by Drones?',
-    department: 'Electronics & Hardware',
+    department: 'Engineering',
     location: 'Vijayawada, Andhra Pradesh',
-    reportsTo: 'Engineering',
+    reportsTo: 'Engineering Manager',
     experience: '5+ years',
     employmentType: 'Full-time',
+    workmode: 'On-site',
     applyButtonText: 'Apply Now',
-    sections: [
+                    sections: [
       {
         heading: 'About Vayukah Drones',
         description:
@@ -107,23 +109,33 @@ const jobDetails: Record<string, JobDetail> = {
       {
         heading: 'Responsibilities',
         items: [
-          'Design, manufacture and integrate Avionic systems.',
-          'Collect objective data, Document and test Avionic systems based on industry standards.',
-          'Lead Qualification testing and Certification process with NABL Labs.',
           'Work with management to plan product innovation.',
-          'Lead, Mentor and inspire your team mates to be the best in the field.',
-          'Assist in Flight qualification and field tests.',
+          'Work with the mechanical and software teams to integrate the electronics into the drone and payloads.',
+          'Collect objective data, Document and test Avionic systems based on industry standards.',
+          'Component selection, sourcing and procurement for electronics systems.',
+          'Design of PCBs for Drone and Payloads, production coordination and integration into the final product.',
+          'Design avioncics wiring layouts and harnesses for drones and payloads.',
+          'Production overview and support for electronics manufacturing, assembly and testing.',
+          'Assist in Flight qualification and field tests (control loop tuning).',
+          'Lead Qualification testing and Certification process with NABL Labs (EMI, EMC etc.).',
+          'Update the avionics systems based on the test results and feedback from the end users.',
+          'Design and implement Bench testing and validation systems for the avionics systems.',
+          'Design sub systems for Drone peripherals and payloads.',
         ],
       },
       {
         heading: 'Required skills',
         items: [
-          'At least 4 – 5 years of hands-on experience in electronics design, manufacturing, integration, and testing of UAV/drone avionics systems, including flight controllers, power distribution systems, sensors, and communication interfaces.',
+          'At least 5 years of hands-on experience in electronics design, manufacturing, integration, and testing of UAV/drone avionics systems, including flight controllers, power distribution systems, sensors, and communication interfaces.',
           'Deep understanding of Electronics components, circuit theory, circuit analysis, power electronics and power calculations.',
           'Experience in Electronics design simulation and validation.',
-          'Experience in PCB Design, Analysis and Manufacturing.',
+          'Experience in PCB Design (KICAD (preferred), EASY EDA, ALTIUM etc.), Analysis and Manufacturing.',
           'Experience in IEC standards for PCBs, EMC testing, Environmental testing.',
+          'Experience in Drone Type Certification with DGCA',
           'Experience in task planning, scheduling and forecasting.',
+          'Experience in RTK and PPK workflows for UAVs.',
+          'Basic knowledge on Ardupilot and PX4 flight controllers, and their integration with sensors and actuators.',
+          'Basic knowledge on tuning of Control loops and PID controllers for UAVs.',
           'Great communication skills.',
           'A good team player.',
         ],
@@ -345,6 +357,9 @@ export default function SeniorElectronicsEngineerPage() {
                   </span>
                   <span className="px-3 py-1 rounded-full text-xs font-medium text-muted bg-white/[0.03] border border-white/[0.07]">
                     {job.employmentType}
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium text-muted bg-white/[0.03] border border-white/[0.07]">
+                    {job.workmode}  
                   </span>
                 </div>
                 <h1

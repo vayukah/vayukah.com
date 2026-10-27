@@ -14,24 +14,26 @@ const openPositions = [
   {
     id: 'senior-electronics-engineer',
     title: 'Senior Electronics Engineer',
-    department: 'Electronics & Hardware',
+    department: 'Engineering',
     location: 'Vijayawada, Andhra Pradesh',
     employmentType: 'Full-time',
     experience: '5+ years',
     summary:
       'Design, develop, and optimize electronic systems and components. Lead engineering projects, apply hands-on technical expertise, and mentor junior engineers.',
     slug: 'senior-electronics-engineer',
+    workmode: 'On-site',
   },
   {
   id: 'mechanical-engineer',
   title: 'Mechanical Engineer',
-  department: 'Mechanical Design & UAV Airframes',
+  department: 'Engineering',
   location: 'Vijayawada, Andhra Pradesh',
   employmentType: 'Full-time',
   experience: '3+ years',
   summary:
     'Design, develop, manufacture, and test UAV airframes and structural components. Work on 3D CAD modelling, lightweight material selection, payload integration, vibration analysis, and design for manufacturing.',
   slug: 'mechanical-engineer',
+  workmode: 'On-site',
 },
 ];
 
@@ -158,6 +160,9 @@ export default function CareerPage() {
                         </span>
                         <span className="px-3 py-1 rounded-full text-xs font-medium text-muted bg-white/[0.03] border border-white/[0.07]">
                           {position.employmentType}
+                        </span>
+                        <span className="px-3 py-1 rounded-full text-xs font-medium text-muted bg-white/[0.03] border border-white/[0.07]">
+                          {position.workmode}
                         </span>
                       </div>
 

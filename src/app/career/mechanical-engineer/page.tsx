@@ -28,6 +28,7 @@ interface JobDetail {
   employmentType: string;
   sections: JobSection[];
   applyButtonText: string;
+  workmode: string;
 }
 
 const careerDetailCopy = {
@@ -97,6 +98,7 @@ const jobDetails: Record<string, JobDetail> = {
     reportsTo: 'Engineering Manager',
     experience: '3+ years',
     employmentType: 'Full-time',
+    workmode: 'On-site',
     applyButtonText: 'Apply Now',
     sections: [
       {
@@ -361,6 +363,9 @@ export default function MechanicalEngineerPage() {
                   </span>
                   <span className="px-3 py-1 rounded-full text-xs font-medium text-muted bg-white/[0.03] border border-white/[0.07]">
                     {job.employmentType}
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium text-muted bg-white/[0.03] border border-white/[0.07]">
+                    {job.workmode}  
                   </span>
                 </div>
                 <h1
