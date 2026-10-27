@@ -111,15 +111,21 @@ export default function DronesharpCloudPage() {
                 </div>
 
                 <div className="reveal active reveal-delay-1">
-                  <h1 className="font-heading font-black tracking-tighter leading-[0.9] text-foreground"
-                  style={{ fontSize: 'clamp(3rem, 7vw, 4.7rem)' }}>
+                <h1 className="font-heading font-black tracking-tighter leading-[0.9] text-foreground">
+                  <span
+                    className="block"
+                    style={{ fontSize: 'clamp(3rem, 7vw, 4.7rem)' }}
+                  >
                     Dronesharp
-                    <br />
-                    <span style={{ background: 'linear-gradient(135deg, #0656D6 0%, #4B9EFF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                      Cloud
-                    </span>
-                  </h1>
-                </div>
+                  </span>
+
+                  <span className="block"
+                    style={{ fontSize: 'clamp(2rem, 4.5vw, 3.2rem)', color: '#0656D6',}}
+                  >
+                    Cloud
+                  </span>
+                </h1>
+              </div>
 
                 <p className="text-base sm:text-lg text-muted leading-relaxed max-w-lg reveal active reveal-delay-2">
                   Dronesharp Cloud is our photogrammetry offering that is cloud scale. Process, manage, and deliver survey projects from anywhere in the world.

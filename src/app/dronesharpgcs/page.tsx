@@ -94,14 +94,22 @@ export default function DronesharpGCSPage() {
                   </div>
                 </div>
 
-                <div className="reveal active reveal-delay-1">
-                  <h1 className="font-heading font-black tracking-tighter leading-[0.9] text-foreground"
-                  style={{ fontSize: 'clamp(3rem, 7vw, 4.7rem)' }}>
-                    Dronesharp  
-                    <br />
-                    <span style={{ color: '#EB8A0C' }}>GCS</span>
-                  </h1>
-                </div>
+               <div className="reveal active reveal-delay-1">
+                <h1 className="font-heading font-black tracking-tighter leading-[0.9] text-foreground">
+                  <span
+                    className="block"
+                    style={{ fontSize: 'clamp(3rem, 7vw, 4.7rem)' }}
+                  >
+                    Dronesharp
+                  </span>
+
+                  <span className="block"
+                    style={{ fontSize: 'clamp(2rem, 4.5vw, 3.2rem)', color: '#EB8A0C',}}
+                  >
+                    GCS
+                  </span>
+                </h1>
+              </div>
 
                 <p className="text-base sm:text-lg text-muted leading-relaxed max-w-lg reveal active reveal-delay-2">
                   Dronesharp GCS is our custom ground control software to optimally configure and fly the VIGOR UAV. Specialized for survey and mapping from the ground up.
