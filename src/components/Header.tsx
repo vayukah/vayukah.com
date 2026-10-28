@@ -206,6 +206,10 @@ export default function Header() {
               className="block px-4 py-3 rounded-xl text-foreground font-semibold hover:bg-white/[0.04] transition-colors">
               Downloads
             </Link>
+            <Link href="/career" onClick={() => setMobileOpen(false)}
+              className="block px-4 py-3 rounded-xl text-foreground font-semibold hover:bg-white/[0.04] transition-colors">
+              Careers
+            </Link>
             <Link href="/contact" onClick={() => setMobileOpen(false)}
               className="block mt-4 px-4 py-3 rounded-xl text-center text-white font-bold bg-primary hover:bg-primary-light transition-colors">
               Contact Us

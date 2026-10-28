@@ -386,7 +386,7 @@ export default function DronePage() {
                     <p className="text-sm text-muted leading-relaxed">Post-Processed Kinematic positioning for centimeter-level accuracy in survey and mapping workflows.</p>
                   </div>
                 </div>
-                {/* 50-Min Endurance */}
+                {/* 45-Min Endurance */}
                 <div className="reveal reveal-delay-2 bg-surface border border-white/[0.07] rounded-2xl p-7 flex flex-col gap-5 hover:border-white/[0.14] transition-all duration-300">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{ background: 'rgba(62,186,58,0.12)', border: '1px solid rgba(62,186,58,0.25)' }}>
@@ -397,7 +397,7 @@ export default function DronePage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-heading font-black text-lg text-foreground tracking-tight mb-2">50-Min Endurance</h3>
+                    <h3 className="font-heading font-black text-lg text-foreground tracking-tight mb-2">45-Min Endurance</h3>
                     <p className="text-sm text-muted leading-relaxed">Industry-leading flight time powered by our intelligent smart battery system.</p>
                   </div>
                 </div>
