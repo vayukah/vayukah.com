@@ -382,8 +382,8 @@ export default function DronePage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-heading font-black text-lg text-foreground tracking-tight mb-2">PPK</h3>
-                    <p className="text-sm text-muted leading-relaxed">Post-Processed Kinematic positioning for centimeter-level accuracy in survey and mapping workflows.</p>
+                    <h3 className="font-heading font-black text-lg text-foreground tracking-tight mb-2">RTK / PPK</h3>
+                    <p className="text-sm text-muted leading-relaxed">Real-Time Kinematic and Post-Processed Kinematic positioning for centimeter-level accuracy in UAV surveying, mapping, and geospatial data collection workflows.</p>
                   </div>
                 </div>
                 {/* 45-Min Endurance */}
@@ -420,13 +420,53 @@ export default function DronePage() {
                 <div className="reveal reveal-delay-4 bg-surface border border-white/[0.07] rounded-2xl p-7 flex flex-col gap-5 hover:border-white/[0.14] transition-all duration-300">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{ background: 'rgba(62,186,58,0.12)', border: '1px solid rgba(62,186,58,0.25)' }}>
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3EBA3A" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-                      <polyline points="9 22 9 12 15 12 15 22" />
-                    </svg>
+                    <svg
+  width="28"
+  height="28"
+  viewBox="0 0 64 64"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  {/* Lion mane */}
+  <path
+    d="M20 9L27 11L32 6L38 11L45 9L48 16L55 19L53 27L59 33L53 39L54 47L46 49L41 56L33 53L26 57L21 50L13 50L12 42L6 37L11 30L9 22L17 19Z"
+    stroke="#3EBA3A"
+    strokeWidth="2.6"
+    strokeLinejoin="round"
+  />
+
+  {/* Lion face */}
+  <path
+    d="M25 17C33 12 43 16 46 23L53 26L58 31L53 35L55 39L49 42L42 41L37 47L29 44L24 38L22 29Z"
+    stroke="#3EBA3A"
+    strokeWidth="2.5"
+    strokeLinejoin="round"
+  />
+
+  {/* Eye */}
+  <circle cx="44" cy="25" r="2" fill="#3EBA3A" />
+
+  {/* Nose and mouth */}
+  <path
+    d="M53 31L58 32L54 35L51 35M54 35L51 39"
+    stroke="#3EBA3A"
+    strokeWidth="2"
+    strokeLinecap="round"
+  />
+
+  {/* Mechanical gear detail */}
+  <circle cx="17" cy="31" r="5" stroke="#3EBA3A" strokeWidth="2" />
+  <circle cx="17" cy="31" r="1.8" fill="#3EBA3A" />
+  <path
+    d="M17 24V26M17 36V38M10 31H12M22 31H24"
+    stroke="#3EBA3A"
+    strokeWidth="2"
+    strokeLinecap="round"
+  />
+</svg>
                   </div>
                   <div>
-                    <h3 className="font-heading font-black text-lg text-foreground tracking-tight mb-2">Made in India</h3>
+                    <h3 className="font-heading font-black text-lg text-foreground tracking-tight mb-2">Make in India</h3>
                     <p className="text-sm text-muted leading-relaxed">Designed and manufactured in Vijayawada, built for Indian terrain and regulations.</p>
                   </div>
                 </div>
