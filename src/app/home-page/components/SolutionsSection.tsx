@@ -11,7 +11,7 @@ const solutions = [
   tagBg: 'bg-primary/10 border-primary/20',
   dotColor: 'bg-primary',
   accentBar: 'from-primary via-primary-light to-transparent',
-  name: 'DroneSharp GCS',
+  name: 'Dronesharp GCS',
   desc: 'Specialized ground control station for survey and mapping operations. Plan, execute, and preview missions with precision.',
   features: [
   'Multi mission management',
@@ -20,7 +20,7 @@ const solutions = [
 
   href: '/dronesharpgcs',
   image: '/assets/images/DronesharpGCS/drone_map_01.png',
-  imageAlt: 'DroneSharp GCS mission planning interface showing drone flight path on map',
+  imageAlt: 'Dronesharp GCS mission planning interface showing drone flight path on map',
   ctaColor: 'text-primary-light',
   hoverGlow: 'rgba(6,86,214,0.12)'
 },
@@ -30,7 +30,7 @@ const solutions = [
   tagBg: 'bg-accent-green/10 border-accent-green/20',
   dotColor: 'bg-accent-green',
   accentBar: 'from-accent-green via-green-400 to-transparent',
-  name: 'DroneSharp Cloud',
+  name: 'Dronesharp Cloud',
   desc: 'Cloud-based photogrammetry platform for processing survey data, managing projects, and collaborating with your team.',
   features: [
   'Cloud photogrammetry processing',
@@ -39,7 +39,7 @@ const solutions = [
 
   href: '/dronesharpcloud',
   image: '/assets/images/Dronesharp.io/Dronesharp_result.png',
-  imageAlt: 'DroneSharp Cloud project dashboard showing photogrammetry processing status and 3D model preview',
+  imageAlt: 'Dronesharp Cloud project dashboard showing photogrammetry processing status and 3D model preview',
   ctaColor: 'text-accent-green',
   hoverGlow: 'rgba(62,186,58,0.12)'
 }];
@@ -79,7 +79,7 @@ export default function SolutionsSection() {
             Our Solutions
           </h2>
           <p className="mt-3 text-muted max-w-xl">
-            From mission planning on the ground to processing in the cloud — DroneSharp closes the loop on your survey workflow.
+            From mission planning on the ground to processing in the cloud — Dronesharp closes the loop on your survey workflow.
           </p>
         </div>
 

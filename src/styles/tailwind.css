@@ -264,6 +264,20 @@ body {
   background: linear-gradient(135deg, #080B12 0%, #0D1A0D 40%, #0B1208 100%);
 }
 
+/* Copperplate Gothic Bold — Vayukah branding */
+@font-face {
+  font-family: "CopperplateGothicBoldLocal";
+  src: local("Copperplate Gothic Bold"),
+       local("CopperplateGothic-Bold");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-copperplate {
+  font-family: "CopperplateGothicBoldLocal", serif;
+  font-weight: 700;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #080B12; }

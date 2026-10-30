@@ -138,7 +138,7 @@ export default function DronePage() {
               <div className="space-y-7">
                 <div className="flex items-center gap-3 reveal active">
                   <div className="w-[2px] h-5" style={{ background: '#EB8A0C' }} />
-                  <span className="text-xs font-bold uppercase tracking-[0.35em] text-muted">UAV Platform</span>
+                  <span className="text-xs font-bold uppercase tracking-[0.35em] text-muted">Survey and Mapping Platform</span>
                   <div className="badge-hover flex items-center gap-1.5 px-3 py-1 rounded-full" style={{ border: '1px solid rgba(235,138,12,0.3)', background: 'rgba(235,138,12,0.1)', transition: 'background 0.25s ease, border-color 0.25s ease' }}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(235,138,12,0.2)'; (e.currentTarget as HTMLElement).style.borderColor = 'rgba(235,138,12,0.5)'; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.background = 'rgba(235,138,12,0.1)'; (e.currentTarget as HTMLElement).style.borderColor = 'rgba(235,138,12,0.3)'; }}>
@@ -148,17 +148,16 @@ export default function DronePage() {
                 </div>
 
                 <div className="reveal active reveal-delay-1">
-                  <div className="inline-block text-xs font-bold uppercase tracking-[0.3em] text-muted mb-2">VIGOR</div>
                   <h1 className="font-heading font-black tracking-tighter leading-[0.9] text-foreground"
-                  style={{ fontSize: 'clamp(3rem, 7vw, 6rem)' }}>
-                    S50
+                  style={{ fontSize: 'clamp(3rem, 7vw, 4.7rem)' }}>
+                    VIGOR
                     <br />
-                    <span style={{ color: '#EB8A0C' }}>Drone</span>
+                    <span style={{ color: '#EB8A0C' }}>S50</span>
                   </h1>
                 </div>
 
                 <p className="text-base sm:text-lg text-muted leading-relaxed max-w-lg reveal active reveal-delay-2">
-                  A stable platform for Survey, Mapping and Inspection projects with a wide range of lens. Equipped with PPK module, pivoting camera mount and obstacle detection.
+                  A stable platform for Survey, Mapping and Inspection projects with multiple payload options. Equipped with RTK and PPK modules, visual navigation and obstacle detection.
                 </p>
 
                 <div className="flex flex-wrap gap-3 reveal active reveal-delay-3">
@@ -211,8 +210,8 @@ export default function DronePage() {
                   
                 </div>
                 {/* Floating cards */}
-                <div className="absolute top-6 right-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
-                  <div className="text-xs text-muted font-medium mb-0.5">PPK Module</div>
+                <div className="absolute bottom-12 right-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
+                  <div className="text-xs text-muted font-medium mb-0.5">RTK & PPK Modules</div>
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-accent-green animate-pulse" />
                     <span className="text-sm font-bold text-foreground">Integrated</span>
@@ -220,7 +219,7 @@ export default function DronePage() {
                 </div>
                 <div className="absolute bottom-10 left-0 bg-surface border border-white/[0.08] rounded-xl px-4 py-3 shadow-xl backdrop-blur-sm">
                   <div className="text-xs text-muted font-medium mb-0.5">Obstacle Detection</div>
-                  <div className="text-lg font-black font-heading" style={{ color: '#EB8A0C' }}>360°</div>
+                  <div className="text-sm font-black font-heading" style={{ color: '#EB8A0C' }}>Multi-directional</div>
                 </div>
               </div>
             </div>
@@ -387,7 +386,7 @@ export default function DronePage() {
                     <p className="text-sm text-muted leading-relaxed">Post-Processed Kinematic positioning for centimeter-level accuracy in survey and mapping workflows.</p>
                   </div>
                 </div>
-                {/* 50-Min Endurance */}
+                {/* 45-Min Endurance */}
                 <div className="reveal reveal-delay-2 bg-surface border border-white/[0.07] rounded-2xl p-7 flex flex-col gap-5 hover:border-white/[0.14] transition-all duration-300">
                   <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0"
                     style={{ background: 'rgba(62,186,58,0.12)', border: '1px solid rgba(62,186,58,0.25)' }}>
@@ -398,7 +397,7 @@ export default function DronePage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-heading font-black text-lg text-foreground tracking-tight mb-2">50-Min Endurance</h3>
+                    <h3 className="font-heading font-black text-lg text-foreground tracking-tight mb-2">45-Min Endurance</h3>
                     <p className="text-sm text-muted leading-relaxed">Industry-leading flight time powered by our intelligent smart battery system.</p>
                   </div>
                 </div>

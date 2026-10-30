@@ -117,7 +117,7 @@ export default function Drones4ReliefPage() {
 
                 <div className="reveal active reveal-delay-1">
                   <h1 className="font-heading font-black tracking-tighter leading-[0.9] text-foreground"
-                  style={{ fontSize: 'clamp(3rem, 7vw, 6rem)' }}>
+                  style={{ fontSize: 'clamp(3rem, 7vw, 4.7rem)' }}>
                     Drones
                     <span className="text-gradient-blue">4</span>
                     <br />
@@ -132,11 +132,20 @@ export default function Drones4ReliefPage() {
                 </p>
 
                 <div className="flex flex-wrap gap-3 reveal active reveal-delay-3">
-                  <Link href="/contact"
-                  className="btn-green inline-flex items-center gap-2 px-7 py-3.5 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-lg"
-                  style={{ background: '#3EBA3A', boxShadow: '0 8px 24px rgba(62,186,58,0.25)' }}>
+                  <Link
+                    href="/contact"
+                    className="btn-green inline-flex items-center gap-2 px-7 py-3.5 text-white font-bold text-sm rounded-xl transition-all duration-300"
+                    style={{ boxShadow: '0 8px 24px rgba(62,186,58,0.25)' }}
+                  >
                     Join the Waitlist
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                    >
                       <path d="M7 17L17 7M17 7H7M17 7v10" />
                     </svg>
                   </Link>
