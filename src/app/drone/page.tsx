@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AppImage from '@/components/ui/AppImage';
 import DownloadModal from '@/components/DownloadModal';
+import DemoRequestModal from '@/components/DemoRequestModal';
 
 const highlights = [
 {
@@ -82,6 +83,7 @@ const cameras = [
 export default function DronePage() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [modalOpen, setModalOpen] = React.useState(false);
+  const [demoModalOpen, setDemoModalOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -114,6 +116,11 @@ export default function DronePage() {
         submitLabel="Submit & Download Brochure"
         successMessage="Your brochure download has started. Check your downloads folder."
         subject="VIGOR S50 Brochure Download Request"
+      />
+      <DemoRequestModal
+        isOpen={demoModalOpen}
+        onClose={() => setDemoModalOpen(false)}
+        web3FormsKey="2876b931-485c-4de1-80ed-3646cb764430"
       />
 
       <main>
@@ -172,10 +179,13 @@ export default function DronePage() {
                       <path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17" />
                     </svg>
                   </button>
-                  <Link href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-white/10 text-sm font-semibold text-foreground hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300">
+                  <button
+                    type="button"
+                    onClick={() => setDemoModalOpen(true)}
+                    className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-white/10 text-sm font-semibold text-foreground hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300"
+                  >
                     Request a Demo
-                  </Link>
+                  </button>
                 </div>
 
                 {/* Key specs row */}
