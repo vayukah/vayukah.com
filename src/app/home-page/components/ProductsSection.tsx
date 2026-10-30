@@ -63,7 +63,7 @@ const products: Product[] = [
     subtitle: 'Precision aerial platform',
     description:
       'Add the product description here, including its capabilities and intended applications.',
-    image: '/assets/images/Drones/vtol_drone.PNG',
+    image: '/assets/images/Drones/vtol_drone.png',
     imageAlt: 'Viper VTOL UAV',
     href: '/vtoldrone',
     theme: 'green',

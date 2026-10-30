@@ -197,7 +197,7 @@ export default function DronePage() {
                 style={{ background: 'radial-gradient(circle, rgba(235,138,12,0.18) 0%, transparent 70%)', filter: 'blur(40px)' }} />
                 <div className="relative z-10 animate-float">
                   <AppImage
-                    src="/assets/images/Drones/vtol_drone.PNG"
+                    src="/assets/images/Drones/vtol_drone.png"
                     alt="Vayukah Viper VTOL VTOL drone top-down layout"
                     width={1160}
                     height={840}
