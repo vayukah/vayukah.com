@@ -148,7 +148,7 @@ export default function DronesharpGCSPage() {
                 style={{ background: 'radial-gradient(ellipse at center, rgba(235,138,12,0.15) 0%, transparent 70%)', filter: 'blur(30px)' }} />
                 <div className="relative z-10 rounded-2xl overflow-hidden border border-white/[0.08] shadow-2xl">
                   <AppImage
-                    src="/assets/images/DronesharpGCS/drone_map_01.png"
+                    src="/assets/images/DronesharpGCS/dronesharp_video.gif"
                     alt="Dronesharp GCS mission planning interface showing drone flight path on map"
                     width={700}
                     height={480}
