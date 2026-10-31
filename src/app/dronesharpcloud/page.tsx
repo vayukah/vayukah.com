@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AppImage from '@/components/ui/AppImage';
+import DronesharpCloudEarlyAccessModal from '@/components/DronesharpCloudEarlyAccessModal';
 
 const workflowSteps = [
 {
@@ -78,6 +79,8 @@ export default function DronesharpCloudPage() {
     return () => observer?.disconnect();
   }, []);
 
+  const [earlyAccessOpen, setEarlyAccessOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-bg text-foreground font-body relative">
       <div className="scan-line" />
@@ -132,14 +135,20 @@ export default function DronesharpCloudPage() {
                 </p>
 
                 <div className="flex flex-wrap gap-3 reveal active reveal-delay-3">
-                  <Link href="/contact"
-                  className="btn-blue inline-flex items-center gap-2 px-7 py-3.5 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-lg"
-                  style={{ background: '#0656D6', boxShadow: '0 8px 24px rgba(6,86,214,0.25)' }}>
+                  <button
+                    type="button"
+                    onClick={() => setEarlyAccessOpen(true)}
+                    className="btn-blue inline-flex items-center gap-2 px-7 py-3.5 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-lg"
+                    style={{
+                      background: '#0656D6',
+                      boxShadow: '0 8px 24px rgba(6,86,214,0.25)',
+                    }}
+                  >
                     Get Early Access
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <path d="M7 17L17 7M17 7H7M17 7v10" />
                     </svg>
-                  </Link>
+                  </button>
                   <Link href="/dronesharpgcs"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-white/10 text-sm font-semibold text-foreground hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300">
                     Dronesharp GCS
@@ -368,11 +377,17 @@ export default function DronesharpCloudPage() {
                   Dronesharp Cloud is available for early access. Get in touch to start processing your survey data in the cloud.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <Link href="/contact"
-                  className="btn-blue px-7 py-3.5 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-lg"
-                  style={{ background: '#0656D6', boxShadow: '0 8px 24px rgba(6,86,214,0.25)' }}>
+                  <button
+                    type="button"
+                    onClick={() => setEarlyAccessOpen(true)}
+                    className="btn-blue px-7 py-3.5 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-lg"
+                    style={{
+                      background: '#0656D6',
+                      boxShadow: '0 8px 24px rgba(6,86,214,0.25)',
+                    }}
+                  >
                     Get Early Access
-                  </Link>
+                  </button>
                   <Link href="/dronesharpgcs"
                   className="px-6 py-3.5 border border-white/10 text-sm font-semibold text-foreground rounded-xl hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300">
                     Explore GCS
@@ -383,6 +398,11 @@ export default function DronesharpCloudPage() {
           </div>
         </section>
       </main>
+      <DronesharpCloudEarlyAccessModal
+        isOpen={earlyAccessOpen}
+        onClose={() => setEarlyAccessOpen(false)}
+        web3FormsKey="2876b931-485c-4de1-80ed-3646cb764430"
+      />
       <Footer />
     </div>);
 
