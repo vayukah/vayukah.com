@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AppImage from '@/components/ui/AppImage';
+import Drones4ReliefWaitlistModal from '@/components/Drones4ReliefWaitlistModal';
 
 const features = [
 {
@@ -69,6 +70,7 @@ const useCases = [
 
 
 export default function Drones4ReliefPage() {
+   const [waitlistOpen, setWaitlistOpen] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -132,8 +134,9 @@ export default function Drones4ReliefPage() {
                 </p>
 
                 <div className="flex flex-wrap gap-3 reveal active reveal-delay-3">
-                  <Link
-                    href="/contact"
+                  <button
+                    type="button"
+                    onClick={() => setWaitlistOpen(true)}
                     className="btn-green inline-flex items-center gap-2 px-7 py-3.5 text-white font-bold text-sm rounded-xl transition-all duration-300"
                     style={{ boxShadow: '0 8px 24px rgba(62,186,58,0.25)' }}
                   >
@@ -148,7 +151,7 @@ export default function Drones4ReliefPage() {
                     >
                       <path d="M7 17L17 7M17 7H7M17 7v10" />
                     </svg>
-                  </Link>
+                  </button>
                   <Link href="/drone"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-white/10 text-sm font-semibold text-foreground hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300">
                     View VIGOR S50
@@ -304,14 +307,27 @@ export default function Drones4ReliefPage() {
                   Drones4Relief is currently in development. Join our waitlist to be among the first to access this humanitarian drone platform when it launches.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  <Link href="/contact"
-                  className="btn-green inline-flex items-center justify-center gap-2 px-8 py-4 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-lg"
-                  style={{ background: '#3EBA3A', boxShadow: '0 8px 24px rgba(62,186,58,0.25)' }}>
+                  <button
+                    type="button"
+                    onClick={() => setWaitlistOpen(true)}
+                    className="btn-green inline-flex items-center justify-center gap-2 px-8 py-4 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-lg"
+                    style={{
+                      background: '#3EBA3A',
+                      boxShadow: '0 8px 24px rgba(62,186,58,0.25)',
+                    }}
+                  >
                     Join the Waitlist
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                    >
                       <path d="M7 17L17 7M17 7H7M17 7v10" />
                     </svg>
-                  </Link>
+                  </button>
                   <Link href="/home-page"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/10 text-sm font-semibold text-foreground hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300">
                     Back to Home
@@ -322,6 +338,11 @@ export default function Drones4ReliefPage() {
           </div>
         </section>
       </main>
+      <Drones4ReliefWaitlistModal
+        isOpen={waitlistOpen}
+        onClose={() => setWaitlistOpen(false)}
+        web3FormsKey="2876b931-485c-4de1-80ed-3646cb764430"
+      />
       <Footer />
     </div>);
 
