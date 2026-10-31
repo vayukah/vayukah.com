@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AppImage from '@/components/ui/AppImage';
 import DownloadModal from '@/components/DownloadModal';
+import VtolWaitlistModal from '@/components/VtolWaitlistModal';
 
 const highlights = [
 {
@@ -82,6 +83,7 @@ const cameras = [
 export default function DronePage() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [modalOpen, setModalOpen] = React.useState(false);
+  const [waitlistOpen, setWaitlistOpen] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -114,6 +116,12 @@ export default function DronePage() {
         submitLabel="Submit & Download Brochure"
         successMessage="Your brochure download has started. Check your downloads folder."
         subject="VIGOR S50 Brochure Download Request"
+      />
+
+      <VtolWaitlistModal
+        isOpen={waitlistOpen}
+        onClose={() => setWaitlistOpen(false)}
+        web3FormsKey="2876b931-485c-4de1-80ed-3646cb764430"
       />
 
       <main>
@@ -161,14 +169,20 @@ export default function DronePage() {
                 </p>
 
                 <div className="flex flex-wrap gap-3 reveal active reveal-delay-3">
-                  <Link href="/contact"
-                  className="btn-green inline-flex items-center gap-2 px-7 py-3.5 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-lg"
-                  style={{ background: '#3EBA3A', boxShadow: '0 8px 24px rgba(62,186,58,0.2)' }}>
+                  <button
+                    type="button"
+                    onClick={() => setWaitlistOpen(true)}
+                    className="btn-green inline-flex items-center gap-2 px-7 py-3.5 text-white font-bold text-sm rounded-xl transition-all duration-300 shadow-lg"
+                    style={{
+                      background: '#3EBA3A',
+                      boxShadow: '0 8px 24px rgba(62,186,58,0.2)',
+                    }}
+                  >
                     Join the Waitlist
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <path d="M7 17L17 7M17 7H7M17 7v10" />
                     </svg>
-                  </Link>
+                  </button>
                   {/*<Link href="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl border border-white/10 text-sm font-semibold text-foreground hover:border-white/20 hover:bg-white/[0.04] transition-all duration-300">
                     Request a Demo
